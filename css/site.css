@@ -254,3 +254,80 @@ footer p{max-width:32ch}
 @media(max-width:900px){.photo-right .wrap>*:not(.crumbs){max-width:none!important}.phead.img.photo-right>img{object-position:60% 50%}}
 .photo-right.narrow-text .wrap>*:not(.crumbs){max-width:min(390px,29vw)!important}
 @media(max-width:900px){.photo-right.narrow-text .wrap>*:not(.crumbs){max-width:none!important}}
+
+/* mobile: three dots instead of the quote button; the menu holds the sections and the quote button */
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;gap:4px;padding:0;flex:none;transition:background .2s,border-color .2s}
+.burger i{display:block;width:5px;height:5px;border-radius:50%;background:var(--ink);transition:transform .2s,width .2s,height .2s,border-radius .2s}
+.burger:hover{border-color:var(--ink)}
+.burger.open{background:var(--ink);border-color:var(--ink)}.burger.open i{background:#fff}
+.burger.open i:nth-child(1){transform:translate(4px,0) rotate(45deg);width:16px;height:2px;border-radius:2px;margin-right:-16px}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){transform:rotate(-45deg);width:16px;height:2px;border-radius:2px}
+.mnav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);z-index:29;max-height:calc(100vh - 84px);overflow:auto;animation:mn .18s ease-out}
+.mnav[hidden]{display:none}
+@keyframes mn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mnav .wrap{padding-top:8px;padding-bottom:28px}
+.mnav ul{list-style:none;padding:0;margin:0}
+.mnav li a{display:flex;justify-content:space-between;align-items:center;min-height:60px;border-bottom:1px solid var(--line);font:700 20px Manrope,Inter,sans-serif;color:var(--ink)}
+.mnav li a:after{content:"\2192";color:var(--muted);font-weight:500}
+.mnav li a[aria-current]{color:var(--blue)}
+.mrow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0 4px}
+.mlang{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px}
+.mlang a{padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted)}
+.mlang a[aria-current]{background:var(--ink);color:#fff;pointer-events:none}
+.mtel{font:700 18px Manrope,Inter,sans-serif;color:var(--ink)}
+.mcta{width:100%;margin-top:18px}
+@media(max-width:1180px){.burger{display:flex}.nav .r .btn,.nav .r .lang{display:none}}
+@media(min-width:1181px){.mnav{display:none!important}}
+body.menu-open{overflow:hidden}
+
+/* open state: a clean cross instead of the dots */
+.burger.open i{display:none}
+.burger.open:before,.burger.open:after{content:"";position:absolute;width:18px;height:2px;border-radius:2px;background:#fff}
+.burger{position:relative}
+.burger.open:before{transform:rotate(45deg)}.burger.open:after{transform:rotate(-45deg)}
+
+/* menu button: three horizontal lines (hamburger) */
+.burger{flex-direction:column;gap:5px}
+.burger i{width:20px;height:2px;border-radius:2px}
+
+/* menu button: no circle, just the lines (and a plain cross when open) */
+.burger{border:0!important;background:transparent!important;border-radius:0;width:44px;height:44px;margin-right:-8px}
+.burger:hover{border:0}
+.burger i{background:var(--ink)}
+.burger.open{background:transparent!important}
+.burger.open:before,.burger.open:after{background:var(--ink)}
+.burger:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:8px}
+
+/* image headers: smaller headline, lower (so wider-looking) photo */
+.frame{min-height:clamp(520px,80vh,680px)}
+.frame h1{font-size:clamp(34px,4.6vw,60px)}
+.phead.img h1,.phead h1{font-size:clamp(30px,3.7vw,50px)!important}
+.phead.img{min-height:clamp(340px,37vw,480px)!important;padding:clamp(64px,7vw,96px) 0 clamp(40px,5vw,64px)!important}
+.phead.img.cat-head,.phead.img.tight{padding:56px 0 40px!important}
+@media(max-width:900px){.frame{min-height:600px}}
+
+/* about header on phones: lower photo, whole van in view */
+@media(max-width:900px){.phead.img.about-head>img{aspect-ratio:16/9!important;object-position:60% 50%!important}}
+@media(max-width:520px){.phead.img.about-head>img{aspect-ratio:2/1!important;object-position:58% 50%!important}}
+
+/* phones: every image header = the photo in its own proportion (little cropping) on top, text below on navy */
+@media(max-width:700px){
+ .phead.img{display:block!important;min-height:0!important;padding:0!important;background:var(--navy)}
+ .phead.img:before{display:none!important}
+ .phead.img>img,.phead.img.about-head>img,.phead.img.photo-right>img{position:static!important;inset:auto!important;display:block;width:100%!important;height:270px!important;aspect-ratio:auto!important;max-height:none;object-fit:cover;object-position:60% 40%!important;z-index:auto;-webkit-mask-image:none!important;mask-image:none!important}
+ .phead.img>.wrap{max-width:none;padding:26px var(--gut) 34px!important}
+ .photo-right .wrap>*:not(.crumbs),.about-head .wrap>*:not(.crumbs){max-width:none!important}
+ .phead.img .crumbs{margin-bottom:20px}
+}
+
+/* about: text on navy, full van panorama below in its own proportion (no crop) */
+@media(min-width:701px){
+ .phead.img.about-head{display:flex!important;flex-direction:column-reverse;min-height:0!important;padding:clamp(64px,7vw,96px) 0 clamp(40px,5vw,64px)!important;background:var(--navy)}
+ .phead.img.about-head:before{display:none!important}
+ .phead.img.about-head>.wrap{max-width:var(--max,1232px);width:100%;margin:0 auto;padding:0 var(--gut,24px)!important}
+ .phead.img.about-head>.wrap>*{max-width:640px!important}
+ .phead.img.about-head>img{position:static!important;display:block;width:calc(100% - 2*var(--gut,24px))!important;max-width:1232px;height:auto!important;aspect-ratio:8/3!important;object-fit:cover;object-position:50% 50%!important;margin:44px auto 0;border-radius:18px;-webkit-mask-image:none!important;mask-image:none!important}
+}
+
+@media(max-width:700px){.phead.img.about-head>img{object-position:64% 50%!important}}
