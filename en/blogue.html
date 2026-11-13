@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tips and guides on heat pumps | Thermolux</title>
+<meta name="description" content="Thermolux guides on heat pumps, mini-splits and Hydro-Québec’s LogisVert subsidy, to help you choose in Montréal, Laval and Longueuil.">
+<link rel="alternate" hreflang="fr" href="https://thermolux.ca/blogue.html">
+<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/blogue.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=47">
+<link rel="stylesheet" href="../css/content.css?v=47">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+<section class="phead img"><img src="../img/ac-wall-unit.jpg" alt="">
+ <div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a><span>/</span>Advice</div>
+  <h1>Tips and <em>guides</em></h1>
+  <p class="lead">Air conditioning, heating, subsidies and maintenance: simple answers to help you decide.</p>
+ </div>
+</section>
+
+<section class="sec"><div class="wrap">
+ <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+ <div id="feat"></div>
+ <div class="posts" id="posts"></div>
+ <p class="empty" id="empty" hidden>No articles in this category yet. New maintenance tips are coming soon.</p>
+</div></section>
+
+<section class="certsec"><div class="wrap"><div><div class="eyebrow">Why Thermolux</div><h2>Clean work, a <em>courteous</em> team</h2><div class="lic dark"><span class="lg"><img src="../img/rbq_crop_with_numbers-v2.png" alt="RBQ"></span><p><b>RBQ licence 5812-9388-01</b>Certified contractor, Régie du bâtiment du Québec</p></div></div><dl><dt>Certified technicians</dt><dd>Installation and maintenance by licensed professionals.</dd><dt>Manufacturer and labour warranty</dt><dd>Your installation is protected.</dd><dt>Reliable, professional service</dt><dd>A local team, from quote to maintenance.</dd><dt>Help with the LogisVert rebate</dt><dd>We guide you through the steps.</dd></dl></div></section>
+<section class="cta-band"><div class="wrap">
+ <h2>Have an air conditioning or heating project? Let’s talk.</h2>
+ <a class="btn btn-p" href="contact.html#soumission">Request a quote</a>
+</div></section>
+</main>
+
+<script src="../js/posts.js?v=47"></script>
+<script>
+(function(){
+ var P=window.POSTS,cats=[["Tous","All"],["Guides","Guides"],["Subventions","Subsidies"],["Entretien","Maintenance"]],cur="Tous";
+ var chips=document.getElementById("chips"),feat=document.getElementById("feat"),grid=document.getElementById("posts"),empty=document.getElementById("empty");
+ function href(p){return "article.html?a="+p.slug}
+ function img(p){return '<div class="zoom'+(p.contain?' fit':'')+'"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div>'}
+ function render(){
+  var list=P.filter(function(p){return cur==="Tous"||p.cat===cur});
+  var f0=cur==="Tous"?P.filter(function(p){return p.featured})[0]:null,f=f0&&T(f0);
+  feat.innerHTML=f?'<a class="feat" href="'+href(f)+'">'+img(f)+'<div><span class="tag">Featured · '+f.cat+'</span><h2>'+f.title+'</h2><p>'+f.excerpt+'</p><span class="link">Read the article</span></div></a>':"";
+  var rest=list.filter(function(p){return p!==f0});
+  grid.innerHTML=rest.map(function(p){p=T(p);return '<article class="post"><a href="'+href(p)+'">'+img(p)+'<span class="tag" style="margin-top:20px">'+p.cat+' · '+p.read+'</span><h3>'+p.title+'</h3><p>'+p.excerpt+'</p><span class="link">Read</span></a></article>'}).join("");
+  empty.hidden=list.length>0;
+ }
+ cats.forEach(function(c){var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=c[1];b.setAttribute("aria-pressed",c[0]===cur);b.onclick=function(){cur=c[0];[].forEach.call(chips.children,function(x){x.setAttribute("aria-pressed",x===b)});render()};chips.appendChild(b)});
+ render();
+})();
+</script>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js?v=47"></script>

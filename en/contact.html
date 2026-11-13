@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact and free quote | Thermolux</title>
+<meta name="description" content="Contact Thermolux at 438-509-1823 or request a free quote for your heat pump in Montréal, Laval and Longueuil.">
+<link rel="alternate" hreflang="fr" href="https://thermolux.ca/contact.html">
+<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=47">
+<link rel="stylesheet" href="../css/content.css?v=47">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+<section class="phead img"><img src="../img/background-2.jpg" alt="">
+ <div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a><span>/</span>Contact</div>
+  <h1>Request your <em>free</em> quote</h1>
+  <p class="lead">Air conditioning and heating installation, repair or maintenance in Montréal and Greater Montréal. An advisor will call you back to assess your request.</p>
+ </div>
+</section>
+
+<section class="sec"><div class="wrap cgrid">
+ <div class="cinfo cinfo-card">
+  <dl>
+   <dt>Phone</dt><dd><a class="big" href="tel:4385091823">438-509-1823</a></dd>
+   <dt>Email</dt><dd><a href="mailto:info@thermolux.ca">info@thermolux.ca</a></dd>
+   <dt>Opening hours</dt><dd>Monday to Friday, 8 a.m. to 5 p.m.<br>Saturday, 9 a.m. to 2 p.m.</dd>
+   <dt>Service area</dt><dd>Montréal, Laval, Longueuil, North Shore and South Shore</dd>
+  </dl>
+  <p class="fhint">Sending the form does not guarantee an appointment: an advisor will contact you to assess your request and plan next steps.</p>
+ </div>
+ <div>
+  <form id="soumission" novalidate aria-labelledby="ft">
+   <h2 id="ft" style="font-size:28px;margin-bottom:28px">Free quote</h2>
+   <div class="f">
+    <div><label for="nom">Name</label><input id="nom" name="nom" autocomplete="name" required><div class="err" id="e-nom"></div></div>
+    <div><label for="tel">Phone</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" id="e-tel"></div></div>
+    <div class="full"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" required><div class="err" id="e-mail"></div></div>
+    <div class="full"><label for="type">Project type</label>
+     <select id="type" name="type" required>
+      <option value="">Select from the list</option>
+      <option>Wall-mounted system</option><option>Multi-zone system</option><option>Central system</option><option>Air exchanger</option><option>Humidifier</option><option>Furnace or boiler</option><option>Ventilation and ductwork</option><option>Repair, maintenance or diagnostics</option><option>Other</option>
+     </select><div class="err" id="e-type"></div></div>
+    <div class="full"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="City, type of home, any special need…"></textarea></div>
+    <button class="btn btn-p" type="submit">Send my request</button>
+   </div>
+  </form>
+  <div class="thanks" id="thanks" hidden tabindex="-1">
+   <h2>Thank you, your request has been sent.</h2>
+   <p>A Thermolux advisor will contact you to discuss your project. For an emergency, call <a href="tel:4385091823"><b>438-509-1823</b></a>.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="certsec"><div class="wrap"><div><div class="eyebrow">Why Thermolux</div><h2>Clean work, a <em>courteous</em> team</h2><div class="lic dark"><span class="lg"><img src="../img/rbq_crop_with_numbers-v2.png" alt="RBQ"></span><p><b>RBQ licence 5812-9388-01</b>Certified contractor, Régie du bâtiment du Québec</p></div></div><dl><dt>Certified technicians</dt><dd>Installation and maintenance by licensed professionals.</dd><dt>Manufacturer and labour warranty</dt><dd>Your installation is protected.</dd><dt>Reliable, professional service</dt><dd>A local team, from quote to maintenance.</dd><dt>Help with the LogisVert rebate</dt><dd>We guide you through the steps.</dd></dl></div></section>
+</main>
+<script>
+(function(){
+ var f=document.getElementById("soumission"),t=document.getElementById("thanks");
+ var rules={nom:function(v){return v.trim()?"":"Enter your name."},
+  tel:function(v){return v.replace(/\D/g,"").length>=10?"":"Enter a 10-digit phone number."},
+  mail:function(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)?"":"Enter a valid email address."},
+  type:function(v){return v?"":"Choose a project type."}};
+ function check(k){var el=f.elements[k],m=rules[k](el.value);document.getElementById("e-"+k).textContent=m;el.setAttribute("aria-invalid",!!m);el.setAttribute("aria-describedby","e-"+k);return !m}
+ Object.keys(rules).forEach(function(k){f.elements[k].addEventListener("blur",function(){check(k)})});
+ f.addEventListener("submit",function(e){e.preventDefault();
+  var bad=Object.keys(rules).filter(function(k){return !check(k)});
+  if(bad.length){f.elements[bad[0]].focus();return}
+  f.hidden=true;t.hidden=false;t.focus();
+  /* shortcut: front-end only, no data sent; connect to Contact Form 7 / Fluent Forms in WordPress */
+ });
+})();
+</script>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js?v=47"></script>

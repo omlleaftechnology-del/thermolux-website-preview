@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Air Conditioning and Heating — Thermolux Catalogue | Montréal, Laval, Longueuil</title>
+<meta name="description" content="Wall-mounted, multi-zone and central heat pumps from Gree, Zephyr, Lennox, LG and more. Compare models built for the Quebec climate and request a quote from Thermolux.">
+<link rel="alternate" hreflang="fr" href="https://thermolux.ca/catalogue.html">
+<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/catalogue.html">
+<link rel="alternate" hreflang="x-default" href="https://thermolux.ca/catalogue.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=47">
+<link rel="stylesheet" href="../css/catalogue.css?v=47">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+<section class="phead img photo-right narrow-text"><img src="../img/catalogue-hero-remote.jpg" alt="Woman setting the temperature of a black wall-mounted air conditioner to 22 degrees">
+ <div class="wrap">
+  <div class="ph-l">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Catalogue</nav>
+  <h1>Products</h1>
+  <p class="lead">Air conditioning and heating systems built for our winters. Compare the models, then request your free quote.</p></div>
+  
+ </div>
+</section>
+<section class="cat-head cat-tools"><div class="wrap"><div class="ph-right">
+  <div class="search ph-r"><label for="q">Search for a model</label><input id="q" type="search" placeholder="E.g. Gree Fairy, Zephyr, Kinghome…" autocomplete="off"></div>
+  <form class="filters" id="filters" aria-label="Filter products" onsubmit="return false">
+ <div class="wrap">
+    <fieldset><legend>Type</legend><div class="chips" id="f-type"></div></fieldset>
+  <fieldset><legend>Brand</legend><div class="chips" id="f-brand"></div></fieldset>
+  <fieldset><legend>Capacity (BTU)</legend><div class="chips" id="f-btu"></div></fieldset>
+ </div>
+</form>
+  </div></div></section>
+
+
+<section class="results">
+ <div class="wrap">
+  <div class="bar">
+   <p id="count" aria-live="polite"></p>
+   <div style="display:flex;align-items:center;gap:28px">
+    <button type="button" id="reset" hidden>Clear all</button>
+    <div class="sort" style="display:flex;align-items:center;gap:12px"><label for="sort" style="margin:0">Sort by</label>
+     <select id="sort"><option value="">Thermolux picks</option><option value="name">Name (A–Z)</option><option value="seer">Efficiency (SEER2)</option><option value="cold">Cold-weather heating</option></select></div>
+   </div>
+  </div>
+  <div class="grid4" id="grid"></div>
+  <p class="aidnote">LogisVert rebates for an owner of an existing home. Source: Hydro-Québec list of November 12, 2026. Eligibility and the final amount are confirmed by Hydro-Québec.</p>
+  <p class="empty" id="empty" hidden>No model matches these filters. <button type="button" id="reset2">Clear all</button></p>
+ </div>
+</section>
+
+<section class="cta-band">
+ <div class="wrap">
+  <h2>Not sure which model fits?</h2>
+  <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-p" href="contact.html#soumission">Request a quote</a><a class="btn btn-o" href="tel:4385091823">438-509-1823</a></div>
+ </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js?v=47"></script>
+<script src="../js/subsidies.js?v=47"></script>
+<script src="../js/products.js?v=47"></script>
+<script>
+(function(){
+ var L=window.LANG;
+ var I={fr:{mural:"Système mural",multizone:"Multizone",central:"Système central",all:"Tous",allf:"Toutes",view:"Voir les détails",cold:"Temp. min.",noise:"Bruit",model:["modèle","modèles"],of:"sur",btu1:"9 000 – 12 000",btu2:"18 000 – 24 000",btu3:"30 000 et +",sep:"\u00a0"},
+        en:{mural:"Wall-mounted system",multizone:"Multi-zone system",central:"Central system",all:"All",allf:"All",view:"View details",cold:"Min. temp.",noise:"Noise",model:["model","models"],of:"of",btu1:"9,000 – 12,000",btu2:"18,000 – 24,000",btu3:"30,000 +",sep:","}}[L];
+
+ function aid(p){var A=window.AID,d=A&&A.data[p.slug];if(!d)return "";
+  var m=A.max(p.slug),en=L=="en";
+  var t=d.combo||!m?(en?"depends on the combination":"selon la combinaison"):(en?"Up to ":"Jusqu\u2019à ")+"<b>"+A.fmt(m)+"</b>";
+  return '<p class="aid"><span class="al"><i aria-hidden="true"></i>LogisVert</span><span class="av">'+t+'</span></p>'}
+ var P=window.PRODUCTS,T=I;
+ var BTU=[["all",I.allf,0,1e9],["s",I.btu1,0,12000],["m",I.btu2,18000,24000],["l",I.btu3,30000,1e9]];
+ var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,I.sep)};
+ var num=function(v){return L=="fr"?String(v).replace(".",","):String(v)};
+ var $=function(id){return document.getElementById(id)};
+ var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+ var norm=function(s){return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim()};
+ function chip(name,type,val,label,checked){return '<label class="chip"><input type="'+type+'" name="'+name+'" value="'+val+'"'+(checked?' checked':'')+'><span>'+label+'</span></label>'}
+ $("f-type").innerHTML=chip("type","radio","all",I.all,1)+["mural","multizone","central"].map(function(k){return chip("type","radio",k,I[k])}).join("");
+ var brands=P.map(function(p){return p.brand}).filter(function(b,i,a){return a.indexOf(b)==i}).sort();
+ $("f-brand").innerHTML=brands.map(function(b){return chip("brand","checkbox",b,b)}).join("");
+ $("f-btu").innerHTML=BTU.map(function(b,i){return chip("btu","radio",b[0],b[1],i==0)}).join("");
+ $("grid").innerHTML=P.map(function(p,i){
+  var cap=n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):"");
+  var mid=p.seer2?'<li><b>'+num(p.seer2)+'</b> SEER2</li>':p.dB?'<li><b>'+num(p.dB)+'</b> dB</li>':"";
+  return '<article class="card" data-i="'+i+'" data-type="'+p.type+'" data-brand="'+esc(p.brand)+'" data-btu="'+p.btu.join(",")+'" data-seer="'+(p.seer2||0)+'" data-cold="'+(p.tminC||0)+'" data-name="'+esc(p.name)+'" data-q="'+esc(norm(p.name+" "+p.brand+" "+p.slug))+'">'+
+   '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
+   '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+
+   '<ul class="specs"><li><b>'+cap+'</b> BTU</li>'+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>'+aid(p)+
+   '<a class="go" href="produit.html?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a></div></article>'}).join("");
+ var cards=[].slice.call(document.querySelectorAll(".card"));
+ function val(name){var e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:"all"}
+ function apply(){
+  var t=val("type"),r=BTU.filter(function(b){return b[0]==val("btu")})[0];
+  var bs=[].slice.call(document.querySelectorAll('input[name="brand"]:checked')).map(function(e){return e.value});
+  var q=norm($("q").value),shown=0;
+  cards.forEach(function(c){
+   var ok=(!q||q.split(" ").every(function(w){return c.dataset.q.indexOf(w)>-1}))&&(t=="all"||c.dataset.type==t)&&(!bs.length||bs.indexOf(c.dataset.brand)>-1)&&
+    (r[0]=="all"||c.dataset.btu.split(",").some(function(b){return +b>=r[2]&&+b<=r[3]}));
+   c.hidden=!ok;if(ok)shown++});
+  $("count").innerHTML="<b>"+shown+"</b> "+I.model[shown>1?1:0]+" "+I.of+" "+cards.length;
+  $("empty").hidden=shown>0;
+  $("reset").hidden=!q&&t=="all"&&!bs.length&&r[0]=="all";
+ }
+ function sort(){
+  var k=$("sort").value,g=$("grid");
+  var f={"":function(a,b){return a.dataset.i-b.dataset.i},name:function(a,b){return a.dataset.name.localeCompare(b.dataset.name)},seer:function(a,b){return b.dataset.seer-a.dataset.seer||a.dataset.i-b.dataset.i},cold:function(a,b){return a.dataset.cold-b.dataset.cold||a.dataset.i-b.dataset.i}}[k];
+  cards.slice().sort(f).forEach(function(c){g.appendChild(c)});
+ }
+ function reset(){$("filters").reset();$("q").value="";apply()}
+ $("filters").addEventListener("change",apply);$("q").addEventListener("input",apply);$("reset").onclick=reset;$("reset2").onclick=reset;$("sort").onchange=sort;
+ apply();
+})();
+</script>
+<script>
+/* filters as drop-downs: tap a button, pick, done */
+(function(){
+ var form=document.getElementById("filters");if(!form)return;
+ var en=document.documentElement.lang=="en";
+ var T=en?{all:"All",allf:"All",sel:" selected"}:{all:"Tous",allf:"Toutes",sel:" sélectionnées"};
+ var holder=form.querySelector(".wrap"),box=document.createElement("div");box.className="dds";
+ var dds=[].slice.call(form.querySelectorAll("fieldset")).map(function(fs){
+  var lg=fs.querySelector("legend").textContent,dd=document.createElement("div"),b=document.createElement("button"),p=document.createElement("div");
+  dd.className="dd";b.type="button";b.className="dd-b";b.setAttribute("aria-expanded","false");
+  b.innerHTML='<span class="dd-l"></span><span class="dd-v"></span><i aria-hidden="true"></i>';b.querySelector(".dd-l").textContent=lg;
+  p.className="dd-p";p.hidden=true;p.appendChild(fs);dd.appendChild(b);dd.appendChild(p);box.appendChild(dd);
+  var multi=!!fs.querySelector('input[type=checkbox]');
+  function upd(){var on=[].slice.call(fs.querySelectorAll("input:checked")).map(function(i){return i.nextElementSibling.textContent});
+   b.querySelector(".dd-v").textContent=multi?(on.length?(on.length==1?on[0]:on.length+T.sel):T.allf):(on[0]||T.all);
+   dd.classList.toggle("on",multi?on.length>0:(fs.querySelector("input:checked")||{}).value!="all")}
+  function close(){p.hidden=true;b.setAttribute("aria-expanded","false")}
+  b.addEventListener("click",function(e){e.stopPropagation();var open=p.hidden;closeAll();if(open){p.hidden=false;b.setAttribute("aria-expanded","true")}});
+  p.addEventListener("click",function(e){e.stopPropagation()});
+  if(!multi)fs.addEventListener("change",function(){close()});
+  return{upd:upd,close:close}});
+ function closeAll(){dds.forEach(function(d){d.close()})}
+ function upd(){dds.forEach(function(d){d.upd()})}
+ holder.appendChild(box);upd();
+ form.addEventListener("change",upd);
+ ["reset","reset2"].forEach(function(id){var r=document.getElementById(id);if(r)r.addEventListener("click",function(){setTimeout(upd,0)})});
+ document.addEventListener("click",closeAll);
+ document.addEventListener("keydown",function(e){if(e.key=="Escape")closeAll()});
+})();
+</script>
+<script>
+/* search island extras: clear button, removable tags of the chosen filters */
+(function(){
+ var q=document.getElementById("q"),form=document.getElementById("filters");if(!q||!form)return;
+ var en=document.documentElement.lang=="en",L=en?{clear:"Clear",rm:"Remove filter"}:{clear:"Effacer",rm:"Retirer le filtre"};
+ var box=document.createElement("div");box.className="sbox";q.parentNode.insertBefore(box,q);box.appendChild(q);
+ var x=document.createElement("button");x.type="button";x.className="sx";x.hidden=true;x.setAttribute("aria-label",L.clear);x.textContent="\u00d7";box.appendChild(x);
+ q.addEventListener("input",function(){x.hidden=!q.value});
+ x.addEventListener("click",function(){q.value="";x.hidden=true;q.dispatchEvent(new Event("input",{bubbles:true}));q.focus()});
+ var tags=document.createElement("div");tags.className="tags";form.querySelector(".wrap").appendChild(tags);
+ function draw(){
+  tags.innerHTML="";
+  [].slice.call(form.querySelectorAll("input:checked")).forEach(function(i){
+   if(i.value=="all")return;
+   var b=document.createElement("button");b.type="button";b.className="tg";b.setAttribute("aria-label",L.rm+": "+i.nextElementSibling.textContent);
+   b.innerHTML="<span></span><i aria-hidden=\"true\">\u00d7</i>";b.firstChild.textContent=i.nextElementSibling.textContent;
+   b.addEventListener("click",function(e){e.stopPropagation();
+    if(i.type=="checkbox")i.checked=false;else{var a=form.querySelector('input[name="'+i.name+'"][value="all"]');if(a)a.checked=true}
+    form.dispatchEvent(new Event("change",{bubbles:true}))});
+   tags.appendChild(b)});
+  tags.hidden=!tags.children.length}
+ form.addEventListener("change",function(){setTimeout(draw,0)});
+ ["reset","reset2"].forEach(function(id){var r=document.getElementById(id);if(r)r.addEventListener("click",function(){x.hidden=true;setTimeout(draw,0)})});
+ draw();
+})();
+</script>
+</body>
+</html>

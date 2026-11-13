@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Article | Thermolux</title>
+<meta name="description" content="Conseils Thermolux sur les thermopompes, les mini-splits et les subventions.">
+<link rel="alternate" hreflang="fr" href="https://thermolux.ca/article.html">
+<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/article.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=47">
+<link rel="stylesheet" href="css/content.css?v=47">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+<article>
+<section class="phead" style="padding-bottom:0;background:#fff">
+ <div class="wrap art-w">
+  <div class="crumbs"><a href="index.html">Accueil</a><span>/</span><a href="blogue.html">Conseils</a><span>/</span><span style="margin:0;opacity:1" id="crumb"></span></div>
+  <span class="tag" id="tag"></span>
+  <h1 id="title" class="art-h"></h1>
+  <p class="meta" id="meta"></p>
+ </div>
+</section>
+<div class="wrap art-w"><div class="zoom art-cover" id="cover"></div></div>
+<div class="wrap art-w art-grid">
+ <nav class="toc" aria-label="Sommaire" id="toc"><h2>Dans cet article</h2><ol id="toclist"></ol></nav>
+ <div>
+  <div class="prose" id="body"></div>
+  <p class="back"><a class="link" href="blogue.html">← Tous les conseils</a></p>
+ </div>
+</div>
+</article>
+
+<section class="sec paper" style="margin-top:96px"><div class="wrap">
+ <div class="sec-h"><div class="eyebrow">À lire aussi</div><h2>Articles <em>liés</em></h2></div>
+ <div class="posts" id="related"></div>
+</div></section>
+
+<section class="certsec"><div class="wrap"><div><div class="eyebrow">Pourquoi Thermolux</div><h2>Un travail propre, une équipe <em>courtoise</em></h2><div class="lic dark"><span class="lg"><img src="img/rbq_crop_with_numbers-v2.png" alt="RBQ"></span><p><b>Licence RBQ 5812-9388-01</b>Entrepreneur certifié par la Régie du bâtiment du Québec</p></div></div><dl><dt>Techniciens certifiés</dt><dd>Installation et entretien par des professionnels licenciés.</dd><dt>Garantie fabricant et main-d’œuvre</dt><dd>Votre installation est protégée.</dd><dt>Service fiable et professionnel</dt><dd>Une équipe locale, de la soumission à l’entretien.</dd><dt>Aide pour la subvention LogisVert</dt><dd>Nous vous accompagnons dans les démarches.</dd></dl></div></section>
+<section class="cta-band"><div class="wrap">
+ <h2>Un projet de climatisation ou de chauffage ? Parlons&#8209;en.</h2>
+ <a class="btn btn-p" href="contact.html#soumission">Demander une soumission</a>
+</div></section>
+</main>
+
+<script src="js/posts.js?v=47"></script>
+<script>
+(function(){
+ var P=window.POSTS,s=new URLSearchParams(location.search).get("a");
+ var p=T(P.filter(function(x){return x.slug===s})[0]||P[0]);
+ function $(i){return document.getElementById(i)}
+ function img(q){return '<div class="zoom'+(q.contain?' fit':'')+'"><img src="'+q.img+'" alt="'+q.alt+'" loading="lazy"></div>'}
+ document.title=p.title+" | Thermolux";
+ document.querySelector('meta[name=description]').content=p.excerpt;
+ $("crumb").textContent=p.title;$("tag").textContent=p.cat;$("title").textContent=p.title;$("meta").textContent="Par Thermolux · "+p.read+" de lecture";
+ $("cover").className="zoom art-cover"+(p.contain?" fit":"");
+ $("cover").innerHTML='<img src="'+p.img+'" alt="'+p.alt+'">';
+ $("body").innerHTML=p.body;
+ var h=$("body").querySelectorAll("h2[id]");
+ $("toclist").innerHTML=[].map.call(h,function(x){return '<li><a href="#'+x.id+'">'+x.textContent+'</a></li>'}).join("");
+ $("toc").hidden=!h.length;
+ $("related").innerHTML=P.filter(function(x){return x.slug!==p.slug}).slice(0,3).map(function(q){q=T(q);return '<article class="post"><a href="article.html?a='+q.slug+'">'+img(q)+'<span class="tag">'+q.cat+' · '+q.read+'</span><h3>'+q.title+'</h3><p>'+q.excerpt+'</p><span class="link">Lire</span></a></article>'}).join("");
+})();
+</script>
+
+<div id="site-footer"></div>
+<script src="js/layout.js?v=47"></script>
