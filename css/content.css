@@ -203,3 +203,11 @@ select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='htt
 .pj-ic svg{width:28px;height:28px}
 .pj-cta h3{margin:0 0 10px;font-size:26px;color:#fff;letter-spacing:-.02em}
 .pj-cta p{margin:0 0 24px;color:#C4D2E4;font-size:15px}
+/* projects: bigger photos (between the old and the narrow layout) */
+.proj{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px}
+.pj .zoom{aspect-ratio:4/3}
+.pj-cta{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 28px;padding:28px 32px}
+.pj-cta .pj-ic{margin:0}
+.pj-cta h3{margin:0;font-size:24px}
+.pj-cta p{margin:0;flex:1 1 280px}
+@media(max-width:700px){.pj-cta{flex-direction:column;align-items:flex-start;gap:10px}.pj-cta p{margin:0 0 14px}}
