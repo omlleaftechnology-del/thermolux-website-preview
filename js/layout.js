@@ -36,7 +36,7 @@ var f=L.f,fp=['catalogue.html','catalogue.html','catalogue.html','catalogue.html
 function ul(t,h){return '<ul>'+t.map(function(x,i){return '<li><a href="'+h[i]+'">'+x+'</a></li>'}).join('')+'</ul>'}
 var F='<footer><div class="wrap"><div class="fg"><div><a class="flogo" href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><p>'+f.blurb+'</p>'+SOC+'</div>'+
  '<div><h4>'+f.c1+'</h4>'+ul(f.p,fp)+'</div><div><h4>'+f.c2+'</h4>'+ul(f.s,fs)+'</div><div><h4>'+f.c3+'</h4>'+ul(f.r,fr)+'</div>'+
- '<div><h4>'+f.c4+'</h4><ul><li><a href="tel:4385091823">438-509-1823</a></li><li><a href="mailto:info@thermolux.ca">info@thermolux.ca</a></li><li>'+f.area+'</li></ul></div></div>'+
+ '<div><h4>'+f.c4+'</h4><ul><li><a href="tel:4385091823">438-509-1823</a></li><li><a href="mailto:service@thermolux.ca">service@thermolux.ca</a></li><li>'+f.area+'</li></ul></div></div>'+
  '<div class="fb"><span>'+f.rights+' · RBQ 5812-9388-01</span><span>'+f.legal+'</span></div></div></footer>';
 document.addEventListener('DOMContentLoaded',function(){
  var h=document.getElementById('site-header'),ft=document.getElementById('site-footer');
