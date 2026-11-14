@@ -356,3 +356,10 @@ body.menu-open{overflow:hidden}
 .duo .cats+.gh{margin-top:36px}
 .duo .cat.svc .zoom img{object-fit:cover;padding:0;mix-blend-mode:normal}
 .duo .cats{margin-bottom:0}
+
+.duo .grid{gap:clamp(40px,7vw,104px)}
+.duo .cats{gap:28px}
+.duo .cats+.gh{margin-top:64px}
+.duo .gh{margin-bottom:22px}
+.duo{padding:clamp(64px,8vw,104px) 0}
+@media(max-width:900px){.duo .cats+.gh{margin-top:44px}.duo .cats{gap:20px}}
