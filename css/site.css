@@ -378,3 +378,12 @@ body.menu-open{overflow:hidden}
 .rebate.slim p{margin-top:4px;font-size:15px}
 @media(max-width:900px){.rebate.slim .wrap{padding-top:28px;padding-bottom:28px;gap:16px}}
 .region+.models{background:#fff}
+/* subsidy strip: bigger, green like the LogisVert blocks */
+.rebate.slim{background:#EEF7F1;border-top:1px solid #CFE5D8;border-bottom:1px solid #CFE5D8}
+.rebate.slim .wrap{border:0;padding-top:52px;padding-bottom:52px;gap:40px}
+.rebate.slim img{height:96px;border-radius:12px;background:#fff;padding:6px}
+.rebate.slim h2{font-size:clamp(26px,3vw,40px)!important;color:var(--ink)}
+.rebate.slim p{font-size:18px;margin-top:8px;color:#3F5A4A}
+.rebate.slim .btn{background:#17703E;border-color:#17703E;color:#fff;height:56px;padding:0 32px;font-size:16px}
+.rebate.slim .btn:hover{background:#115A31;border-color:#115A31}
+@media(max-width:900px){.rebate.slim .wrap{padding-top:40px;padding-bottom:40px;gap:20px}.rebate.slim img{height:72px}.rebate.slim .btn{width:100%}}
