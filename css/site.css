@@ -345,3 +345,11 @@ body.menu-open{overflow:hidden}
 .qcard .f{gap:16px}
 @media(max-width:900px){.duo .grid{grid-template-columns:1fr}}
 .duo .cat .zoom{aspect-ratio:3/2}.duo .cat .zoom img{padding:8%}
+
+/* form card: white, soft shadow, blue top edge — stands out gently from the paper-tinted page */
+.duo{background:linear-gradient(180deg,var(--paper) 0,#fff 100%)}
+.qcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);box-shadow:0 18px 44px -18px rgba(10,31,61,.22);position:sticky;top:96px}
+.qcard input,.qcard select,.qcard textarea{background:var(--paper)!important;border:1px solid transparent!important;border-radius:10px!important;transition:border-color .15s,background .15s}
+.qcard input:focus,.qcard select:focus,.qcard textarea:focus{background:#fff!important;border-color:var(--blue)!important;outline:0;box-shadow:0 0 0 3px rgba(21,101,168,.14)}
+.qcard .btn{border-radius:10px}
+@media(max-width:900px){.qcard{position:static}}
