@@ -485,3 +485,6 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .stepsx .step p{max-width:none}
 @media(min-width:901px){.stepsx .step:not(:last-child):after{content:"";position:absolute;right:-25px;top:62px;width:26px;height:2px;background:repeating-linear-gradient(90deg,#9CB8D6 0 4px,transparent 4px 8px)}}
 @media(max-width:900px){.stepsx{gap:16px}}
+
+.stepsx~.sfoot,.sfoot{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px)}
+@media(max-width:520px){.sfoot .btn{width:100%}}
