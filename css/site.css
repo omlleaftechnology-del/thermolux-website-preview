@@ -321,14 +321,6 @@ body.menu-open{overflow:hidden}
  .phead.img .crumbs{margin-bottom:20px}
 }
 
-/* about: text on navy, full van panorama below in its own proportion (no crop) */
-@media(min-width:701px){
- .phead.img.about-head{display:flex!important;flex-direction:column-reverse;min-height:0!important;padding:clamp(64px,7vw,96px) 0 clamp(40px,5vw,64px)!important;background:var(--navy)}
- .phead.img.about-head:before{display:none!important}
- .phead.img.about-head>.wrap{max-width:var(--max,1232px);width:100%;margin:0 auto;padding:0 var(--gut,24px)!important}
- .phead.img.about-head>.wrap>*{max-width:640px!important}
- .phead.img.about-head>img{position:static!important;display:block;width:calc(100% - 2*var(--gut,24px))!important;max-width:1232px;height:auto!important;aspect-ratio:8/3!important;object-fit:cover;object-position:50% 50%!important;margin:44px auto 0;border-radius:18px;-webkit-mask-image:none!important;mask-image:none!important}
-}
 
 @media(max-width:700px){.phead.img.about-head>img{object-position:64% 50%!important}}
 
