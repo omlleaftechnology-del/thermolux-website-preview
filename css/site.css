@@ -404,3 +404,7 @@ body.menu-open{overflow:hidden}
 .aidhome .ph{border-radius:22px;overflow:hidden;background:#fff;border:1px solid #CFE5D8;box-shadow:0 24px 60px -30px rgba(10,31,61,.3)}
 .aidhome .ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
 @media(max-width:900px){.aidhome .grid{grid-template-columns:1fr}.aidhome .acts .btn{width:100%}}
+
+/* hero photo always covers the whole frame, at any screen shape */
+.frame{background-size:cover!important;background-repeat:no-repeat!important;background-position:80% 30%!important}
+@media(max-width:900px){.frame{background-position:72% 30%!important}}
