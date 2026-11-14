@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 512" role="img" aria-hidden="true">
+ <g transform="translate(0,34)">
+ <!-- art only: no text, so it works in every language; the words are live HTML over it -->
+ <path d="M10 392 C70 300 190 262 300 330 L300 392 Z" fill="#7BA7F0"/>
+ <ellipse cx="528" cy="168" rx="34" ry="12" fill="#E8EDF8"/><ellipse cx="548" cy="160" rx="22" ry="12" fill="#E8EDF8"/><ellipse cx="506" cy="164" rx="20" ry="9" fill="#EEF2FA"/>
+ <!-- tree + bush -->
+ <path d="M296 362 C282 312 292 258 330 236 C366 252 372 318 360 362 Z" fill="#2F8A68"/>
+ <path d="M296 362 C284 330 292 290 318 262 C312 300 316 336 326 362 Z" fill="#3FA07B" opacity=".6"/>
+ <!-- tank + can -->
+ <rect x="268" y="326" width="62" height="34" fill="#E6EAF6"/><ellipse cx="299" cy="326" rx="31" ry="8" fill="#F3F5FB"/>
+ <circle cx="304" cy="318" r="12" fill="#F6A23B"/><path d="M292 318 A12 12 0 0 1 316 318 Z" fill="#FFD27A"/>
+ <rect x="261" y="338" width="16" height="22" rx="2" fill="#3874E0"/><rect x="261" y="334" width="16" height="6" rx="2" fill="#E8ECF8"/>
+ <!-- house -->
+ <polygon points="318,362 318,252 384,196 450,252 450,362" fill="#14168E"/>
+ <rect x="450" y="252" width="140" height="110" fill="#3874E0"/>
+ <polygon points="384,196 524,196 590,252 450,252" fill="#E1E7F6"/>
+ <g fill="#2F5FD0"><polygon points="418,204 458,204 478,226 438,226"/><polygon points="466,204 506,204 526,226 486,226"/><polygon points="438,230 478,230 498,248 458,248"/><polygon points="486,230 526,230 546,248 506,248"/></g>
+ <rect x="344" y="286" width="17" height="17" fill="#F6B93B"/>
+ <rect x="500" y="282" width="17" height="17" fill="#2A56C4"/><rect x="544" y="282" width="17" height="17" fill="#2A56C4"/>
+ <ellipse cx="354" cy="362" rx="40" ry="13" fill="#4DAE87"/><ellipse cx="354" cy="366" rx="40" ry="6" fill="#3E9B77"/>
+ <!-- heat pump -->
+ <rect x="590" y="322" width="62" height="48" rx="5" fill="#F1F3FA" stroke="#D5DAEA"/>
+ <circle cx="629" cy="347" r="19" fill="#1B2A78"/><circle cx="629" cy="347" r="3" fill="#F6A23B"/>
+ <g fill="#F6A23B"><ellipse cx="629" cy="335" rx="5" ry="10"/><ellipse cx="640" cy="352" rx="10" ry="5" transform="rotate(30 640 352)"/><ellipse cx="618" cy="352" rx="10" ry="5" transform="rotate(-30 618 352)"/></g>
+ <rect x="590" y="370" width="62" height="3" fill="#F2B84A"/>
+ <!-- woman -->
+ <rect x="168" y="238" width="31" height="146" rx="6" fill="#3874E0"/><rect x="201" y="238" width="31" height="146" rx="6" fill="#3874E0"/>
+ <rect x="166" y="372" width="35" height="13" fill="#A9ADB5"/><rect x="199" y="372" width="35" height="13" fill="#A9ADB5"/>
+ <path d="M168 385 H199 L201 410 L226 424 Q228 430 218 430 H172 Q166 428 168 418 Z" fill="#3A6FDC"/>
+ <path d="M201 385 H232 L234 410 L258 424 Q260 430 250 430 H204 Q198 428 200 418 Z" fill="#3A6FDC"/>
+ <path d="M164 118 L170 244" stroke="#F7CFAF" stroke-width="14" stroke-linecap="round"/>
+ <path d="M246 116 L270 152 L304 102" fill="none" stroke="#F7CFAF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="307" cy="97" r="9" fill="#F7CFAF"/><circle cx="321" cy="90" r="4" fill="#E9EEFA"/><circle cx="328" cy="95" r="3" fill="#E9EEFA"/>
+ <path d="M156 112 Q156 104 168 104 H246 Q260 104 262 114 L256 138 L250 244 H168 L164 138 Z" fill="#4DA88F"/>
+ <circle cx="162" cy="126" r="12" fill="#4DA88F"/><circle cx="254" cy="124" r="13" fill="#4DA88F"/>
+ <rect x="197" y="94" width="15" height="14" fill="#F7CFAF"/>
+ <ellipse cx="203" cy="58" rx="42" ry="46" fill="#1E2FC0"/><rect x="161" y="56" width="17" height="56" rx="8" fill="#1E2FC0"/><rect x="229" y="56" width="17" height="48" rx="8" fill="#1E2FC0"/>
+ <ellipse cx="205" cy="66" rx="30" ry="34" fill="#F7CFAF"/>
+ <path d="M172 62 C176 36 234 34 238 62 C222 48 190 50 172 62 Z" fill="#1E2FC0"/>
+ <g fill="none" stroke="#E88A2A" stroke-width="3"><circle cx="193" cy="68" r="9"/><circle cx="219" cy="68" r="9"/><path d="M202 67 H210"/></g>
+ <g fill="none" stroke="#6B3A1E" stroke-width="2" stroke-linecap="round"><path d="M188 68 q5 -4 10 0"/><path d="M214 68 q5 -4 10 0"/><path d="M194 86 q11 9 22 0"/></g>
+</g>
+</svg>

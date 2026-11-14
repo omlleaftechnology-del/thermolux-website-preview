@@ -415,3 +415,17 @@ body.menu-open{overflow:hidden}
 .totop:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 .totop:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:700px){.totop{right:14px;bottom:14px;width:44px;height:44px}}
+
+/* LogisVert illustration: art is an SVG, the words are live text (translate with the page) */
+.aidhome .ph.ill{position:relative;container-type:inline-size;aspect-ratio:660/512;padding:0}
+.ill .art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+.ill p{position:absolute;margin:0;line-height:1;font-family:Manrope,Inter,sans-serif;font-weight:800;white-space:nowrap}
+.ill .t1{left:37%;top:4%;font-size:3.6cqw;color:#1B1F8F}
+.ill .t2{left:36.5%;top:8.6%;font-size:7cqw;color:#3E9B77;letter-spacing:-.02em}
+.ill .t3{left:52%;top:17.5%;font-size:4.2cqw;color:#1B1F8F}
+.ill .t4{left:47.5%;top:23.5%;font-size:10cqw;color:#2F6FE0;letter-spacing:-.03em}
+.ill .t5{left:40%;top:34%;font-size:3.7cqw;color:#1B1F8F}
+.ill .t6{right:7%;top:6%;font-size:3.2cqw;color:#E88A2A;letter-spacing:-.01em}
+.aidhome .ph.ill .lg{position:absolute;right:5%;bottom:4%;left:auto;top:auto;width:46%;height:auto;aspect-ratio:auto;object-fit:contain}
+.aidhome .ph.ill .art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+.ill .t5{top:37%!important}
