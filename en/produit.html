@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=61">
-<link rel="stylesheet" href="../css/catalogue.css?v=54">
+<link rel="stylesheet" href="../css/catalogue.css?v=71">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -41,7 +41,7 @@
 
 <section class="blk"><div class="wrap"><div class="det"><h2>Technical specifications</h2><table class="spec"><tbody id="spec"></tbody></table></div></div></section>
 
-<section class="aidsec" id="aidsec" hidden><div class="wrap"><div class="head"><div><p class="eyebrow">Financial aid</p><h2>LogisVert rebate by capacity</h2></div></div><div class="aidtabs" id="aidtabs" role="tablist"><button type="button" role="tab" data-s="existing" aria-selected="true">Existing home</button><button type="button" role="tab" data-s="newhome" aria-selected="false">New house</button><button type="button" role="tab" data-s="plex" aria-selected="false">Multiplex or building</button></div><table class="aidtab"><thead id="aidhead"></thead><tbody id="aidrows"></tbody></table><p class="aidnote2" id="aidnote2"></p><p class="aidfoot">Based on the Hydro-Québec list of November 12, 2026. Eligibility and the final amount are confirmed by Hydro-Québec.<a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Check on Hydro-Québec →</a></p></div></section>
+<section class="aidsec" id="aidsec" hidden><div class="wrap"><div class="head"><div><p class="eyebrow">Financial aid</p><h2>LogisVert rebate by capacity</h2></div></div><p class="aidask">Choose the capacity</p><div class="aidtabs" id="aidtabs" role="tablist"></div><div class="aidres"><span>LogisVert rebate</span><b id="aidval"></b></div><p class="aidnote2">The same amount applies to new and existing homes.</p><p class="aidfoot">Based on the Hydro-Québec list of November 12, 2026. Eligibility and the final amount are confirmed by Hydro-Québec.<a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Check on Hydro-Québec →</a></p></div></section>
 
 <section class="blk blk-end" id="about"><div class="wrap"><div class="det"><h2>Description</h2><div><p id="intro"></p><p class="dl" id="dl" hidden><a class="link" target="_blank" rel="noopener" id="brochure" href="#">Manufacturer brochure (PDF)</a></p></div></div></div></section>
 
@@ -113,16 +113,14 @@
  var slug=new URLSearchParams(location.search).get("p"),p=P.filter(function(x){return x.slug==slug})[0]||P[0],d=A.data[p.slug];if(!d)return;
  var T={"cap": "Capacity (BTU)", "val": "Rebate", "eff": "Efficiency option", "opt": "Optimized option", "no": "Not on the list", "combo": "Depends on the combination", "notes": {"existing": "Owner of an existing home. Housing offices (social housing) receive the same amounts.", "newhome": "Contractor, new construction (house).", "plex": "Contractor, new construction (multiplex or building)."}},n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
  var $=function(i){return document.getElementById(i)};
- function cell(v){return v?"<b>"+A.fmt(v)+"</b>":'<span class="no">'+(d.combo?T.combo:T.no)+"</span>"}
- function show(s){
-  var g=s=="existing"?d.grants:d[s],plex=s=="plex";
-  $("aidhead").innerHTML="<tr><th>"+T.cap+"</th>"+(plex?"<th>"+T.eff+"</th><th>"+T.opt+"</th>":"<th>"+T.val+"</th>")+"</tr>";
-  $("aidrows").innerHTML=p.btu.map(function(c){var v=g[c];
-   return "<tr><td>"+n(c)+" BTU</td>"+(plex?"<td>"+cell(v&&v[0])+"</td><td>"+cell(v&&v[1])+"</td>":"<td>"+cell(v)+"</td>")+"</tr>"}).join("");
-  $("aidnote2").textContent=T.notes[s];
-  [].forEach.call($("aidtabs").children,function(b){b.setAttribute("aria-selected",b.dataset.s==s)})}
- $("aidtabs").addEventListener("click",function(e){var b=e.target.closest("button");if(b)show(b.dataset.s)});
- $("aidlink").href=A.url[L]||A.url.fr;show("existing");$("aidsec").hidden=false;
+ var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>LogisVert rebate</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
+ $("capl").innerHTML=p.btu.map(function(c){return '<li><button type="button" data-c="'+c+'">'+n(c)+'</button></li>'}).join("");
+ function show(c){var v=d.grants[c]||d.newhome[c],s=v?A.fmt(v):(d.combo?T.combo:T.no);
+  $("aidval").textContent=s;$("topv").textContent=s;
+  [].forEach.call(document.querySelectorAll("#aidtabs button,#capl button"),function(b){b.setAttribute("aria-selected",b.dataset.c==c);b.setAttribute("aria-pressed",b.dataset.c==c)})}
+ $("aidtabs").innerHTML=p.btu.map(function(c){return '<button type="button" role="tab" data-c="'+c+'">'+n(c)+' BTU</button>'}).join("");
+ document.addEventListener("click",function(e){var b=e.target.closest("#aidtabs button,#capl button");if(b)show(b.dataset.c)});
+ $("aidlink").href=A.url[L]||A.url.fr;show(p.btu.filter(function(c){return d.grants[c]||d.newhome[c]})[0]||p.btu[0]);$("aidsec").hidden=false;
 })();
 </script>
 </body>

@@ -256,3 +256,14 @@
 .spec th{width:32%;text-align:left}
 .spec td{width:68%}
 .det p{max-width:78ch}
+
+.aidask{margin:0 0 14px;font-size:15px;color:var(--muted)}
+.aidres{display:flex;align-items:baseline;justify-content:space-between;gap:16px;max-width:560px;margin:8px 0 0;padding:22px 26px;border-radius:16px;background:#fff;border:1px solid var(--aid-line)}
+.aidres span{font-weight:700;color:var(--aid);font-size:16px}
+.aidres b{font-size:clamp(32px,4vw,44px);letter-spacing:-.02em;color:var(--aid)}
+
+#capl button{height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font:500 14px Inter,sans-serif;cursor:pointer;transition:background .18s,border-color .18s}
+#capl button:hover{border-color:var(--aid)}
+#capl button[aria-selected=true]{background:var(--aid);border-color:var(--aid);color:#fff;font-weight:600}
+.caps+.aid{margin:-8px 0 22px!important}
+#capl li{padding:0!important;border:0!important;height:auto!important}
