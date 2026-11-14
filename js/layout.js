@@ -57,3 +57,13 @@ if('scrollRestoration' in history)history.scrollRestoration='manual';
 var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];
 if(n&&n.type==='reload'){clean();scrollTo(0,0);addEventListener('load',function(){scrollTo(0,0)})}
 })();
+
+/* back-to-top arrow */
+(function(){var b=document.createElement("button");b.type="button";b.className="totop";
+ b.setAttribute("aria-label",(document.documentElement.lang||"fr")=="en"?"Back to top":"Retour en haut");
+ b.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+ document.body.appendChild(b);
+ function t(){b.classList.toggle("show",window.scrollY>600)}
+ window.addEventListener("scroll",t,{passive:true});t();
+ b.addEventListener("click",function(){window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})});
+})();
