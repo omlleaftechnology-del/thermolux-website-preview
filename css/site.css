@@ -353,3 +353,8 @@ body.menu-open{overflow:hidden}
 .qcard input:focus,.qcard select:focus,.qcard textarea:focus{background:#fff!important;border-color:var(--blue)!important;outline:0;box-shadow:0 0 0 3px rgba(21,101,168,.14)}
 .qcard .btn{border-radius:10px}
 @media(max-width:900px){.qcard{position:static}}
+
+.qcard{border-top:1px solid var(--line)!important;position:sticky}
+.qcard:before{content:"";position:absolute;left:32px;right:32px;top:-1px;height:4px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--blue),#4aa3e8 55%,var(--orange))}
+@media(max-width:900px){.qcard{position:relative}}
+.qcard{border-radius:22px!important}
