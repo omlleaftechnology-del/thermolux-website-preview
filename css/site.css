@@ -469,3 +469,19 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 /* featured models photo: never cropped */
 .models .ph{aspect-ratio:auto;display:block;overflow:visible;background:transparent}
 .models .ph img{display:block;width:100%;height:auto;max-height:440px;padding:0;object-fit:contain;mix-blend-mode:multiply}
+
+/* "which system" steps: cards with icons and a connecting line */
+.stepsx{gap:24px;position:relative}
+.stepsx .step{position:relative;margin:0;padding:32px 28px 30px;border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:18px;background:#fff;box-shadow:0 14px 34px -22px rgba(10,31,61,.25);transition:transform .25s,box-shadow .25s}
+.stepsx .step:hover{transform:translateY(-4px);box-shadow:0 22px 44px -22px rgba(10,31,61,.35)}
+.stepsx .step:nth-child(2){border-top-color:#4aa3e8}
+.stepsx .step:nth-child(3){border-top-color:#17703E}
+.stepsx .si{display:grid;place-items:center;width:60px;height:60px;border-radius:16px;background:#EAF3FB;color:var(--blue);margin-bottom:22px}
+.stepsx .step:nth-child(2) .si{background:#E4F1FC;color:#2B84CC}
+.stepsx .step:nth-child(3) .si{background:#EAF6EE;color:#17703E}
+.stepsx .si svg{width:30px;height:30px}
+.stepsx .step i{position:absolute;right:24px;top:22px;margin:0;font:800 44px Manrope,Inter,sans-serif;color:#DCE8F5;letter-spacing:-.03em}
+.stepsx .step h3{font-size:22px;margin-bottom:10px}
+.stepsx .step p{max-width:none}
+@media(min-width:901px){.stepsx .step:not(:last-child):after{content:"";position:absolute;right:-25px;top:62px;width:26px;height:2px;background:repeating-linear-gradient(90deg,#9CB8D6 0 4px,transparent 4px 8px)}}
+@media(max-width:900px){.stepsx{gap:16px}}
