@@ -387,3 +387,20 @@ body.menu-open{overflow:hidden}
 .rebate.slim .btn{background:#17703E;border-color:#17703E;color:#fff;height:56px;padding:0 32px;font-size:16px}
 .rebate.slim .btn:hover{background:#115A31;border-color:#115A31}
 @media(max-width:900px){.rebate.slim .wrap{padding-top:40px;padding-bottom:40px;gap:20px}.rebate.slim img{height:72px}.rebate.slim .btn{width:100%}}
+
+/* home: full subsidy section (swap img/LogisVert.png in .aidhome .ph for the new photo) */
+.aidhome{background:#EEF7F1;border-top:1px solid #CFE5D8;border-bottom:1px solid #CFE5D8;padding:clamp(56px,7vw,96px) 0}
+.aidhome .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.aidhome .eyebrow{color:#17703E}
+.aidhome h2{font-size:clamp(28px,3.2vw,44px);margin:8px 0 16px;max-width:none}
+.aidhome h2 em{color:#17703E;font-style:normal}
+.aidhome .lead{font-size:18px;color:#3F5A4A;margin:0 0 22px;max-width:46ch}
+.aidhome ul{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:12px}
+.aidhome li{position:relative;padding-left:32px;font-size:17px;font-weight:500}
+.aidhome li:before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:#17703E}
+.aidhome li:after{content:"";position:absolute;left:7px;top:8px;width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+.aidhome .acts{display:flex;flex-wrap:wrap;gap:12px}
+.aidhome .btn-p{background:#17703E;border-color:#17703E;color:#fff}.aidhome .btn-p:hover{background:#115A31;border-color:#115A31}
+.aidhome .ph{border-radius:22px;overflow:hidden;background:#fff;border:1px solid #CFE5D8;box-shadow:0 24px 60px -30px rgba(10,31,61,.3)}
+.aidhome .ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+@media(max-width:900px){.aidhome .grid{grid-template-columns:1fr}.aidhome .acts .btn{width:100%}}
