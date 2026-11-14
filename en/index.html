@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="../img/hero.jpg">
-<link rel="stylesheet" href="../css/site.css?v=84">
+<link rel="stylesheet" href="../css/site.css?v=86">
 <meta name="description" content="Air conditioning and heating: heat pump installation, replacement and maintenance in Montréal, Laval and Longueuil by RBQ-certified technicians.">
 <link rel="alternate" hreflang="fr" href="../index.html"><link rel="alternate" hreflang="en" href="index.html">
 </head>
@@ -64,9 +64,9 @@
   <div class="acts"><a class="btn btn-p" href="catalogue.html">See the rebates</a><a class="btn btn-o" href="#soumission">Get a quote</a></div>
  </div>
  <div class="ph viz"><p class="vz-pill">LogisVert rebate · Hydro-Québec</p>
-  <p class="vz-up">up to</p><p class="vz-big" id="vzmax">5&nbsp;400&nbsp;$</p><p class="vz-sub">Efficient heat pump, depending on capacity</p>
+  <p class="vz-up">up to</p><p class="vz-big" id="vzmax">$6,720</p><p class="vz-sub">Efficient heat pump, depending on capacity</p>
   <div class="vz-bars" id="vzbars"></div>
-  <p class="vz-cap">Example rebate by capacity · Canair 4C28 · owner, existing home</p>
+  <p class="vz-cap">Examples by capacity · owner, existing home</p>
  </div>
 </div></div></section>
 
@@ -124,11 +124,10 @@
 <script src="../js/layout.js?v=80"></script>
 <script src="../js/subsidies.js"></script>
 <script>
-(function(){window.LANG="en";var A=window.AID,d=A&&A.data["canair-4c28"];if(!d)return;
- var mx=0;Object.keys(A.data).forEach(function(k){Object.keys(A.data[k].grants).forEach(function(c){mx=Math.max(mx,A.data[k].grants[c])})});
- document.getElementById("vzmax").textContent=A.fmt(mx);
- var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,window.LANG=="en"?",":"\u00a0")};
- var h=Object.keys(d.grants).sort(function(a,b){return a-b}).map(function(c){var v=d.grants[c];return '<div class="vz-row"><span>'+n(c)+' BTU</span><i><b style="--w:'+Math.round(v/mx*100)+'%"></b></i><em>'+A.fmt(v)+'</em></div>'}).join("");
+(function(){window.LANG="en";var A=window.AID;if(!A)return;
+ var MAX=6720,n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,window.LANG=="en"?",":"\u00a0")};
+ var rows=[["kinghome-polaris-r32","12000","Wall"],["kinghome-polaris-r32","18000","Wall"],["kinghome-polaris-r32","24000","Wall"],["elios-central-r454b","36000","Central"],["elios-central-r454b","48000","Central"],["elios-central-r454b","60000","Central"]];
+ var h=rows.map(function(r){var d=A.data[r[0]],v=d&&d.grants[r[2-1]];if(!v)return"";return '<div class="vz-row"><span>'+n(r[1])+' BTU<small>'+r[2]+'</small></span><i><b style="--w:'+Math.round(v/MAX*100)+'%"></b></i><em>'+A.fmt(v)+'</em></div>'}).join("");
  document.getElementById("vzbars").innerHTML=h;
  requestAnimationFrame(function(){document.getElementById("vzbars").classList.add("on")});
 })();
