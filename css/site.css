@@ -363,3 +363,11 @@ body.menu-open{overflow:hidden}
 .duo .gh{margin-bottom:22px}
 .duo{padding:clamp(64px,8vw,104px) 0}
 @media(max-width:900px){.duo .cats+.gh{margin-top:44px}.duo .cats{gap:20px}}
+
+/* form card: no sticky motion; same height as products+services column */
+.duo .grid{align-items:stretch}
+.qcard,.qcard{position:relative!important;top:auto!important;display:flex;flex-direction:column}
+.qcard form{flex:1;display:flex;flex-direction:column}
+.qcard .f{flex:1;grid-template-rows:auto auto 1fr auto}
+.qcard .f .full{display:flex;flex-direction:column}
+.qcard .f .full textarea{flex:1;min-height:120px}
