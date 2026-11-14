@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=61">
-<link rel="stylesheet" href="../css/catalogue.css?v=71">
+<link rel="stylesheet" href="../css/catalogue.css?v=73">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -116,7 +116,7 @@
  var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>LogisVert rebate</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
  $("capl").innerHTML=p.btu.map(function(c){return '<li><button type="button" data-c="'+c+'">'+n(c)+'</button></li>'}).join("");
  function show(c){var v=d.grants[c]||d.newhome[c],s=v?A.fmt(v):(d.combo?T.combo:T.no);
-  $("aidval").textContent=s;$("topv").textContent=s;
+  $("aidval").textContent=s;$("aidval").className=v?"":"na";$("topv").textContent=s;
   [].forEach.call(document.querySelectorAll("#aidtabs button,#capl button"),function(b){b.setAttribute("aria-selected",b.dataset.c==c);b.setAttribute("aria-pressed",b.dataset.c==c)})}
  $("aidtabs").innerHTML=p.btu.map(function(c){return '<button type="button" role="tab" data-c="'+c+'">'+n(c)+' BTU</button>'}).join("");
  document.addEventListener("click",function(e){var b=e.target.closest("#aidtabs button,#capl button");if(b)show(b.dataset.c)});

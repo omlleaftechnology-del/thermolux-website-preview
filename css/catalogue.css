@@ -267,3 +267,9 @@
 #capl button[aria-selected=true]{background:var(--aid);border-color:var(--aid);color:#fff;font-weight:600}
 .caps+.aid{margin:-8px 0 22px!important}
 #capl li{padding:0!important;border:0!important;height:auto!important}
+
+.aidres{align-items:center;min-height:92px}
+.aidres span{white-space:nowrap}
+.aidres b{white-space:nowrap}
+.aidres b.na{font-size:clamp(16px,1.6vw,20px);font-weight:600;letter-spacing:0;color:var(--muted)}
+@media(max-width:520px){.aidres{padding:18px 16px;gap:10px;min-height:80px}.aidres span{font-size:14px}.aidres b.na{font-size:14px}}
