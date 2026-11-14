@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=94">
-<link rel="stylesheet" href="css/content.css?v=54">
+<link rel="stylesheet" href="css/content.css?v=60">
 </head>
 <body>
 
@@ -27,6 +27,7 @@
 
 <section class="sec"><div class="wrap">
  <div class="fgroups" id="fg"></div>
+ <p class="pcount" id="cnt"></p>
  <div class="proj" id="proj"></div>
  <p class="empty" id="empty" hidden>Aucun projet publié pour cette sélection pour le moment.</p>
 </div></section>
@@ -46,7 +47,7 @@ var PROJETS=[
  {city:"Laval",place:"Laval",type:"Climatisation et chauffage",model:"Gree Vita",img:"img/realisations/laval-gree-vita.jpg",alt:"Installation d’un système Gree Vita à Laval : unité extérieure et unité murale"}
 ];
 (function(){
- var fg=document.getElementById("fg"),pr=document.getElementById("proj"),em=document.getElementById("empty"),sel={city:"Tous",type:"Tous"};
+ var cnt=document.getElementById("cnt"),fg=document.getElementById("fg"),pr=document.getElementById("proj"),em=document.getElementById("empty"),sel={city:"Tous",type:"Tous"};
  var types=PROJETS.map(function(p){return p.type}).filter(function(t,i,a){return a.indexOf(t)===i});
  var groups=[["city","Ville",["Tous","Montréal","Laval","Longueuil"]]];
  if(types.length>1)groups.push(["type","Type",["Tous"].concat(types)]);
@@ -58,7 +59,8 @@ var PROJETS=[
   d.appendChild(c);fg.appendChild(d)});
  function render(){
   var l=PROJETS.filter(function(p){return(sel.city==="Tous"||p.city===sel.city)&&(sel.type==="Tous"||p.type===sel.type)});
-  pr.innerHTML=l.map(function(p){return '<article class="pj"><div class="zoom"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy" style="object-position:center 40%"></div><h3>'+p.place+'</h3><p>'+p.model+'</p></article>'}).join("");
+  pr.innerHTML=l.map(function(p){return '<article class="pj"><div class="zoom"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy" style="object-position:center 40%"><span class="pj-city"><i></i>'+p.city+'</span></div><div class="pj-b"><h3>'+p.place+'</h3><p>'+p.model+'</p><span class="pj-t">'+p.type+'</span></div></article>'}).join("")+'<a class="pj pj-cta" href="contact.html#soumission"><span class="pj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><h3>Votre projet ici</h3><p>Installation de climatisation ou de chauffage : demandez votre soumission.</p><span class="btn btn-p">Demander une soumission</span></a>';
+  cnt.textContent=l.length+" projets";
   em.hidden=l.length>0;
  }
  render();
