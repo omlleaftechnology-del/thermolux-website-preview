@@ -466,3 +466,6 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .models .grid{gap:clamp(32px,5vw,64px)}
 .models .ph{aspect-ratio:4/3}
 @media(max-width:900px){section{padding:48px 0}.head{margin-bottom:24px}}
+/* featured models photo: never cropped */
+.models .ph{aspect-ratio:auto;display:block;overflow:visible;background:transparent}
+.models .ph img{display:block;width:100%;height:auto;max-height:440px;padding:0;object-fit:contain;mix-blend-mode:multiply}
