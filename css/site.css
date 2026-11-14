@@ -488,3 +488,4 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 
 .stepsx~.sfoot,.sfoot{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px)}
 @media(max-width:520px){.sfoot .btn{width:100%}}
+.stepsx~.sfoot{justify-content:center}
