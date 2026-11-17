@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=94">
-<link rel="stylesheet" href="css/catalogue.css?v=73">
+<link rel="stylesheet" href="css/catalogue.css?v=74">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -62,12 +62,13 @@
 <div id="site-footer"></div>
 <script src="js/layout.js?v=96"></script>
 <script src="js/subsidies.js?v=54"></script>
+<script src="js/variants.js?v=1"></script>
 <script src="js/products.js?v=54"></script>
 <script>
 (function(){
  var L=window.LANG;
- var I={fr:{mural:"Système mural",multizone:"Système multizone",central:"Système central",series:"Série ",view:"Voir les détails",cold:"Temp. min.",noise:"Niveau sonore",cap:"Capacités disponibles",rCap:"Capacités disponibles",rEff:"SEER2 / HSPF2",rMin:"Température minimale de chauffage",rClim:"Plage en climatisation",rNoise:"Niveau sonore (intérieur / extérieur)",rRef:"Réfrigérant",rVolt:"Tension",rWifi:"Connectivité (Wi-Fi)",rCert:"Certification (ENERGY STAR)",rWarr:"Garantie",rAhri:"Numéros AHRI / modèles",ref:"Réfrigérant",wifi:"Connectivité",sep:" ",btu:"BTU",min:"Température minimale de fonctionnement",db:"Niveau sonore (min.)",desc:"Descriptions"},
-        en:{mural:"Wall-mounted system",multizone:"Multi-zone",central:"Central system",series:"Series ",view:"View details",cold:"Min. temp.",noise:"Sound level",cap:"Available capacities",rCap:"Available capacities",rEff:"SEER2 / HSPF2",rMin:"Minimum heating temperature",rClim:"Cooling range",rNoise:"Sound level (indoor / outdoor)",rRef:"Refrigerant",rVolt:"Voltage",rWifi:"Connectivity (Wi-Fi)",rCert:"Certification (ENERGY STAR)",rWarr:"Warranty",rAhri:"AHRI numbers / models",ref:"Refrigerant",wifi:"Connectivity",sep:",",btu:"BTU",min:"Minimum operating temperature",db:"Sound level (min.)"}}[L];
+ var I={fr:{rCombo:"Selon la combinaison d’unités intérieures",rCapSel:"Capacité",rIn:"N° de modèle intérieur",rOut:"N° de modèle extérieur",rAhriN:"N° AHRI",rCool:"Capacité nominale en climatisation",rHeat:"Capacité de chauffage à 17 °F (−8 °C)",rDl:"Documents",rBro:"Brochure du fabricant (PDF)",mural:"Système mural",multizone:"Système multizone",central:"Système central",series:"Série ",view:"Voir les détails",cold:"Temp. min.",noise:"Niveau sonore",cap:"Capacités disponibles",rCap:"Capacités disponibles",rEff:"SEER2 / HSPF2",rMin:"Température minimale de chauffage",rClim:"Plage en climatisation",rNoise:"Niveau sonore (intérieur / extérieur)",rRef:"Réfrigérant",rVolt:"Tension",rWifi:"Connectivité (Wi-Fi)",rCert:"Certification (ENERGY STAR)",rWarr:"Garantie",rAhri:"Numéros AHRI / modèles",ref:"Réfrigérant",wifi:"Connectivité",sep:" ",btu:"BTU",min:"Température minimale de fonctionnement",db:"Niveau sonore (min.)",desc:"Descriptions"},
+        en:{rCapSel:"Capacity",rIn:"Indoor model #",rOut:"Outdoor model #",rAhriN:"AHRI #",rCool:"Rated cooling capacity",rHeat:"Heating capacity at 17 °F (−8 °C)",rDl:"Downloads",rBro:"Manufacturer brochure (PDF)",mural:"Wall-mounted system",multizone:"Multi-zone",central:"Central system",series:"Series ",view:"View details",cold:"Min. temp.",noise:"Sound level",cap:"Available capacities",rCap:"Available capacities",rEff:"SEER2 / HSPF2",rMin:"Minimum heating temperature",rClim:"Cooling range",rNoise:"Sound level (indoor / outdoor)",rRef:"Refrigerant",rVolt:"Voltage",rWifi:"Connectivity (Wi-Fi)",rCert:"Certification (ENERGY STAR)",rWarr:"Warranty",rAhri:"AHRI numbers / models",ref:"Refrigerant",wifi:"Connectivity",sep:",",btu:"BTU",min:"Minimum operating temperature",db:"Sound level (min.)"}}[L];
  var P=window.PRODUCTS,$=function(i){return document.getElementById(i)};
  var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,I.sep)};
  var num=function(v){return L=="fr"?String(v).replace(".",","):String(v)};
@@ -90,10 +91,21 @@
  if(keys.length<3&&p.dB)keys.push([I.noise,num(p.dB)+" dB"]);
  $("keys").innerHTML=keys.slice(0,3).map(function(k){return "<div><dt>"+k[0]+"</dt><dd>"+k[1]+"</dd></div>"}).join("");
  $("capl").innerHTML=p.btu.map(function(b){return "<li>"+n(b)+"</li>"}).join("");$("caps").firstChild.textContent=I.cap+" (BTU)";
- var S=d.spec||{},dash="—";
+ var S=d.spec||{},dash="—",VV=((window.VARIANTS||{})[p.slug])||{};
+ var tr=function(a,b,c){return "<tr"+(c?" class=\""+c+"\"":"")+"><th scope=\"row\">"+esc(a)+"</th><td>"+b+"</td></tr>"};
+ var cv=function(v){return v?esc(v):dash};
+ window.renderSpec=function(c){
+  var v=VV[c]||{};
+  var chips='<div class="speccaps" id="speccaps" role="group">'+p.btu.map(function(b){return '<button type="button" data-c="'+b+'" aria-pressed="'+(b==c)+'">'+n(b)+' BTU</button>'}).join("")+'</div>';
+  var ahri=p.type=="multizone"?I.rCombo:(v.a?esc(v.a):dash);
+  var h=tr(I.rCapSel,chips,"sel")+tr(I.rIn,cv(v.i),"sel")+tr(I.rOut,cv(v.o),"sel")+tr(I.rAhriN,ahri,"sel")+tr(I.rCool,v.c?n(v.c)+" BTU/h":dash,"sel")+tr(I.rHeat,v.h?n(v.h)+" BTU/h":dash,"sel");
+  [[I.rEff,(p.seer2?num(p.seer2):dash)+" / "+(p.hspf2?num(p.hspf2):dash)],[I.rMin,p.tminC?neg(p.tminC)+" °C":dash],[I.rClim,S.clim||dash],[I.rNoise,S.noise||dash],[I.rRef,p.refrigerant||dash],[I.rVolt,S.volt||dash],[I.rWifi,S.wifi||dash],[I.rCert,S.cert||dash],[I.rWarr,S.warr||dash]].forEach(function(r){h+=tr(r[0],esc(r[1]))});
+  if(D.brochure)h+=tr(I.rDl,'<a class="link" href="'+esc(D.brochure)+'" target="_blank" rel="noopener">'+I.rBro+'</a>');
+  $("spec").innerHTML=h;
+ };
  var cap2=p.btu.map(n).join(", ")+" BTU";
- var rows=[[I.rCap,cap2],[I.rEff,(p.seer2?num(p.seer2):dash)+" / "+(p.hspf2?num(p.hspf2):dash)],[I.rMin,p.tminC?neg(p.tminC)+" °C":dash],[I.rClim,S.clim||dash],[I.rNoise,S.noise||dash],[I.rRef,p.refrigerant||dash],[I.rVolt,S.volt||dash],[I.rWifi,S.wifi||dash],[I.rCert,S.cert||dash],[I.rWarr,S.warr||dash],[I.rAhri,null]];
- $("spec").innerHTML=rows.map(function(r){return "<tr><th scope=\"row\">"+esc(r[0])+"</th><td>"+(r[1]===null?esc(S.ahri||dash)+(S.models?'<small>'+(L=="fr"?"Modèles : ":"Models: ")+esc(S.models)+'</small>':""):esc(r[1]))+"</td></tr>"}).join("");
+ window.renderSpec(p.btu[0]);
+ $("spec").addEventListener("click",function(e){var b=e.target.closest("#speccaps button");if(b)(window.showCap||window.renderSpec)(b.dataset.c)});
  $("whyl").innerHTML=(d.why||[]).map(function(w){return "<li><h3>"+esc(w[0]).replace(/ °C/g,"\u00a0°C")+"</h3><p>"+esc(w[1])+"</p></li>"}).join("");
  $("intro").textContent=d.intro||"";
  if(D.brochure){$("brochure").href=D.brochure;$("dl").hidden=false}
@@ -115,9 +127,10 @@
  var $=function(i){return document.getElementById(i)};
  var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>Subvention LogisVert</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
  $("capl").innerHTML=p.btu.map(function(c){return '<li><button type="button" data-c="'+c+'">'+n(c)+'</button></li>'}).join("");
- function show(c){var v=d.grants[c]||d.newhome[c],s=v?A.fmt(v):(d.combo?T.combo:T.no);
+ function show(c){if(window.renderSpec)window.renderSpec(c);var v=d.grants[c]||d.newhome[c],s=v?A.fmt(v):(d.combo?T.combo:T.no);
   $("aidval").textContent=s;$("aidval").className=v?"":"na";$("topv").textContent=s;
   [].forEach.call(document.querySelectorAll("#aidtabs button,#capl button"),function(b){b.setAttribute("aria-selected",b.dataset.c==c);b.setAttribute("aria-pressed",b.dataset.c==c)})}
+ window.showCap=show;
  $("aidtabs").innerHTML=p.btu.map(function(c){return '<button type="button" role="tab" data-c="'+c+'">'+n(c)+' BTU</button>'}).join("");
  document.addEventListener("click",function(e){var b=e.target.closest("#aidtabs button,#capl button");if(b)show(b.dataset.c)});
  $("aidlink").href=A.url[L]||A.url.fr;show(p.btu.filter(function(c){return d.grants[c]||d.newhome[c]})[0]||p.btu[0]);$("aidsec").hidden=false;

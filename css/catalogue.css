@@ -273,3 +273,12 @@
 .aidres b{white-space:nowrap}
 .aidres b.na{font-size:clamp(16px,1.6vw,20px);font-weight:600;letter-spacing:0;color:var(--muted)}
 @media(max-width:520px){.aidres{padding:18px 16px;gap:10px;min-height:80px}.aidres span{font-size:14px}.aidres b.na{font-size:14px}}
+
+/* spec table: capacity-specific rows */
+.spec tr.sel th,.spec tr.sel td{background:#F2F8F4}
+.spec tr.sel:first-child th,.spec tr.sel:first-child td{padding-top:18px}
+.speccaps{display:flex;flex-wrap:wrap;gap:8px}
+.speccaps button{height:38px;padding:0 16px;border-radius:999px;border:1px solid #B7D6C3;background:#fff;color:var(--ink);font:600 14px Inter,sans-serif;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.speccaps button:hover{border-color:#17703E}
+.speccaps button[aria-pressed=true]{background:#17703E;border-color:#17703E;color:#fff}
+.spec td{font-variant-numeric:tabular-nums}
