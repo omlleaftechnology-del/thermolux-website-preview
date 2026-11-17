@@ -282,3 +282,8 @@
 .speccaps button:hover{border-color:#17703E}
 .speccaps button[aria-pressed=true]{background:#17703E;border-color:#17703E;color:#fff}
 .spec td{font-variant-numeric:tabular-nums}
+/* spec table: blue, not green */
+.spec tr.sel th,.spec tr.sel td{background:#EEF4FA}
+.speccaps button{border-color:#B8C9DC}
+.speccaps button:hover{border-color:var(--blue)}
+.speccaps button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
