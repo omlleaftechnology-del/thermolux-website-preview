@@ -9,8 +9,8 @@
 <link rel="alternate" hreflang="en" href="https://thermolux.ca/en/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=111">
-<link rel="stylesheet" href="css/content.css?v=109">
+<link rel="stylesheet" href="css/site.css?v=115">
+<link rel="stylesheet" href="css/content.css?v=115">
 </head>
 <body>
 
@@ -31,18 +31,17 @@
   <p class="fhint">Envoyer le formulaire ne garantit pas un rendez-vous : un conseiller communique avec vous pour évaluer votre demande et planifier la suite.</p>
  </div>
  <div>
-  <form id="soumission" novalidate aria-labelledby="ft">
-   <h2 id="ft" style="font-size:28px;margin-bottom:28px">Soumission gratuite</h2>
-   <div class="f">
-    <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required><div class="err" id="e-nom"></div></div>
-    <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" id="e-tel"></div></div>
-    <div class="full"><label for="mail">Courriel</label><input id="mail" name="mail" type="email" autocomplete="email" required><div class="err" id="e-mail"></div></div>
-    <div class="full"><label for="type">Type de projet</label>
-     <select id="type" name="type" required>
-      <option value="">Sélectionnez dans la liste</option>
-      <option>Système mural</option><option>Système multizone</option><option>Système central</option><option>Échangeur d’air</option><option>Humidificateur</option><option>Fournaise ou chaudière</option><option>Ventilation et conduits</option><option>Réparation, entretien ou diagnostic</option><option>Autre</option>
-     </select><div class="err" id="e-type"></div></div>
-    <div class="full"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Ville, type de logement, besoin particulier…"></textarea></div>
+  <form class="qform" id="soumission" novalidate data-thanks="thanks" aria-labelledby="ft">
+   <h2 id="ft" style="font-size:28px;margin-bottom:28px">Soumission gratuite</h2><div class="f">
+    <div><label for="q-name">Nom complet *</label><input id="q-name" name="name" autocomplete="name" required><div class="err" id="e-name" data-err="name"></div></div>
+    <div><label for="q-phone">Téléphone *</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" id="e-phone" data-err="phone"></div></div>
+    <div><label for="q-email">Courriel *</label><input id="q-email" name="email" type="email" autocomplete="email" required><div class="err" id="e-email" data-err="email"></div></div>
+    <div><label for="q-type">Type de projet *</label><select id="q-type" name="type" required><option value="">Choisir…</option><option>Nouvelle installation</option><option>Remplacement d’un système existant</option><option>Réparation ou diagnostic</option><option>Entretien</option><option>Ventilation</option><option>Autre</option></select><div class="err" id="e-type" data-err="type"></div></div>
+    <div class="full"><label for="q-city">Ville ou code postal</label><input id="q-city" name="city" autocomplete="postal-code" placeholder="Montréal, Laval, H3A 1A1…"></div>
+    <div class="full"><label for="q-msg">Message (optionnel)</label><textarea id="q-msg" name="msg" placeholder="Décrivez brièvement votre projet…"></textarea></div>
+    <div class="full"><label for="q-photo">Photo (optionnelle)</label>
+     <div class="dropwrap"><label class="drop" for="q-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.500-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="12.500" r="3.500"/></svg><span class="dt">Joindre une photo</span></label><button class="drop-rm" type="button" hidden>Retirer</button></div>
+     <input class="vh" id="q-photo" name="photo" type="file" accept="image/*"><small class="dhint">Photo de l’endroit à installer · JPG ou PNG · 5 Mo max.</small><div class="err" id="e-photo" data-err="photo"></div></div>
     <button class="btn btn-p" type="submit">Envoyer ma demande</button>
    </div>
   </form>
@@ -56,23 +55,7 @@
 
 <section class="certsec"><div class="wrap"><div><div class="eyebrow">Pourquoi Thermolux</div><h2>Un travail propre, une équipe <em>courtoise</em></h2><div class="lic dark"><span class="lg"><img src="img/rbq_crop_with_numbers-v2.png" alt="RBQ"></span><p><b>Licence RBQ 5812-9388-01</b>Entrepreneur certifié par la Régie du bâtiment du Québec</p></div></div><dl><dt>Techniciens certifiés</dt><dd>Installation et entretien par des professionnels licenciés.</dd><dt>Garantie fabricant et main-d’œuvre</dt><dd>Votre installation est protégée.</dd><dt>Service fiable et professionnel</dt><dd>Une équipe locale, de la soumission à l’entretien.</dd><dt>Aide pour la subvention LogisVert</dt><dd>Nous vous accompagnons dans les démarches.</dd></dl></div></section>
 </main>
-<script>
-(function(){
- var f=document.getElementById("soumission"),t=document.getElementById("thanks");
- var rules={nom:function(v){return v.trim()?"":"Entrez votre nom."},
-  tel:function(v){return v.replace(/\D/g,"").length>=10?"":"Entrez un numéro à 10 chiffres."},
-  mail:function(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)?"":"Entrez un courriel valide."},
-  type:function(v){return v?"":"Choisissez un type de projet."}};
- function check(k){var el=f.elements[k],m=rules[k](el.value);document.getElementById("e-"+k).textContent=m;el.setAttribute("aria-invalid",!!m);el.setAttribute("aria-describedby","e-"+k);return !m}
- Object.keys(rules).forEach(function(k){f.elements[k].addEventListener("blur",function(){check(k)})});
- f.addEventListener("submit",function(e){e.preventDefault();
-  var bad=Object.keys(rules).filter(function(k){return !check(k)});
-  if(bad.length){f.elements[bad[0]].focus();return}
-  f.hidden=true;t.hidden=false;t.focus();
-  /* shortcut: front-end only, no data sent; connect to Contact Form 7 / Fluent Forms in WordPress */
- });
-})();
-</script>
+<script src="js/forms.js?v=1"></script>
 
 <div id="site-footer"></div>
 <script src="js/layout.js?v=112"></script>

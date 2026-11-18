@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/hero.jpg">
-<link rel="stylesheet" href="css/site.css?v=113">
+<link rel="stylesheet" href="css/site.css?v=115">
 <meta name="description" content="Climatisation et chauffage : installation, remplacement et entretien de thermopompes à Montréal, Laval et Longueuil par des techniciens certifiés RBQ.">
 <link rel="alternate" hreflang="fr" href="index.html"><link rel="alternate" hreflang="en" href="en/index.html">
 </head>
@@ -41,17 +41,21 @@
   <div class="eyebrow">Soumission</div>
   <h2>Demandez votre <em>soumission</em></h2>
   <p class="meta">Réponse rapide · Sans engagement · Données confidentielles</p>
-  <form onsubmit="document.getElementById('ok').hidden=false;return false">
-  <div class="f">
-   <div><label for="n">Nom complet *</label><input id="n" autocomplete="name" required></div>
-   <div><label for="t">Téléphone *</label><input id="t" type="tel" autocomplete="tel" required></div>
-   <div><label for="e">Courriel *</label><input id="e" type="email" autocomplete="email" required></div>
-   <div><label for="p">Type de projet *</label><select id="p" required><option value="">Choisir…</option><option>Installation</option><option>Remplacement</option><option>Entretien</option></select></div>
-   <div class="full"><label for="m">Votre message (optionnel)</label><textarea id="m"></textarea></div>
-   <button class="btn btn-p">Envoyer ma demande</button>
-  </div>
-  <p id="ok" role="status" hidden>Merci! Nous vous répondons rapidement.</p>
- </form>
+  <form class="qform" novalidate data-thanks="qthanks">
+   <div class="f">
+    <div><label for="q-name">Nom complet *</label><input id="q-name" name="name" autocomplete="name" required><div class="err" id="e-name" data-err="name"></div></div>
+    <div><label for="q-phone">Téléphone *</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" id="e-phone" data-err="phone"></div></div>
+    <div><label for="q-email">Courriel *</label><input id="q-email" name="email" type="email" autocomplete="email" required><div class="err" id="e-email" data-err="email"></div></div>
+    <div><label for="q-type">Type de projet *</label><select id="q-type" name="type" required><option value="">Choisir…</option><option>Nouvelle installation</option><option>Remplacement d’un système existant</option><option>Réparation ou diagnostic</option><option>Entretien</option><option>Ventilation</option><option>Autre</option></select><div class="err" id="e-type" data-err="type"></div></div>
+    <div class="full"><label for="q-city">Ville ou code postal</label><input id="q-city" name="city" autocomplete="postal-code" placeholder="Montréal, Laval, H3A 1A1…"></div>
+    <div class="full"><label for="q-msg">Message (optionnel)</label><textarea id="q-msg" name="msg" placeholder="Décrivez brièvement votre projet…"></textarea></div>
+    <div class="full"><label for="q-photo">Photo (optionnelle)</label>
+     <div class="dropwrap"><label class="drop" for="q-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.500-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="12.500" r="3.500"/></svg><span class="dt">Joindre une photo</span></label><button class="drop-rm" type="button" hidden>Retirer</button></div>
+     <input class="vh" id="q-photo" name="photo" type="file" accept="image/*"><small class="dhint">Photo de l’endroit à installer · JPG ou PNG · 5 Mo max.</small><div class="err" id="e-photo" data-err="photo"></div></div>
+    <button class="btn btn-p" type="submit">Envoyer ma demande</button>
+   </div>
+  </form>
+  <div class="thanks qthanks" id="qthanks" hidden tabindex="-1"><h3>Merci, votre demande est envoyée.</h3><p>Un conseiller Thermolux vous contactera pour discuter de votre projet.</p></div>
   <div class="form-contact"><a href="tel:4385091823"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>438-509-1823</a><a href="mailto:service@thermolux.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>service@thermolux.ca</a></div>
  </div>
 </div></div></section>
@@ -122,6 +126,7 @@
 </main>
 
 <div id="site-footer"></div>
+<script src="js/forms.js?v=1"></script>
 <script src="js/layout.js?v=112"></script>
 <script src="js/subsidies.js"></script>
 <script>
