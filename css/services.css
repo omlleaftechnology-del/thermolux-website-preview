@@ -287,3 +287,8 @@ main>section.s-tight{padding:96px 0}
 .mt-notes span{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:#fff;border:1px solid var(--line);font-weight:700}
 .mt-notes svg{width:20px;height:20px;color:var(--blue)}
 @media(max-width:1000px){.mt-sheets,.mt-why{grid-template-columns:1fr;gap:28px}.mt-seasons{grid-template-columns:1fr 1fr}.mt-seasons>div:nth-child(2){border-right:0}.mt-seasons>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.mt-why .eyebrow{font-size:14px}
+.mt-why h2{font-size:clamp(36px,4.2vw,64px)!important;line-height:1.05}
+.mt-why .lead{font-size:clamp(20px,1.7vw,26px)!important;line-height:1.5;max-width:30ch!important}
+.mt-why li{font-size:clamp(19px,1.5vw,24px);padding-top:22px;padding-bottom:22px}
+.mt-why .bi{width:54px;height:54px}
