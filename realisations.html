@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=111">
-<link rel="stylesheet" href="css/content.css?v=61">
+<link rel="stylesheet" href="css/content.css?v=68">
 </head>
 <body>
 
@@ -42,12 +42,12 @@
 <script>
 /* One array = one WordPress "Réalisation" (city, type, model, photo). Only real projects from thermolux.ca. */
 var PROJETS=[
- {city:"Montréal",place:"Montréal-Ouest",type:"Climatisation et chauffage",model:"Gree Sapphire −30 °C",img:"img/realisations/montreal-ouest-1.jpg",alt:"Installation d’un système Gree Sapphire à Montréal-Ouest"},
- {city:"Montréal",place:"Montréal-Ouest",type:"Climatisation et chauffage",model:"Gree Sapphire −30 °C",img:"img/realisations/montreal-ouest-2.jpg",alt:"Système Gree Sapphire installé à Montréal-Ouest"},
- {city:"Laval",place:"Laval",type:"Climatisation et chauffage",model:"Gree Vita",img:"img/realisations/laval-gree-vita.jpg",alt:"Installation d’un système Gree Vita à Laval : unité extérieure et unité murale"}
+ {city:"Montréal",place:"Montréal-Ouest",type:"Climatisation et chauffage",model:"Gree Sapphire −30 °C",img:"img/realisations/montreal-ouest-1.jpg",alt:"Installation d’un système Gree Sapphire à Montréal-Ouest",txt:"Unité intérieure murale du système Gree Sapphire, installée dans le séjour à Montréal-Ouest : chauffage fiable jusqu’à −30 °C et climatisation toute l’année."},
+ {city:"Montréal",place:"Montréal-Ouest",type:"Climatisation et chauffage",model:"Gree Sapphire −30 °C",img:"img/realisations/montreal-ouest-2.jpg",alt:"Système Gree Sapphire installé à Montréal-Ouest",txt:"Unité extérieure du système Gree Sapphire, fixée au mur de la maison à Montréal-Ouest, conçue pour les hivers québécois."},
+ {city:"Laval",place:"Laval",type:"Climatisation et chauffage",model:"Gree Vita",img:"img/realisations/laval-gree-vita.jpg",alt:"Installation d’un système Gree Vita à Laval : unité extérieure et unité murale",txt:"Système Gree Vita installé à Laval : unité extérieure et unité murale intérieure, pour un confort toute l’année."}
 ];
 (function(){
- var cnt=document.getElementById("cnt"),fg=document.getElementById("fg"),pr=document.getElementById("proj"),em=document.getElementById("empty"),sel={city:"Tous",type:"Tous"};
+ var cur=[],cnt=document.getElementById("cnt"),fg=document.getElementById("fg"),pr=document.getElementById("proj"),em=document.getElementById("empty"),sel={city:"Tous",type:"Tous"};
  var types=PROJETS.map(function(p){return p.type}).filter(function(t,i,a){return a.indexOf(t)===i});
  var groups=[["city","Ville",["Tous","Montréal","Laval","Longueuil"]]];
  if(types.length>1)groups.push(["type","Type",["Tous"].concat(types)]);
@@ -59,10 +59,27 @@ var PROJETS=[
   d.appendChild(c);fg.appendChild(d)});
  function render(){
   var l=PROJETS.filter(function(p){return(sel.city==="Tous"||p.city===sel.city)&&(sel.type==="Tous"||p.type===sel.type)});
-  pr.innerHTML=l.map(function(p){return '<article class="pj"><div class="zoom"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy" style="object-position:center 40%"><span class="pj-city"><i></i>'+p.city+'</span></div><div class="pj-b"><h3>'+p.place+'</h3><p>'+p.model+'</p><span class="pj-t">'+p.type+'</span></div></article>'}).join("")+'<a class="pj pj-cta" href="contact.html#soumission"><span class="pj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><h3>Votre projet ici</h3><p>Installation de climatisation ou de chauffage : demandez votre soumission.</p><span class="btn btn-p">Nous joindre</span></a>';
+  cur=l;pr.innerHTML=l.map(function(p,i){return '<article class="pj" tabindex="0" role="button" aria-haspopup="dialog" data-i="'+i+'"><div class="zoom"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy" style="object-position:center 40%"><span class="pj-city"><i></i>'+p.city+'</span></div><div class="pj-b"><h3>'+p.place+'</h3><p>'+p.model+'</p><span class="pj-t">'+p.type+'</span></div></article>'}).join("")+'<a class="pj pj-cta" href="contact.html#soumission"><span class="pj-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><h3>Votre projet ici</h3><p>Installation de climatisation ou de chauffage : demandez votre soumission.</p><span class="btn btn-p">Nous joindre</span></a>';
   cnt.textContent=l.length+" projets";
   em.hidden=l.length>0;
  }
+ /* project dialog: dimmed page, big photo, details; prev/next, Esc and backdrop close */
+ var LB={"city": "Ville", "type": "Type de projet", "model": "Modèle", "cta": "Nous joindre", "prev": "Projet précédent", "next": "Projet suivant", "close": "Fermer", "lead": "Un projet similaire ?"},dlg=document.createElement("div"),last=null,idx=0;
+ dlg.className="pm";dlg.hidden=true;dlg.setAttribute("role","dialog");dlg.setAttribute("aria-modal","true");dlg.setAttribute("aria-labelledby","pm-t");
+ dlg.innerHTML='<div class="pm-box"><button type="button" class="pm-x" aria-label="'+LB.close+'">&times;</button><div class="pm-ph"><img alt=""><span class="pm-city"><i></i><b></b></span></div><div class="pm-b"><p class="pm-n"></p><h3 id="pm-t"></h3><p class="pm-d"></p><dl class="pm-dl"><div><dt>'+LB.city+'</dt><dd data-k="city"></dd></div><div><dt>'+LB.type+'</dt><dd data-k="type"></dd></div><div><dt>'+LB.model+'</dt><dd data-k="model"></dd></div></dl><div class="pm-a"><a class="btn btn-p" href="contact.html#soumission">'+LB.cta+'</a><span class="pm-nav"><button type="button" class="pm-prev" aria-label="'+LB.prev+'">&larr;</button><button type="button" class="pm-next" aria-label="'+LB.next+'">&rarr;</button></span></div></div></div>';
+ document.body.appendChild(dlg);
+ function show(i){var p=cur[i];if(!p)return;idx=i;var q=function(s){return dlg.querySelector(s)};
+  q(".pm-ph img").src=p.img;q(".pm-ph img").alt=p.alt;q(".pm-city b").textContent=p.city;q("#pm-t").textContent=p.place;q(".pm-d").textContent=p.txt||"";
+  q(".pm-n").textContent=(i+1)+" / "+cur.length;
+  [].forEach.call(dlg.querySelectorAll("dd"),function(d){d.textContent=p[d.dataset.k]});
+  q(".pm-prev").hidden=q(".pm-next").hidden=cur.length<2}
+ function open(i,from){last=from||last;show(i);dlg.hidden=false;document.body.classList.add("pm-lock");requestAnimationFrame(function(){dlg.classList.add("on")});dlg.querySelector(".pm-x").focus()}
+ function close(){dlg.classList.remove("on");document.body.classList.remove("pm-lock");setTimeout(function(){dlg.hidden=true},200);if(last)last.focus()}
+ pr.addEventListener("click",function(e){var a=e.target.closest("article.pj");if(a)open(+a.dataset.i,a)});
+ pr.addEventListener("keydown",function(e){var a=e.target.closest&&e.target.closest("article.pj");if(a&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(+a.dataset.i,a)}});
+ dlg.addEventListener("click",function(e){if(e.target===dlg||e.target.closest(".pm-x"))close();else if(e.target.closest(".pm-prev"))show((idx-1+cur.length)%cur.length);else if(e.target.closest(".pm-next"))show((idx+1)%cur.length)});
+ document.addEventListener("keydown",function(e){if(dlg.hidden)return;if(e.key==="Escape")close();else if(e.key==="ArrowLeft"&&cur.length>1)show((idx-1+cur.length)%cur.length);else if(e.key==="ArrowRight"&&cur.length>1)show((idx+1)%cur.length)});
+
  render();
 })();
 </script>
