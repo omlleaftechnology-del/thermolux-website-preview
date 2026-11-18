@@ -520,3 +520,9 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .aidhome{scroll-margin-top:84px}
 
 
+
+/* phone + email under the forms */
+.form-contact{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.form-contact a{display:inline-flex;align-items:center;gap:10px;font:700 16px Inter,sans-serif;color:var(--ink);transition:color .2s}
+.form-contact a:hover{color:var(--blue)}
+.form-contact svg{width:22px;height:22px;color:var(--blue);flex:none}
