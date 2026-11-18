@@ -321,3 +321,23 @@ body.pm-lock{overflow:hidden}
 .fin-top .sec-h{margin-bottom:0}
 .fin-top .fin-note{margin:0;max-width:none;font-size:13px}
 @media(max-width:900px){.fin-top{grid-template-columns:1fr;gap:18px}}
+
+/* subsidy tables on the financing page */
+.at-h{margin:34px 0 14px;font-size:22px;letter-spacing:-.02em}
+.at-h:first-of-type{margin-top:8px}
+.at-wrap{overflow-x:auto;border:1px solid #CFE5D8;border-radius:16px;background:#fff;box-shadow:0 14px 34px -26px rgba(10,31,61,.3)}
+.at{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
+.at th,.at td{padding:14px 16px;text-align:center;white-space:nowrap;border-bottom:1px solid #E6F2EA}
+.at thead th{background:#EEF7F1;color:#17703E;font:700 14px Inter,sans-serif;position:sticky;top:0}
+.at thead th small{display:block;font:600 10.5px Inter,sans-serif;letter-spacing:.12em;opacity:.75;margin-top:2px}
+.at thead th:first-child,.at tbody th{text-align:left;position:sticky;left:0;background:#fff;z-index:1}
+.at thead th:first-child{background:#EEF7F1}
+.at tbody th a{font:700 15px Inter,sans-serif;color:var(--ink)}
+.at tbody th a:hover{color:var(--blue)}
+.at tbody tr:last-child th,.at tbody tr:last-child td{border-bottom:0}
+.at td.v{font-weight:700;color:#17703E}
+.at td.no{color:var(--muted);font-size:13px}
+.at tbody tr:hover td,.at tbody tr:hover th{background:#F7FBF8}
+.aid-note{max-width:none;margin-top:18px}
+@media(max-width:700px){.at th,.at td{padding:12px 12px}}
+.at th,.at th a{text-transform:none;letter-spacing:0}.at thead th{text-transform:none}

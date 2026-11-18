@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=114">
-<link rel="stylesheet" href="css/content.css?v=76">
+<link rel="stylesheet" href="css/content.css?v=79">
 </head>
 <body>
 
@@ -36,6 +36,12 @@
  <div class="sfoot"><a class="btn btn-p" href="https://www.financeit.ca/fr/direct/payment-plan/YT0zMjg5NjkmbD0mcD03SC1qNjRBSW9DSVBObU90MnkwQTB3JnE9dHJ1ZSZzPTAmdj0x/apply?slug=GrTbAw" target="_blank" rel="noopener">Faire une demande</a></div>
 </div></section>
 
+<section class="sec" id="subventions"><div class="wrap">
+ <div class="sec-h"><div class="eyebrow">Aide financière</div><h2>Subvention <em>LogisVert</em> par modèle</h2><p>Montants de l’aide d’Hydro-Québec pour un propriétaire d’une habitation existante, selon le modèle et la capacité (BTU). Cliquez sur un modèle pour voir ses détails.</p></div>
+ <div id="aidtables"></div>
+ <p class="fin-note aid-note">Montants selon la liste des appareils admissibles d’Hydro-Québec (novembre 2026). L’admissibilité et le montant final sont confirmés par Hydro-Québec. <a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Vérifier sur Hydro-Québec →</a></p>
+</div></section>
+
 <section class="sec"><div class="wrap">
  <div class="fin-cards">
   <a class="fin-card" href="index.html#subvention"><h3>Aides financières</h3><p>LogisVert d’Hydro-Québec, Rénoclimat : découvrez les programmes qui peuvent réduire le coût de votre projet.</p><span class="btn btn-o">Voir les subventions</span></a>
@@ -50,6 +56,26 @@
 </main>
 
 <div id="site-footer"></div>
+<script src="js/subsidies.js?v=120"></script>
+<script src="js/products.js?v=120"></script>
+<script>
+(function(){
+ var A=window.AID,P=window.PRODUCTS,L=window.LANG,box=document.getElementById("aidtables");if(!A||!P||!box)return;
+ var T=L=="en"?{mural:"Wall-mounted systems",multizone:"Multi-zone systems",central:"Central systems",model:"Model",none:"—",combo:"Depends on the combination",btu:"BTU"}:{mural:"Systèmes muraux",multizone:"Systèmes multizones",central:"Systèmes centraux",model:"Modèle",none:"—",combo:"Selon la combinaison",btu:"BTU"};
+ var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
+ var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+ ["mural","multizone","central"].forEach(function(type){
+  var rows=P.filter(function(p){return p.type==type&&A.data[p.slug]});if(!rows.length)return;
+  var caps=[];rows.forEach(function(p){p.btu.forEach(function(b){if(caps.indexOf(b)<0)caps.push(b)})});caps.sort(function(a,b){return a-b});
+  var h='<h3 class="at-h">'+T[type]+'</h3><div class="at-wrap"><table class="at"><thead><tr><th>'+T.model+'</th>'+caps.map(function(c){return'<th>'+n(c)+'<small>'+T.btu+'</small></th>'}).join("")+'</tr></thead><tbody>';
+  rows.forEach(function(p){var d=A.data[p.slug];
+   h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th>'+caps.map(function(c){
+    if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d.grants[c]||(d.newhome&&d.newhome[c]);
+    return v?'<td class="v">'+A.fmt(v)+'</td>':'<td class="no">'+(d.combo?T.combo:T.none)+'</td>'}).join("")+'</tr>'});
+  box.insertAdjacentHTML("beforeend",h+'</tbody></table></div>')});
+ var lk=document.getElementById("aidlink");if(lk)lk.href=A.url[L]||A.url.fr;
+})();
+</script>
 <script src="js/layout.js?v=113"></script>
 </body>
 </html>
