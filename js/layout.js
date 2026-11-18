@@ -41,7 +41,7 @@ var F='<footer><div class="wrap"><div class="fg"><div><a class="flogo" href="ind
 document.addEventListener('DOMContentLoaded',function(){
  var h=document.getElementById('site-header'),ft=document.getElementById('site-footer');
  if(h)h.outerHTML=H;if(ft)ft.outerHTML=F;
- document.querySelectorAll('.nav ul a').forEach(function(a){if(a.getAttribute('href')===P){a.setAttribute('aria-current','page');a.style.color='var(--blue)'}});
+ document.querySelectorAll('.nav ul a').forEach(function(a){var h=a.getAttribute('href');if(h===P&&h!=='index.html'){a.setAttribute('aria-current','page');a.style.color='var(--blue)'}});
  var b=document.getElementById('burger'),m=document.getElementById('mnav');
  if(b&&m){
   var set=function(open){m.hidden=!open;b.setAttribute('aria-expanded',open);b.classList.toggle('open',open);document.body.classList.toggle('menu-open',open)};
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded',function(){
   document.addEventListener('click',function(){set(false)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
   window.addEventListener('resize',function(){if(innerWidth>1270)set(false)});
-  m.querySelectorAll('a[href]').forEach(function(a){if(a.getAttribute('href')===P&&!a.classList.contains('mcta')){a.setAttribute('aria-current','page')}});
+  m.querySelectorAll('a[href]').forEach(function(a){if(a.getAttribute('href')===P&&a.getAttribute('href')!=='index.html'&&!a.classList.contains('mcta')){a.setAttribute('aria-current','page')}});
  }
 });
 /* drop the #hash once used; on reload always start at the top */
