@@ -315,3 +315,9 @@ body.pm-lock{overflow:hidden}
 .pm-a{position:sticky;bottom:0;background:#fff;padding:14px 0 24px;margin-top:auto;box-shadow:0 -14px 14px -10px #fff}
 .pm-d{margin-bottom:18px}
 @media(max-width:800px){.pm-b{padding-bottom:0}.pm-a{position:static;padding-bottom:24px}}
+
+/* financing: the disclaimer sits above the icon cards, in the right corner opposite the heading */
+.fin-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,400px);gap:24px 56px;align-items:end;margin-bottom:clamp(28px,3vw,44px)}
+.fin-top .sec-h{margin-bottom:0}
+.fin-top .fin-note{margin:0;max-width:none;font-size:13px}
+@media(max-width:900px){.fin-top{grid-template-columns:1fr;gap:18px}}
