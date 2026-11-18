@@ -17,7 +17,7 @@ var L=en?{
   c3:'Ressources',r:['Subventions LogisVert','Guides et conseils','FAQ','Réalisations','Blogue'],c4:'Nous joindre',area:'Grand Montréal, QC',
   rights:'© 2026 Thermolux Inc. Tous droits réservés.',legal:'Conditions · Confidentialité · Plan du site'}
 };
-var pages=['catalogue.html','services.html','realisations.html','financement.html','index.html#subvention','blogue.html','a-propos.html'];
+var pages=['catalogue.html','services.html','realisations.html','financement.html','subvention.html','blogue.html','a-propos.html'];
 var other=(en?'../'+P:'en/'+P)+location.search;
 var lang='<span class="lang">'+(en?'<a href="'+other+'" hreflang="fr" lang="fr">FR</a> / <a aria-current="true" href="#" lang="en">EN</a>':'<a aria-current="true" href="#" lang="fr">FR</a> / <a href="'+other+'" hreflang="en" lang="en">EN</a>')+'</span>';
 var SO=[['Facebook','https://www.facebook.com/thermoluxhvac','<path d="M14 8.5V7c0-.8.4-1.2 1.300-1.200H17V3h-2.500C11.800 3 10.500 4.600 10.500 6.800V8.500H8v3h2.500V21H14v-9.500h2.600l.4-3H14Z"/>'],
