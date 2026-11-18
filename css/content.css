@@ -292,3 +292,6 @@ body.pm-lock{overflow:hidden}
 .pm-nav button:hover{background:var(--ink);border-color:var(--ink);color:#fff}
 @media(max-width:800px){.pm{padding:12px;align-items:end}.pm-box{grid-template-columns:1fr;max-height:calc(100vh - 24px);overflow:auto;border-radius:22px}.pm-ph{min-height:0;aspect-ratio:4/3}.pm-b{padding:24px 22px 22px;overflow:visible}.pm-dl div{grid-template-columns:110px 1fr}}
 @media(prefers-reduced-motion:reduce){.pm,.pm-box{transition:none}}
+
+/* dialog = photo + the project text only (the client edits the text in the project data / WordPress) */
+.pm-d{margin:0 0 28px;font-size:17px;line-height:1.65;white-space:pre-line}

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=111">
-<link rel="stylesheet" href="css/content.css?v=68">
+<link rel="stylesheet" href="css/content.css?v=69">
 </head>
 <body>
 
@@ -66,12 +66,11 @@ var PROJETS=[
  /* project dialog: dimmed page, big photo, details; prev/next, Esc and backdrop close */
  var LB={"city": "Ville", "type": "Type de projet", "model": "Modèle", "cta": "Nous joindre", "prev": "Projet précédent", "next": "Projet suivant", "close": "Fermer", "lead": "Un projet similaire ?"},dlg=document.createElement("div"),last=null,idx=0;
  dlg.className="pm";dlg.hidden=true;dlg.setAttribute("role","dialog");dlg.setAttribute("aria-modal","true");dlg.setAttribute("aria-labelledby","pm-t");
- dlg.innerHTML='<div class="pm-box"><button type="button" class="pm-x" aria-label="'+LB.close+'">&times;</button><div class="pm-ph"><img alt=""><span class="pm-city"><i></i><b></b></span></div><div class="pm-b"><p class="pm-n"></p><h3 id="pm-t"></h3><p class="pm-d"></p><dl class="pm-dl"><div><dt>'+LB.city+'</dt><dd data-k="city"></dd></div><div><dt>'+LB.type+'</dt><dd data-k="type"></dd></div><div><dt>'+LB.model+'</dt><dd data-k="model"></dd></div></dl><div class="pm-a"><a class="btn btn-p" href="contact.html#soumission">'+LB.cta+'</a><span class="pm-nav"><button type="button" class="pm-prev" aria-label="'+LB.prev+'">&larr;</button><button type="button" class="pm-next" aria-label="'+LB.next+'">&rarr;</button></span></div></div></div>';
+ dlg.innerHTML='<div class="pm-box"><button type="button" class="pm-x" aria-label="'+LB.close+'">&times;</button><div class="pm-ph"><img alt=""><span class="pm-city"><i></i><b></b></span></div><div class="pm-b"><p class="pm-n"></p><h3 id="pm-t"></h3><p class="pm-d"></p><div class="pm-a"><a class="btn btn-p" href="contact.html#soumission">'+LB.cta+'</a><span class="pm-nav"><button type="button" class="pm-prev" aria-label="'+LB.prev+'">&larr;</button><button type="button" class="pm-next" aria-label="'+LB.next+'">&rarr;</button></span></div></div></div>';
  document.body.appendChild(dlg);
  function show(i){var p=cur[i];if(!p)return;idx=i;var q=function(s){return dlg.querySelector(s)};
   q(".pm-ph img").src=p.img;q(".pm-ph img").alt=p.alt;q(".pm-city b").textContent=p.city;q("#pm-t").textContent=p.place;q(".pm-d").textContent=p.txt||"";
   q(".pm-n").textContent=(i+1)+" / "+cur.length;
-  [].forEach.call(dlg.querySelectorAll("dd"),function(d){d.textContent=p[d.dataset.k]});
   q(".pm-prev").hidden=q(".pm-next").hidden=cur.length<2}
  function open(i,from){last=from||last;show(i);dlg.hidden=false;document.body.classList.add("pm-lock");requestAnimationFrame(function(){dlg.classList.add("on")});dlg.querySelector(".pm-x").focus()}
  function close(){dlg.classList.remove("on");document.body.classList.remove("pm-lock");setTimeout(function(){dlg.hidden=true},200);if(last)last.focus()}
