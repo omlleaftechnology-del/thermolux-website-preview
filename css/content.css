@@ -242,3 +242,10 @@ select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='htt
 .mission .eyebrow{color:var(--blue)}
 .mission blockquote:before{color:var(--blue)}
 .mission p{color:var(--muted)}
+
+.fin-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:860px}
+.fin-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:30px 28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 14px 34px -24px rgba(10,31,61,.3);transition:transform .25s,box-shadow .25s}
+.fin-card:hover{transform:translateY(-4px);box-shadow:0 26px 48px -26px rgba(10,31,61,.4)}
+.fin-card h3{margin:0;font-size:22px;letter-spacing:-.02em}
+.fin-card p{margin:0 0 14px;color:var(--muted);font-size:16px;flex:1}
+@media(max-width:700px){.fin-cards{grid-template-columns:1fr}}
