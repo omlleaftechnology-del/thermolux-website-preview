@@ -252,3 +252,38 @@ main>section.s-tight{padding:96px 0}
 .ins-badges.b4{grid-template-columns:repeat(4,1fr)}
 .ins-tl.t4{grid-template-columns:repeat(4,1fr)}.ins-tl.t4:before{left:12.5%;right:12.5%}
 @media(max-width:1000px){.ins-badges.b4{grid-template-columns:repeat(2,1fr)}.ins-badges.b4 li:last-child{grid-column:auto}.ins-tl.t4{grid-template-columns:1fr}.ins-tl.t4:before{left:34px;right:auto}}
+
+/* maintenance page: its own look (checklist sheets, benefit rows, season track) */
+.mt-sheets{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.mt-sheet{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -30px rgba(10,31,61,.35)}
+.mt-sheet header{display:flex;align-items:center;gap:14px;padding:20px 26px;background:var(--blue);color:#fff}
+.mt-sheet header .bi{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.16)}
+.mt-sheet header svg{width:24px;height:24px}
+.mt-sheet h3{margin:0;font-size:22px;color:#fff;letter-spacing:-.01em}
+.mt-sheet header small{margin-left:auto;font:700 12px Manrope,Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.mt-sheet ol{list-style:none;margin:0;padding:6px 26px 12px;counter-reset:m}
+.mt-sheet li{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px dashed #C5D5E6;font-weight:600;counter-increment:m}
+.mt-sheet li:last-child{border-bottom:0}
+.mt-sheet li:before{content:"";flex:none;width:24px;height:24px;border:2px solid var(--blue);border-radius:7px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231565B0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7'/%3E%3C/svg%3E") center/16px no-repeat}
+.mt-cta{margin-top:30px;text-align:center}
+.mt-why{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:center}
+.mt-why ul{list-style:none;margin:0;padding:0}
+.mt-why li{display:flex;align-items:center;gap:18px;padding:18px 4px;border-top:1px solid #C5D5E6;font:700 19px Manrope,Inter,sans-serif;transition:padding .25s,color .25s}
+.mt-why li:last-child{border-bottom:1px solid #C5D5E6}
+.mt-why li:hover{padding-left:14px;color:var(--blue)}
+.mt-why .bi{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--blue);border:1px solid var(--line)}
+.mt-why svg{width:24px;height:24px}
+.mt-seasons{display:grid;grid-template-columns:repeat(4,1fr);border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.mt-seasons>div{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 16px 30px;text-align:center;border-right:1px solid var(--line)}
+.mt-seasons>div:last-child{border-right:0}
+.mt-seasons .bi{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#F2F6FA;color:#8FA6BF}
+.mt-seasons svg{width:28px;height:28px}
+.mt-seasons small{font:700 12px Manrope,Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8FA6BF}
+.mt-seasons b{font:800 17px/1.25 Manrope,Inter,sans-serif;min-height:22px}
+.mt-seasons .on{background:linear-gradient(180deg,#EAF3FB,#fff)}
+.mt-seasons .on .bi{background:var(--blue);color:#fff;box-shadow:0 10px 22px -10px rgba(21,101,176,.7)}
+.mt-seasons .on small{color:var(--blue)}
+.mt-notes{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.mt-notes span{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:#fff;border:1px solid var(--line);font-weight:700}
+.mt-notes svg{width:20px;height:20px;color:var(--blue)}
+@media(max-width:1000px){.mt-sheets,.mt-why{grid-template-columns:1fr;gap:28px}.mt-seasons{grid-template-columns:1fr 1fr}.mt-seasons>div:nth-child(2){border-right:0}.mt-seasons>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
