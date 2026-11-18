@@ -251,3 +251,15 @@ select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='htt
 @media(max-width:700px){.fin-cards{grid-template-columns:1fr}}
 
 .fin-cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:none}
+
+/* financing */
+.fin-facts{margin-top:0}
+.fin-facts .stc b.fb{font:800 clamp(24px,2.4vw,30px)/1.15 Manrope,Inter,sans-serif;letter-spacing:-.02em;color:var(--blue)}
+.fin-note{margin-top:28px;max-width:78ch;font-size:13px;line-height:1.55;color:var(--muted)}
+.fin-cards{max-width:none}
+.fin-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fin-facts .stc{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.fin-facts .stc .ci2{margin-bottom:18px}
+.fin-facts .stc b.fb{margin-bottom:8px}
+@media(max-width:900px){.fin-facts{grid-template-columns:1fr}}
+.fin-facts .stc b.fb{margin:0 0 8px!important}
