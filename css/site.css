@@ -526,3 +526,7 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .form-contact a{display:inline-flex;align-items:center;gap:10px;font:700 16px Inter,sans-serif;color:var(--ink);transition:color .2s}
 .form-contact a:hover{color:var(--blue)}
 .form-contact svg{width:22px;height:22px;color:var(--blue);flex:none}
+
+/* popular air conditioners sit under products/services/form */
+.models+.region{background:#fff}
+.models .n a{font:inherit;color:inherit}.models .n a:hover{color:var(--blue)}
