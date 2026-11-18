@@ -8,6 +8,8 @@ window.AID={asOf:"2026-11-12",
  url:{fr:"https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html",
       en:"https://www.hydroquebec.com/residential/energy-wise/financial-assistance/logisvert/efficient-heat-pump-search.html"},
  data:{
+ "gree-vita-r32": {"grants":{"12000":1164,"18000":1836,"24000":2304},"newhome":{},"plex":{},"combo":false},
+ "gree-sapphire": {"grants":{"12000":1236,"18000":1812},"newhome":{},"plex":{},"combo":false},
  "gree-fairy-ultra-heat": {
   "grants": {
    "18000": 1812,

@@ -214,6 +214,56 @@ window.PRODUCTS=[
   ]
  },
  {
+  "slug": "gree-vita-r32",
+  "name": "Gree Vita R32",
+  "brand": "Gree",
+  "type": "mural",
+  "series": "VITA-R32",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "seer2": "20.5",
+  "hspf2": "8.8",
+  "tminC": "-25",
+  "dB": "22",
+  "refrigerant": "R-32",
+  "wifi": true,
+  "img": "img/products/gree-vita-r32-1.jpg",
+  "src": "https://thermolux.ca/produit/gree-vita-r32-25c",
+  "imgs": [
+   "img/products/gree-vita-r32-1.jpg",
+   "img/products/gal/gree-vita-r32-2.jpg",
+   "img/products/gal/gree-vita-r32-3.jpg"
+  ]
+ },
+ {
+  "slug": "gree-sapphire",
+  "name": "Gree Sapphire",
+  "brand": "Gree",
+  "type": "mural",
+  "series": "SAPPHIRE",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "tminC": "-30",
+  "dB": "19",
+  "refrigerant": "R-410A",
+  "wifi": true,
+  "img": "img/products/gree-sapphire-1.jpg",
+  "src": "https://thermolux.ca/produit/gree-sapphire-38-seer-30c",
+  "imgs": [
+   "img/products/gree-sapphire-1.jpg",
+   "img/products/gal/gree-sapphire-2.png",
+   "img/products/gal/gree-sapphire-3.png"
+  ]
+ },
+ {
   "slug": "gree-free-match-extreme",
   "name": "Gree Free Match Extreme",
   "brand": "Gree",
@@ -1095,6 +1145,134 @@ window.PRODUCT_DETAILS={
     "warr": "Parts 10 years · labour 10 years",
     "ahri": "AHRI 215449704, 215449705, 215449706, 215449707, 215449708, 215449709",
     "models": "4CDH2018F21 / 4CDH2018C21 · 4CDH2024F21 / 4CDH2024C21 · 4CDH2030F21/ 4CDH2030C21 · 4CDH2036F21/ 4CDH2036C21 · 4CDH2048F21 / 4CDH2048C21 · 4CDH2060F21 / 4CDH2060C21"
+   }
+  }
+ },
+ "gree-vita-r32": {
+  "fr": {
+   "intro": "La Gree Vita R32 est un système mural simple zone qui offre un confort fiable, des fonctions modernes et une bonne efficacité énergétique à un prix accessible. Son compresseur Inverter ajuste la puissance selon les besoins réels pour une température stable et un fonctionnement silencieux.",
+   "why": [
+    [
+     "Chauffage jusqu’à −25 °C",
+     "Chauffage efficace jusqu’à −25 °C et climatisation de −18 °C à 48 °C."
+    ],
+    [
+     "Jusqu’à 20,5 SEER2",
+     "Jusqu’à 8,8 HSPF2 et COP jusqu’à 3,9."
+    ],
+    [
+     "Wi-Fi inclus",
+     "Contrôle à distance avec l’application GREE+."
+    ],
+    [
+     "Protection Blue Fin",
+     "Ailettes traitées contre la corrosion et détecteur de fuite de réfrigérant."
+    ]
+   ],
+   "spec": {
+    "clim": "−18 °C à 48 °C",
+    "noise": "Intérieur environ 22 à 24 dB(A) · extérieur 51 à 58 dB(A)",
+    "volt": "220 V",
+    "wifi": "Oui, inclus",
+    "cert": "—",
+    "warr": "Pièces 10 ans · main-d’œuvre 10 ans",
+    "ahri": "AHRI 215386291, 215402236, 215224737, 215390442",
+    "models": "GWH09ATCXB-D6DNA3D/I / GWH09ATCXB-D6DNA4D/O · GWH12ATCXB-D6DNA3B/I / GWH12ATCXB-D6DNA4B/O · GWH18ATDXD-D6DNA3F/I / GWH18ATDXD-D6DNA4F/O · GWH24ATEXF-D6DNA3H/I / GWH24ATEXF-D6DNA4H/O"
+   }
+  },
+  "en": {
+   "intro": "The Gree Vita R32 is a single-zone wall-mounted system that delivers reliable comfort, modern features and good energy efficiency at an accessible price. Its Inverter compressor adjusts output to real demand for a steady temperature and quiet operation.",
+   "why": [
+    [
+     "Heating down to −25 °C",
+     "Efficient heating down to −25 °C and cooling from −18 °C to 48 °C."
+    ],
+    [
+     "Up to 20.5 SEER2",
+     "Up to 8.8 HSPF2 and COP up to 3.9."
+    ],
+    [
+     "Wi-Fi included",
+     "Remote control with the GREE+ app."
+    ],
+    [
+     "Blue Fin protection",
+     "Fins treated against corrosion and a refrigerant leak detector."
+    ]
+   ],
+   "spec": {
+    "clim": "−18 °C to 48 °C",
+    "noise": "Indoor about 22 to 24 dB(A) · outdoor 51 to 58 dB(A)",
+    "volt": "220 V",
+    "wifi": "Yes, included",
+    "cert": "—",
+    "warr": "Parts 10 years · labour 10 years",
+    "ahri": "AHRI 215386291, 215402236, 215224737, 215390442",
+    "models": "GWH09ATCXB-D6DNA3D/I / GWH09ATCXB-D6DNA4D/O · GWH12ATCXB-D6DNA3B/I / GWH12ATCXB-D6DNA4B/O · GWH18ATDXD-D6DNA3F/I / GWH18ATDXD-D6DNA4F/O · GWH24ATEXF-D6DNA3H/I / GWH24ATEXF-D6DNA4H/O"
+   }
+  }
+ },
+ "gree-sapphire": {
+  "fr": {
+   "intro": "Le système sans conduits ultra-haute efficacité de la série Sapphire de Gree garde n’importe quelle pièce agréable sans compromettre l’esthétique. En hiver, il peut fournir jusqu’à 90 % de sa capacité de chauffage à des températures aussi basses que −30 °C.",
+   "why": [
+    [
+     "Chauffage à −30 °C",
+     "Jusqu’à 90 % de la capacité de chauffage par temps très froid."
+    ],
+    [
+     "Inverter à deux étages",
+     "Technologie Inverter G10 pour un confort constant toute l’année."
+    ],
+    [
+     "Certifié ENERGY STAR",
+     "Haute efficacité, jusqu’à 38 SEER et 15 HSPF."
+    ],
+    [
+     "Wi-Fi intégré",
+     "Fonction I-Feel, dégivrage intelligent et préchauffage intelligent."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "Intérieur dès 19 dB(A)",
+    "volt": "230 V",
+    "wifi": "Oui, intégré",
+    "cert": "ENERGY STAR",
+    "warr": "Pièces 10 ans · main-d’œuvre 10 ans",
+    "ahri": "AHRI 10149900, 10149903, 10157570, 10157571",
+    "models": "SAP09HP230V1AO / SAP09HP230V1AH · SAP12HP230V1AO / SAP12HP230V1AH · SAP18HP230V1AO / SAP18HP230V1AH · SAP24HP230V1AO / SAP24HP230V1AH"
+   }
+  },
+  "en": {
+   "intro": "The ultra-high-efficiency ductless system from Gree’s Sapphire series keeps any room comfortable without compromising looks. In winter it can deliver up to 90% of its heating capacity at temperatures as low as −30 °C.",
+   "why": [
+    [
+     "Heating at −30 °C",
+     "Up to 90% of heating capacity in very cold weather."
+    ],
+    [
+     "Two-stage Inverter",
+     "G10 Inverter technology for steady comfort all year."
+    ],
+    [
+     "ENERGY STAR certified",
+     "High efficiency, up to 38 SEER and 15 HSPF."
+    ],
+    [
+     "Built-in Wi-Fi",
+     "I-Feel function, smart defrost and smart preheating."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "Indoor from 19 dB(A)",
+    "volt": "230 V",
+    "wifi": "Yes, built in",
+    "cert": "ENERGY STAR",
+    "warr": "Parts 10 years · labour 10 years",
+    "ahri": "AHRI 10149900, 10149903, 10157570, 10157571",
+    "models": "SAP09HP230V1AO / SAP09HP230V1AH · SAP12HP230V1AO / SAP12HP230V1AH · SAP18HP230V1AO / SAP18HP230V1AH · SAP24HP230V1AO / SAP24HP230V1AH"
    }
   }
  }
