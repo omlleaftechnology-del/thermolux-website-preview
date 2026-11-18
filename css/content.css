@@ -249,3 +249,5 @@ select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='htt
 .fin-card h3{margin:0;font-size:22px;letter-spacing:-.02em}
 .fin-card p{margin:0 0 14px;color:var(--muted);font-size:16px;flex:1}
 @media(max-width:700px){.fin-cards{grid-template-columns:1fr}}
+
+.fin-cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:none}
