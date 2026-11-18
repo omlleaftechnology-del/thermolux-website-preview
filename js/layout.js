@@ -3,21 +3,21 @@
 var en=/\/en\//.test(location.pathname),R=en?'../':'',P=location.pathname.split('/').pop()||'index.html';
 document.documentElement.lang=en?'en':'fr';
 var L=en?{
- nav:['Products','Services','Projects','Financing','Subsidies','Advice','About','Contact us'],cta:'Get a quote',ctaS:'Quote',aria:'Main',menu:'Open the menu',home:'Home',
+ nav:['Products','Services','Projects','Financing','Subsidies','Advice','About'],cta:'Contact us',ctaS:'Contact',aria:'Main',menu:'Open the menu',home:'Home',
  f:{blurb:'Your expert in air conditioning, heating and ventilation in Greater Montréal.',
   c1:'Products',p:['Wall-mounted systems','Multi-zone','Central systems','Air exchangers','Thermostats'],
   c2:'Services',s:['Installation','Replacement','Repair and diagnostic','Maintenance and cleaning','Ventilation'],
   c3:'Resources',r:['LogisVert rebates','Guides and advice','FAQ','Projects','Blog'],c4:'Contact',area:'Greater Montréal, QC',
   rights:'© 2026 Thermolux Inc. All rights reserved.',legal:'Terms · Privacy · Sitemap'}
 }:{
- nav:['Produits','Services','Réalisations','Financement','Subventions','Conseils','À propos','Nous joindre'],cta:'Demander une soumission',ctaS:'Soumission',aria:'Principal',menu:'Ouvrir le menu',home:'Accueil',
+ nav:['Produits','Services','Réalisations','Financement','Subventions','Conseils','À propos'],cta:'Nous joindre',ctaS:'Contact',aria:'Principal',menu:'Ouvrir le menu',home:'Accueil',
  f:{blurb:'Votre expert en climatisation, chauffage et ventilation dans le Grand Montréal.',
   c1:'Produits',p:['Systèmes muraux','Multizones','Systèmes centraux','Échangeurs d’air','Thermostats'],
   c2:'Services',s:['Installation','Remplacement','Réparation et diagnostic','Entretien et nettoyage','Ventilation'],
   c3:'Ressources',r:['Subventions LogisVert','Guides et conseils','FAQ','Réalisations','Blogue'],c4:'Nous joindre',area:'Grand Montréal, QC',
   rights:'© 2026 Thermolux Inc. Tous droits réservés.',legal:'Conditions · Confidentialité · Plan du site'}
 };
-var pages=['catalogue.html','services.html','realisations.html','financement.html','index.html#subvention','blogue.html','a-propos.html','contact.html'];
+var pages=['catalogue.html','services.html','realisations.html','financement.html','index.html#subvention','blogue.html','a-propos.html'];
 var other=(en?'../'+P:'en/'+P)+location.search;
 var lang='<span class="lang">'+(en?'<a href="'+other+'" hreflang="fr" lang="fr">FR</a> / <a aria-current="true" href="#" lang="en">EN</a>':'<a aria-current="true" href="#" lang="fr">FR</a> / <a href="'+other+'" hreflang="en" lang="en">EN</a>')+'</span>';
 var SO=[['Facebook','https://www.facebook.com/thermoluxhvac','<path d="M14 8.5V7c0-.8.4-1.2 1.300-1.200H17V3h-2.500C11.800 3 10.500 4.600 10.500 6.800V8.500H8v3h2.500V21H14v-9.500h2.600l.4-3H14Z"/>'],
@@ -26,7 +26,7 @@ var SO=[['Facebook','https://www.facebook.com/thermoluxhvac','<path d="M14 8.5V7
 var SOC='<div class="soc">'+SO.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener" aria-label="'+s[0]+'"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'+s[2]+'</svg></a>'}).join('')+'</div>';
 var H='<header><div class="wrap nav"><a href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><nav aria-label="'+L.aria+'"><ul>'+
  ['index.html'].concat(pages).map(function(h,i){return '<li><a href="'+h+'">'+(i?L.nav[i-1]:L.home)+'</a></li>'}).join('')+'</ul></nav>'+
- '<div class="r"><a class="tel-d" href="tel:4385091823">438-509-1823</a>'+lang+'<a class="btn btn-p" href="contact.html#soumission"><span class="d">'+L.cta+'</span><span class="m">'+L.ctaS+'</span></a>'+
+ '<div class="r">'+lang+'<a class="btn btn-p" href="contact.html#soumission"><span class="d">'+L.cta+'</span><span class="m">'+L.ctaS+'</span></a>'+
  '<button type="button" class="burger" id="burger" aria-label="'+L.menu+'" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button></div></div>'+
  '<div class="mnav" id="mnav" hidden><div class="wrap"><ul>'+
  ['index.html'].concat(pages).map(function(h,i){return '<li><a href="'+h+'">'+(i?L.nav[i-1]:L.home)+'</a></li>'}).join('')+'</ul>'+
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded',function(){
   m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);e.stopPropagation()});
   document.addEventListener('click',function(){set(false)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
-  window.addEventListener('resize',function(){if(innerWidth>1400)set(false)});
+  window.addEventListener('resize',function(){if(innerWidth>1270)set(false)});
   m.querySelectorAll('a[href]').forEach(function(a){if(a.getAttribute('href')===P&&!a.classList.contains('mcta')){a.setAttribute('aria-current','page')}});
  }
 });
