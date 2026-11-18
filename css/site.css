@@ -553,3 +553,4 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 @media(min-width:901px){.phead.img{min-height:clamp(480px,40vw,780px)!important;padding:clamp(96px,9vw,160px) 0 clamp(64px,6vw,110px)!important}.phead.img.cat-head,.phead.img.tight{padding:clamp(96px,9vw,160px) 0 clamp(64px,6vw,110px)!important}}
 .phead.img>img[src*="subvention-technician"]{object-position:50% 18%}
 @media(min-width:901px){.phead.img.face-r h1{max-width:min(52%,16em)!important}.phead.img.face-r .lead{max-width:min(46%,40ch)}}
+@media(min-width:901px){.phead.img.img-right{background:var(--navy)}.phead.img.img-right>img{left:auto;right:0;width:60%;object-position:50% 30%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}.phead.img.img-right .wrap>*:not(.crumbs){max-width:min(520px,42%)!important}.split.solo{grid-template-columns:minmax(0,820px)}}
