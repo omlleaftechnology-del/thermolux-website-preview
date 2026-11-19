@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=154">
-<link rel="stylesheet" href="css/catalogue.css?v=75">
+<link rel="stylesheet" href="css/catalogue.css?v=91">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -33,7 +33,7 @@
    <p class="lead" id="lead" hidden></p>
    <dl class="keys" id="keys"></dl>
    <div class="caps" id="caps"><p>Capacités disponibles (BTU)</p><ul id="capl"></ul></div>
-   <div class="acts" id="acts"><a class="btn btn-p" href="contact.html#soumission">Nous joindre</a><a class="btn btn-o" href="tel:4385091823">Appeler 438-509-1823</a></div>
+   <div class="acts" id="acts"><a class="btn btn-p" href="contact.html#soumission">Nous joindre</a><a class="btn btn-o" href="tel:4385091823">Appeler 438-509-1823</a><a class="btn btn-d" id="brochureBtn" hidden target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M12 11v6m0 0-2.500-2.500M12 17l2.500-2.500"/></svg>Télécharger la brochure (PDF)</a></div>
    <p class="note">Installation par nos techniciens à Montréal, Laval et Longueuil.</p>
   </div>
  </div>
@@ -63,7 +63,7 @@
 <script src="js/layout.js?v=151"></script>
 <script src="js/subsidies.js?v=210"></script>
 <script src="js/variants.js?v=210"></script>
-<script src="js/products.js?v=210"></script>
+<script src="js/products.js?v=211"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -112,7 +112,7 @@
  $("spec").addEventListener("click",function(e){var b=e.target.closest("#speccaps button");if(b)(window.showCap||window.renderSpec)(b.dataset.c)});
  $("whyl").innerHTML=(d.why||[]).map(function(w){return "<li><h3>"+esc(w[0]).replace(/ °C/g,"\u00a0°C")+"</h3><p>"+esc(w[1])+"</p></li>"}).join("");
  $("intro").textContent=d.intro||"";
- if(D.brochure){$("brochure").href=D.brochure;$("dl").hidden=false}
+ if(D.brochure){$("brochure").href=D.brochure;$("dl").hidden=false;var bb=$("brochureBtn");if(bb){bb.href=D.brochure;bb.hidden=false}}
  var sim=P.filter(function(x){return x.slug!=p.slug}).sort(function(a,b){return (b.type==p.type)-(a.type==p.type)||(b.brand==p.brand)-(a.brand==p.brand)}).slice(0,4);
  $("sim").innerHTML=sim.map(function(q){
   var c=n(q.btu[0])+(q.btu.length>1?" – "+n(q.btu[q.btu.length-1]):"");

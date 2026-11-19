@@ -735,6 +735,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "canair-4c28": {
+  "brochure": "https://cms.canair.com/assets/brochure_canair-ductless-split-systems-4c35-28-25_2026-10__ang.pdf",
   "fr": {
    "intro": "La Canair 4C28 est un système mural simple zone développé pour le climat rigoureux du Québec. Grâce à la technologie Inverter, elle offre une température plus stable et une consommation d’énergie réduite.",
    "why": [
@@ -1311,6 +1312,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "canair-4cdh": {
+  "brochure": "https://cms.canair.com/assets/brochure-canair-4cdh-r-454b-2026-10-05__ang.pdf",
   "fr": {
    "intro": "Le système central à décharge latérale Canair 4CDH est conçu pour offrir un confort puissant et stable dans les conditions climatiques exigeantes du Québec.",
    "why": [
