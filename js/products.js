@@ -373,6 +373,164 @@ window.PRODUCTS=[
    "img/products/gal/canair-4cdh-852711.jpg",
    "img/products/gal/canair-4cdh-d3f618.jpg"
   ]
+ },
+ {
+  "slug": "kinghome-airy",
+  "name": "Kinghome Airy",
+  "brand": "Kinghome",
+  "type": "mural",
+  "series": "AIRY",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "seer2": "30",
+  "hspf2": "11.2",
+  "tminC": "-30",
+  "dB": "19",
+  "refrigerant": "R-32",
+  "wifi": true,
+  "img": "img/products/kinghome-airy-1.png",
+  "src": "https://tticlimatisation.com/produits/kinghome-airy-thermopompe-murale-simple-zone",
+  "imgs": [
+   "img/products/kinghome-airy-1.png"
+  ]
+ },
+ {
+  "slug": "kinghome-charmo",
+  "name": "Kinghome Charmo",
+  "brand": "Kinghome",
+  "type": "mural",
+  "series": "CHARMO",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "seer2": "20.5",
+  "hspf2": "8.8",
+  "tminC": "-25",
+  "dB": "22",
+  "refrigerant": "R-32",
+  "wifi": true,
+  "img": "img/products/kinghome-charmo-1.jpg",
+  "src": "https://tticlimatisation.com/produits/kinghome-charmo-thermopompe-murale-simple-zone",
+  "imgs": [
+   "img/products/kinghome-charmo-1.jpg"
+  ]
+ },
+ {
+  "slug": "zephyr-cb22",
+  "name": "Zephyr CB22",
+  "brand": "Zephyr",
+  "type": "mural",
+  "series": "CB22",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "seer2": "22.5",
+  "hspf2": "9.8",
+  "tminC": "-25",
+  "dB": "28",
+  "refrigerant": "R-32",
+  "img": "img/products/zephyr-cb22-1.jpg",
+  "src": "https://tticlimatisation.com/produits/thermopompe-murale-zephyr-cb22",
+  "imgs": [
+   "img/products/zephyr-cb22-1.jpg"
+  ]
+ },
+ {
+  "slug": "zephyr-ub32",
+  "name": "Zephyr UB32 R454b",
+  "brand": "Zephyr",
+  "type": "mural",
+  "series": "UB32",
+  "btu": [
+   9000,
+   12000,
+   15000
+  ],
+  "seer2": "32",
+  "hspf2": "11.8",
+  "tminC": "-30",
+  "dB": "29",
+  "refrigerant": "R-454B",
+  "img": "img/products/zephyr-ub32-1.jpg",
+  "src": "https://tticlimatisation.com/produits/thermopompe-murale-zephyr-ub32-30C",
+  "imgs": [
+   "img/products/zephyr-ub32-1.jpg"
+  ]
+ },
+ {
+  "slug": "kinghome-multizone-r32",
+  "name": "Kinghome Multizone R32 Ultra Heat",
+  "brand": "Kinghome",
+  "type": "multizone",
+  "series": "R32 Ultra Heat",
+  "btu": [
+   18000,
+   24000,
+   36000,
+   42000,
+   48000,
+   60000
+  ],
+  "seer2": "21",
+  "hspf2": "10",
+  "tminC": "-30",
+  "refrigerant": "R-32",
+  "img": "img/products/kinghome-multizone-r32-1.png",
+  "src": "https://tticlimatisation.com/produits/systeme-multizone-kinghome-r32-series-ultra-heat",
+  "imgs": [
+   "img/products/kinghome-multizone-r32-1.png"
+  ]
+ },
+ {
+  "slug": "zephyr-multi-zone-r454b",
+  "name": "Zephyr Multi Zone R454b",
+  "brand": "Zephyr",
+  "type": "multizone",
+  "series": "Multi Zone",
+  "btu": [
+   18000,
+   24000,
+   36000,
+   42000
+  ],
+  "refrigerant": "R-454B",
+  "img": "img/products/zephyr-multi-zone-r454b-1.jpg",
+  "src": "https://tticlimatisation.com/produits/zephyr-multi-zone-r454b",
+  "imgs": [
+   "img/products/zephyr-multi-zone-r454b-1.jpg"
+  ]
+ },
+ {
+  "slug": "kinghome-ultranixx-r32",
+  "name": "Kinghome Ultranixx R32",
+  "brand": "Kinghome",
+  "type": "central",
+  "series": "ULTRANIXX",
+  "btu": [
+   24000,
+   36000,
+   48000,
+   60000
+  ],
+  "seer2": "19",
+  "hspf2": "10.5",
+  "tminC": "-30",
+  "refrigerant": "R-32",
+  "img": "img/products/kinghome-ultranixx-r32-1.jpg",
+  "src": "https://tticlimatisation.com/produits/thermopompe-kinghome-ultranixx-r32",
+  "imgs": [
+   "img/products/kinghome-ultranixx-r32-1.jpg"
+  ]
  }
 ];
 
@@ -1273,6 +1431,446 @@ window.PRODUCT_DETAILS={
     "warr": "Parts 10 years · labour 10 years",
     "ahri": "AHRI 10149900, 10149903, 10157570, 10157571",
     "models": "SAP09HP230V1AO / SAP09HP230V1AH · SAP12HP230V1AO / SAP12HP230V1AH · SAP18HP230V1AO / SAP18HP230V1AH · SAP24HP230V1AO / SAP24HP230V1AH"
+   }
+  }
+ },
+ "kinghome-airy": {
+  "fr": {
+   "intro": "L’Airy est le sommet de la gamme simple-zone Kinghome : un système mural sans conduits qui atteint jusqu’à 30 SEER2 et 11,2 HSPF2, certifié ENERGY STAR avec désignation climat froid. Son compresseur G-Storm garde 100 % de sa capacité de chauffage à −15 °C.",
+   "why": [
+    [
+     "30 SEER2, 11,2 HSPF2",
+     "Au sommet de la gamme Kinghome, certifié ENERGY STAR climat froid."
+    ],
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Compresseur G-Storm jusqu’à 200 Hz, réfrigérant R32."
+    ],
+    [
+     "Économie d’énergie AI 2.0",
+     "Jusqu’à 25 % d’économies grâce à la commande intelligente."
+    ],
+    [
+     "Flux d’air 3D et Wi-Fi",
+     "Portée jusqu’à 15 m, nettoyage intelligent, contrôle par application."
+    ]
+   ],
+   "spec": {
+    "clim": "−29 °C à 50 °C",
+    "noise": "Intérieur dès 19 dB(A)",
+    "volt": "—",
+    "wifi": "Oui, intégré",
+    "cert": "ENERGY STAR, climat froid",
+    "warr": "12 ans compresseur et pièces (résidentiel, modèles enregistrés)",
+    "ahri": "—",
+    "models": "—"
+   }
+  },
+  "en": {
+   "intro": "The Airy tops Kinghome’s single-zone range: a ductless wall-mounted system reaching up to 30 SEER2 and 11.2 HSPF2, ENERGY STAR certified with the cold-climate designation. Its G-Storm compressor keeps 100% of its heating capacity at −15 °C.",
+   "why": [
+    [
+     "30 SEER2, 11.2 HSPF2",
+     "Top of the Kinghome range, ENERGY STAR cold-climate certified."
+    ],
+    [
+     "Heating down to −30 °C",
+     "G-Storm compressor up to 200 Hz, R32 refrigerant."
+    ],
+    [
+     "AI 2.0 energy saving",
+     "Up to 25% savings thanks to smart inverter control."
+    ],
+    [
+     "3D airflow and Wi-Fi",
+     "Throw up to 15 m, smart cleaning, app control."
+    ]
+   ],
+   "spec": {
+    "clim": "−29 °C to 50 °C",
+    "noise": "Indoor from 19 dB(A)",
+    "volt": "—",
+    "wifi": "Yes, built in",
+    "cert": "ENERGY STAR, cold climate",
+    "warr": "12 years on compressor and parts (residential, registered models)",
+    "ahri": "—",
+    "models": "—"
+   }
+  }
+ },
+ "kinghome-charmo": {
+  "fr": {
+   "intro": "La série Charmo offre un excellent rapport performance-prix, avec jusqu’à 20,5 SEER2 et 8,8 HSPF2 et le réfrigérant R32. Chauffage fiable jusqu’à −25 °C et refroidissement performant jusqu’à 48 °C.",
+   "why": [
+    [
+     "20,5 SEER2, 8,8 HSPF2",
+     "Excellent rapport performance-prix, réfrigérant R32."
+    ],
+    [
+     "Chauffage jusqu’à −25 °C",
+     "Refroidissement performant jusqu’à 48 °C."
+    ],
+    [
+     "Dès 22 dB(A)",
+     "Ultra-silencieux, mode Turbo et 7 vitesses de ventilation."
+    ],
+    [
+     "Wi-Fi intégré",
+     "Contrôle par application, auto-nettoyage, gestion de l’humidité."
+    ]
+   ],
+   "spec": {
+    "clim": "Jusqu’à 48 °C",
+    "noise": "Intérieur dès 22 dB(A)",
+    "volt": "—",
+    "wifi": "Oui, intégré",
+    "cert": "ENERGY STAR climat froid (sauf modèle 12 000 BTU)",
+    "warr": "12 ans compresseur et pièces (résidentiel, modèles enregistrés)",
+    "ahri": "—",
+    "models": "—"
+   }
+  },
+  "en": {
+   "intro": "The Charmo series offers an excellent performance-to-price ratio, with up to 20.5 SEER2 and 8.8 HSPF2 and R32 refrigerant. Reliable heating down to −25 °C and efficient cooling up to 48 °C.",
+   "why": [
+    [
+     "20.5 SEER2, 8.8 HSPF2",
+     "Excellent performance-to-price ratio, R32 refrigerant."
+    ],
+    [
+     "Heating down to −25 °C",
+     "Efficient cooling up to 48 °C."
+    ],
+    [
+     "From 22 dB(A)",
+     "Ultra-quiet, Turbo mode and 7 fan speeds."
+    ],
+    [
+     "Built-in Wi-Fi",
+     "App control, self-cleaning, humidity management."
+    ]
+   ],
+   "spec": {
+    "clim": "Up to 48 °C",
+    "noise": "Indoor from 22 dB(A)",
+    "volt": "—",
+    "wifi": "Yes, built in",
+    "cert": "ENERGY STAR cold climate (except the 12,000 BTU model)",
+    "warr": "12 years on compressor and parts (residential, registered models)",
+    "ahri": "—",
+    "models": "—"
+   }
+  }
+ },
+ "zephyr-cb22": {
+  "fr": {
+   "intro": "Le système mural Zephyr CB22 est performant là où ça compte : jusqu’à 22,5 SEER2 et 9,8 HSPF2, pour un excellent rapport qualité-prix. Chauffage optimal jusqu’à −25 °C, avec châssis chauffant, dégivrage automatique et chauffage du compresseur.",
+   "why": [
+    [
+     "22,5 SEER2, 9,8 HSPF2",
+     "Excellent rapport qualité-prix, réfrigérant R32."
+    ],
+    [
+     "Chauffage jusqu’à −25 °C",
+     "Châssis chauffant, dégivrage automatique, chauffage du compresseur."
+    ],
+    [
+     "Dès 28 dB(A)",
+     "Modes iFeel, 4D, Turbo et nettoyage automatique."
+    ],
+    [
+     "Version 115 V",
+     "Offerte en 9 000 et 12 000 BTU/h."
+    ]
+   ],
+   "spec": {
+    "clim": "Dès −15 °C",
+    "noise": "Intérieur dès 28 dB(A)",
+    "volt": "230 V (115 V : 9 000 et 12 000 BTU/h)",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1 (ZE-09CB22, ZE-18CB22)",
+    "warr": "Pièces 10 ans",
+    "ahri": "AHRI 215414825 (18 000 BTU/h)",
+    "models": "ZE-09CB22 · ZE-12CB22 · ZE-18CB22 · ZE-24CB22 (115 V : ZE-09DB22 · ZE-12DB22)"
+   }
+  },
+  "en": {
+   "intro": "The Zephyr CB22 wall-mounted system performs where it counts: up to 22.5 SEER2 and 9.8 HSPF2, for excellent value. Optimal heating down to −25 °C, with a base pan heater, automatic defrost and compressor heater.",
+   "why": [
+    [
+     "22.5 SEER2, 9.8 HSPF2",
+     "Excellent value, R32 refrigerant."
+    ],
+    [
+     "Heating down to −25 °C",
+     "Base pan heater, automatic defrost, compressor heater."
+    ],
+    [
+     "From 28 dB(A)",
+     "iFeel and 4D modes, Turbo and automatic cleaning."
+    ],
+    [
+     "115 V version",
+     "Available in 9,000 and 12,000 BTU/h."
+    ]
+   ],
+   "spec": {
+    "clim": "From −15 °C",
+    "noise": "Indoor from 28 dB(A)",
+    "volt": "230 V (115 V: 9,000 and 12,000 BTU/h)",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1 (ZE-09CB22, ZE-18CB22)",
+    "warr": "Parts 10 years",
+    "ahri": "AHRI 215414825 (18,000 BTU/h)",
+    "models": "ZE-09CB22 · ZE-12CB22 · ZE-18CB22 · ZE-24CB22 (115 V: ZE-09DB22 · ZE-12DB22)"
+   }
+  }
+ },
+ "zephyr-ub32": {
+  "fr": {
+   "intro": "Le système mural Zephyr UB32 offre un confort sans compromis, été comme hiver : jusqu’à 32 SEER2 et 11,8 HSPF2, parmi les plus performants du marché, avec un chauffage optimal jusqu’à −30 °C.",
+   "why": [
+    [
+     "32 SEER2, 11,8 HSPF2",
+     "Parmi les plus performants du marché, ENERGY STAR V6.1."
+    ],
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Châssis chauffant, dégivrage automatique, chauffage du compresseur."
+    ],
+    [
+     "Admissible LogisVert",
+     "12 000 et 15 000 BTU/h : 1 560 $."
+    ],
+    [
+     "Dès 29 dB(A)",
+     "Modes iFeel, 4D, Turbo et nettoyage automatique."
+    ]
+   ],
+   "spec": {
+    "clim": "Dès −15 °C",
+    "noise": "Intérieur dès 29 dB(A)",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1",
+    "warr": "Pièces 10 ans",
+    "ahri": "AHRI 217596869, 217596870",
+    "models": "ZE-09UB32 · ZE-12UB32 · ZE-15UB32"
+   }
+  },
+  "en": {
+   "intro": "The Zephyr UB32 wall-mounted system delivers uncompromising comfort, summer and winter: up to 32 SEER2 and 11.8 HSPF2, among the most efficient on the market, with optimal heating down to −30 °C.",
+   "why": [
+    [
+     "32 SEER2, 11.8 HSPF2",
+     "Among the most efficient on the market, ENERGY STAR V6.1."
+    ],
+    [
+     "Heating down to −30 °C",
+     "Base pan heater, automatic defrost, compressor heater."
+    ],
+    [
+     "LogisVert eligible",
+     "12,000 and 15,000 BTU/h: $1,560."
+    ],
+    [
+     "From 29 dB(A)",
+     "iFeel and 4D modes, Turbo and automatic cleaning."
+    ]
+   ],
+   "spec": {
+    "clim": "From −15 °C",
+    "noise": "Indoor from 29 dB(A)",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1",
+    "warr": "Parts 10 years",
+    "ahri": "AHRI 217596869, 217596870",
+    "models": "ZE-09UB32 · ZE-12UB32 · ZE-15UB32"
+   }
+  }
+ },
+ "kinghome-multizone-r32": {
+  "fr": {
+   "intro": "Une seule unité extérieure, jusqu’à 6 zones. Le système multizone Kinghome R32 raccorde jusqu’à six unités intérieures à un seul condenseur de 18 000 à 60 000 BTU/h, avec un chauffage stable jusqu’à −30 °C.",
+   "why": [
+    [
+     "Jusqu’à 6 zones",
+     "Un seul condenseur, taux de connexion jusqu’à 150 %."
+    ],
+    [
+     "Chauffage stable à −30 °C",
+     "Fonctionnement de −30 °C à 48 °C, réfrigérant R32."
+    ],
+    [
+     "21 SEER2, 10 HSPF2",
+     "Homologué AHRI et ENERGY STAR, admissible à LogisVert."
+    ],
+    [
+     "Contrôle bi-énergie",
+     "Bascule automatique vers la fournaise d’appoint au besoin."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 48 °C",
+    "noise": "Cassette 1 voie dès 30 dB(A)",
+    "volt": "164 V – 265 V (plage étendue)",
+    "wifi": "Oui, via l’application",
+    "cert": "AHRI, ENERGY STAR, NEEP, CEE",
+    "warr": "—",
+    "ahri": "Selon la combinaison",
+    "models": "—"
+   }
+  },
+  "en": {
+   "intro": "One outdoor unit, up to 6 zones. The Kinghome R32 multi-zone system connects up to six indoor units to a single condenser from 18,000 to 60,000 BTU/h, with steady heating down to −30 °C.",
+   "why": [
+    [
+     "Up to 6 zones",
+     "A single condenser, connection ratio up to 150%."
+    ],
+    [
+     "Steady heating at −30 °C",
+     "Operation from −30 °C to 48 °C, R32 refrigerant."
+    ],
+    [
+     "21 SEER2, 10 HSPF2",
+     "AHRI and ENERGY STAR listed, LogisVert eligible."
+    ],
+    [
+     "Dual-fuel control",
+     "Switches automatically to the backup furnace when needed."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 48 °C",
+    "noise": "1-way cassette from 30 dB(A)",
+    "volt": "164 V – 265 V (extended range)",
+    "wifi": "Yes, via the app",
+    "cert": "AHRI, ENERGY STAR, NEEP, CEE",
+    "warr": "—",
+    "ahri": "Depends on the combination",
+    "models": "—"
+   }
+  }
+ },
+ "zephyr-multi-zone-r454b": {
+  "fr": {
+   "intro": "Les systèmes multizones Zephyr s’installent avec 2 à 5 unités intérieures pour une seule unité extérieure. Des performances qui concurrencent presque toutes les marques, à petit prix. Offerts de 18 000 à 42 000 BTU/h.",
+   "why": [
+    [
+     "2 à 5 unités intérieures",
+     "Une seule unité extérieure."
+    ],
+    [
+     "18 000 à 42 000 BTU/h",
+     "Réfrigérant R454B."
+    ],
+    [
+     "Performances compétitives",
+     "À petit prix."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "—",
+    "warr": "—",
+    "ahri": "Selon la combinaison",
+    "models": "—"
+   }
+  },
+  "en": {
+   "intro": "Zephyr multi-zone systems are installed with 2 to 5 indoor units on a single outdoor unit. Performance that rivals almost every brand, at a low price. Available from 18,000 to 42,000 BTU/h.",
+   "why": [
+    [
+     "2 to 5 indoor units",
+     "A single outdoor unit."
+    ],
+    [
+     "18,000 to 42,000 BTU/h",
+     "R454B refrigerant."
+    ],
+    [
+     "Competitive performance",
+     "At a low price."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "—",
+    "warr": "—",
+    "ahri": "Depends on the combination",
+    "models": "—"
+   }
+  }
+ },
+ "kinghome-ultranixx-r32": {
+  "fr": {
+   "intro": "Conçu pour les vrais hivers canadiens, le système central Kinghome Ultranixx offre sa pleine capacité de chauffage jusqu’à −15 °C et fonctionne de façon fiable jusqu’à −30 °C. Compresseur modulant et réfrigérant R32 : jusqu’à 19 SEER2 et 10,5 HSPF2.",
+   "why": [
+    [
+     "Pleine capacité à −15 °C",
+     "Fonctionnement continu de −30 °C à 54 °C."
+    ],
+    [
+     "19 SEER2, 10,5 HSPF2",
+     "Compresseur modulant, admissible à LogisVert."
+    ],
+    [
+     "Compatible bi-énergie",
+     "S’intègre aux fournaises à gaz pour un chauffage hybride."
+    ],
+    [
+     "Détecteur de fuite intégré",
+     "Ventilo-convecteur multiposition, installation simplifiée."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 54 °C (fonctionnement continu)",
+    "noise": "Unité extérieure dès 60 dB(A)",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "Admissible LogisVert (climat froid)",
+    "warr": "—",
+    "ahri": "AHRI 218855728, 218855726, 218855729, 218855727",
+    "models": "KU36UXO / KU24UXI · KU36UXO / KU36UXI · KU60UXO / KU48UXI · KU60UXO / KU60UXI"
+   }
+  },
+  "en": {
+   "intro": "Built for real Canadian winters, the Kinghome Ultranixx central system delivers full heating capacity down to −15 °C and runs reliably down to −30 °C. Modulating compressor and R32 refrigerant: up to 19 SEER2 and 10.5 HSPF2.",
+   "why": [
+    [
+     "Full capacity at −15 °C",
+     "Continuous operation from −30 °C to 54 °C."
+    ],
+    [
+     "19 SEER2, 10.5 HSPF2",
+     "Modulating compressor, LogisVert eligible."
+    ],
+    [
+     "Dual-fuel compatible",
+     "Works with gas furnaces for hybrid heating."
+    ],
+    [
+     "Built-in leak detector",
+     "Multi-position fan coil, simplified installation."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 54 °C (continuous operation)",
+    "noise": "Outdoor unit from 60 dB(A)",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "LogisVert eligible (cold climate)",
+    "warr": "—",
+    "ahri": "AHRI 218855728, 218855726, 218855729, 218855727",
+    "models": "KU36UXO / KU24UXI · KU36UXO / KU36UXI · KU60UXO / KU48UXI · KU60UXO / KU60UXI"
    }
   }
  }
