@@ -10,33 +10,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=142">
-<link rel="stylesheet" href="css/content.css?v=54">
+<link rel="stylesheet" href="css/content.css?v=119">
 </head>
 <body>
 
 <div id="site-header"></div>
 
+<div class="ar-progress" id="prog" aria-hidden="true"></div>
 <main>
 <article>
-<section class="phead" style="padding-bottom:0;background:#fff">
- <div class="wrap art-w">
-  <div class="crumbs"><a href="index.html">Accueil</a><span>/</span><a href="blogue.html">Conseils</a><span>/</span><span style="margin:0;opacity:1" id="crumb"></span></div>
-  <span class="tag" id="tag"></span>
-  <h1 id="title" class="art-h"></h1>
-  <p class="meta" id="meta"></p>
+<section class="phead img ar-hero"><div class="wrap">
+ <div class="ar-hl">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="blogue.html">Conseils</a></nav>
+  <span class="ar-tag" id="tag"></span>
+  <h1 id="title"></h1>
+  <p class="ar-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><i id="read"></i></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.6 3.200-5.500 7-5.500s6.400 1.900 7 5.500"/></svg>Par Thermolux</span></p>
  </div>
-</section>
-<div class="wrap art-w"><div class="zoom art-cover" id="cover"></div></div>
-<div class="wrap art-w art-grid">
- <nav class="toc" aria-label="Sommaire" id="toc"><h2>Dans cet article</h2><ol id="toclist"></ol></nav>
- <div>
+ <figure class="ar-cover" id="cover"></figure>
+</div></section>
+<div class="wrap ar-brief-w"><aside class="ar-brief"><b>En bref</b><p id="brief"></p></aside></div>
+<div class="wrap ar-grid">
+ <nav class="toc ar-toc" aria-label="Sommaire" id="toc"><h2>Dans cet article</h2><ol id="toclist"></ol></nav>
+ <div class="ar-main">
   <div class="prose" id="body"></div>
+  <div class="ar-by"><img src="img/logo.png" alt="Thermolux"><p><b>Thermolux</b>Licence RBQ 5812-9388-01 · Climatisation et chauffage dans le Grand Montréal</p></div>
   <p class="back"><a class="link" href="blogue.html">← Tous les conseils</a></p>
  </div>
+ <aside class="ar-side"><div class="ar-help"><h3>Un projet de climatisation ou de chauffage ?</h3><p>Parlons-en. La soumission est gratuite.</p><a class="tel" href="tel:4385091823">438-509-1823</a><a class="btn btn-p" href="contact.html#soumission">Nous joindre</a></div></aside>
 </div>
 </article>
 
-<section class="sec paper" style="margin-top:96px"><div class="wrap">
+<section class="sec paper ar-rel" style="margin-top:96px"><div class="wrap">
  <div class="sec-h"><div class="eyebrow">À lire aussi</div><h2>Articles <em>liés</em></h2></div>
  <div class="posts" id="related"></div>
 </div></section>
@@ -57,14 +61,23 @@
  function img(q){return '<div class="zoom'+(q.contain?' fit':'')+'"><img src="'+q.img+'" alt="'+q.alt+'" loading="lazy"></div>'}
  document.title=p.title+" | Thermolux";
  document.querySelector('meta[name=description]').content=p.excerpt;
- $("crumb").textContent=p.title;$("tag").textContent=p.cat;$("title").textContent=p.title;$("meta").textContent="Par Thermolux · "+p.read+" de lecture";
- $("cover").className="zoom art-cover"+(p.contain?" fit":"");
+ $("tag").textContent=p.cat;$("title").textContent=p.title;$("read").textContent=p.read+" de lecture";$("brief").textContent=p.excerpt;
+ $("cover").className="ar-cover"+(p.contain?" fit":"");
  $("cover").innerHTML='<img src="'+p.img+'" alt="'+p.alt+'">';
  $("body").innerHTML=p.body;
  var h=$("body").querySelectorAll("h2[id]");
  $("toclist").innerHTML=[].map.call(h,function(x){return '<li><a href="#'+x.id+'">'+x.textContent+'</a></li>'}).join("");
  $("toc").hidden=!h.length;
  $("related").innerHTML=P.filter(function(x){return x.slug!==p.slug}).slice(0,3).map(function(q){q=T(q);return '<article class="post"><a href="article.html?a='+q.slug+'">'+img(q)+'<span class="tag">'+q.cat+' · '+q.read+'</span><h3>'+q.title+'</h3><p>'+q.excerpt+'</p><span class="link">Lire</span></a></article>'}).join("");
+ /* reading progress + active section in the table of contents */
+ var bar=$("prog"),links=[].slice.call(document.querySelectorAll("#toclist a")),secs=[].slice.call(h);
+ function onScroll(){
+  var b=$("body"),r=b.getBoundingClientRect(),tot=r.height-innerHeight*.5,done=Math.min(Math.max(-r.top+innerHeight*.3,0),tot);
+  bar.style.width=(tot>0?done/tot*100:0)+"%";
+  var cur=-1;secs.forEach(function(x,i){if(x.getBoundingClientRect().top<innerHeight*.35)cur=i});
+  links.forEach(function(a,i){a.classList.toggle("on",i===cur)});
+ }
+ addEventListener("scroll",onScroll,{passive:true});onScroll();
 })();
 </script>
 

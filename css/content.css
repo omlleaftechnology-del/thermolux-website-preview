@@ -360,3 +360,51 @@ body.pm-lock{overflow:hidden}
 .cinfo-card .fhint{margin:6px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);color:#B6C3D6;font-size:14px;line-height:1.5}
 .cgrid .form-contact{display:none}
 @media(max-width:900px){.cinfo-card{position:static;padding:26px 22px}}
+
+/* article template (blog): hero with cover card, "in brief", numbered sections, step/check lists, sticky TOC + help card */
+.ar-progress{position:fixed;left:0;top:0;height:3px;width:0;background:#E8590C;z-index:300;transition:width .12s}
+.phead.img.ar-hero{display:block!important;min-height:0!important;padding:clamp(56px,6vw,96px) 0 clamp(96px,9vw,140px)!important;background:radial-gradient(1100px 480px at 88% -10%,#2169B6 0,transparent 62%),linear-gradient(160deg,#0D3258,#0A1F3D)!important}
+.ar-hero:before{display:none!important}
+.ar-hero>.wrap{display:grid!important;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center;max-width:var(--wrap)}
+.ar-hero h1{max-width:none!important;font-size:clamp(30px,3.4vw,52px)!important;line-height:1.1;letter-spacing:-.03em;color:#fff;margin:18px 0 22px}
+.ar-tag{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(140,196,245,.18);color:#BFE0FF;font:700 12px Manrope,Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.ar-meta{display:flex;gap:10px 22px;flex-wrap:wrap;margin:0;color:#B6C3D6;font-size:15px}
+.ar-meta span{display:inline-flex;align-items:center;gap:8px}
+.ar-meta svg{width:18px;height:18px;color:#8CC4F5}
+.ar-cover{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:#fff;box-shadow:0 34px 70px -34px rgba(0,0,0,.7)}
+.ar-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.ar-cover.fit img{object-fit:contain;padding:14px}
+.ar-brief-w{position:relative;z-index:2;margin-top:-58px}
+.ar-brief{display:grid;grid-template-columns:auto 1fr;gap:0 28px;align-items:center;max-width:980px;padding:26px 32px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 50px -32px rgba(10,31,61,.45)}
+.ar-brief b{padding-right:28px;border-right:2px solid #D4E2F0;font:800 13px Manrope,Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.ar-brief p{margin:0;font-size:18px;line-height:1.55;color:var(--ink)}
+.ar-grid{display:grid;grid-template-columns:190px minmax(0,1fr) 270px;gap:clamp(32px,4vw,56px);margin-top:64px;align-items:start}
+.ar-main{min-width:0}
+.ar-main .prose{max-width:720px;counter-reset:sec}
+.ar-toc .on{color:var(--blue)!important;font-weight:700;border-top-color:var(--blue)!important}
+.prose h2{counter-increment:sec;display:flex;gap:14px;align-items:baseline;margin:56px 0 18px;font-size:clamp(26px,2.4vw,34px);letter-spacing:-.02em}
+.prose h2:before{content:counter(sec,decimal-leading-zero);flex:none;padding:4px 9px;border-radius:9px;background:var(--blue);color:#fff;font:800 15px Manrope,Inter,sans-serif;transform:translateY(-4px)}
+.prose ol{list-style:none;margin:22px 0 28px!important;padding:0;display:grid;gap:12px;counter-reset:st}
+.prose ol>li{counter-increment:st;position:relative;margin:0!important;padding:18px 22px 18px 74px!important;background:#F4F8FC;border:1px solid var(--line);border-radius:16px}
+.prose ol>li:before{content:counter(st);position:absolute;left:18px;top:50%;display:grid;place-items:center;width:38px;height:38px;margin-top:-19px;border-radius:50%;background:var(--blue);color:#fff;font:800 16px Manrope,Inter,sans-serif}
+.prose ul{list-style:none;margin:22px 0 28px!important;padding:0;display:grid;gap:10px}
+.prose ul>li{position:relative;margin:0!important;padding:15px 20px 15px 56px!important;background:#fff;border:1px solid var(--line);border-radius:14px}
+.prose ul>li:before{content:"";position:absolute;left:18px;top:50%;width:24px;height:24px;margin-top:-12px;border-radius:50%;background:#EAF3FB url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231565B0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7'/%3E%3C/svg%3E") center/13px no-repeat}
+.prose .note{margin:38px 0;padding:24px 28px;border:0;border-radius:18px;background:linear-gradient(160deg,#0D3258,#0A1F3D);color:#fff;font-size:18px;line-height:1.55}
+.prose .note a{color:#9CCBF5}
+.ar-side{position:sticky;top:112px}
+.ar-help{padding:28px 26px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 24px 50px -34px rgba(10,31,61,.45)}
+.ar-help h3{margin:0 0 10px;font-size:21px;line-height:1.25;letter-spacing:-.02em}
+.ar-help p{margin:0 0 18px;color:var(--muted);font-size:15px}
+.ar-help .tel{display:block;margin:0 0 16px;font:800 24px Manrope,Inter,sans-serif;letter-spacing:-.02em;color:var(--ink)}
+.ar-help .btn{width:100%;justify-content:center;text-align:center}
+.ar-by{display:flex;align-items:center;gap:16px;margin-top:44px;padding:20px 24px;border-radius:18px;background:#F4F8FC;border:1px solid var(--line)}
+.ar-by img{width:120px;height:auto;flex:none}
+.ar-by p{margin:0;font-size:14.5px;color:var(--muted)}.ar-by b{display:block;color:var(--ink);font-size:16px}
+.ar-rel .post>a{display:block;overflow:hidden;padding-bottom:24px;background:#fff;border:1px solid var(--line);border-radius:20px;transition:transform .25s,box-shadow .25s}
+.ar-rel .post>a:hover{transform:translateY(-4px);box-shadow:0 26px 48px -28px rgba(10,31,61,.4)}
+.ar-rel .post .zoom{border-radius:0}
+.ar-rel .post .tag,.ar-rel .post h3,.ar-rel .post p,.ar-rel .post .link{margin-left:24px;margin-right:24px}
+@media(max-width:1180px){.ar-grid{grid-template-columns:190px minmax(0,1fr)}.ar-side{grid-column:2;position:static}}
+@media(max-width:900px){.ar-hero>.wrap{grid-template-columns:1fr!important;padding:36px var(--gut) 40px!important}.ar-cover{aspect-ratio:16/10}.ar-brief-w{margin-top:-28px}.ar-brief{grid-template-columns:1fr;gap:10px;padding:22px}.ar-brief b{border:0;padding:0}.ar-grid{grid-template-columns:1fr;margin-top:40px}.ar-side{grid-column:auto}.ar-by{flex-direction:column;align-items:flex-start}}
+.ar-rel .post{display:flex}.ar-rel .post>a{flex:1}
