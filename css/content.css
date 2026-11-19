@@ -408,3 +408,18 @@ body.pm-lock{overflow:hidden}
 @media(max-width:1180px){.ar-grid{grid-template-columns:190px minmax(0,1fr)}.ar-side{grid-column:2;position:static}}
 @media(max-width:900px){.ar-hero>.wrap{grid-template-columns:1fr!important;padding:36px var(--gut) 40px!important}.ar-cover{aspect-ratio:16/10}.ar-brief-w{margin-top:-28px}.ar-brief{grid-template-columns:1fr;gap:10px;padding:22px}.ar-brief b{border:0;padding:0}.ar-grid{grid-template-columns:1fr;margin-top:40px}.ar-side{grid-column:auto}.ar-by{flex-direction:column;align-items:flex-start}}
 .ar-rel .post{display:flex}.ar-rel .post>a{flex:1}
+/* mobile: projects "your project here" card must not stretch; subsidy tables become compact cards */
+@media(max-width:700px){
+.pj-cta{min-height:0!important;padding:24px 22px!important}.pj-cta p{flex:none!important;margin:0 0 10px!important}.pj-cta .btn{width:100%;text-align:center}
+.at-wrap{overflow:visible;border:0;background:none;box-shadow:none;border-radius:0}
+.at{display:block;min-width:0;width:100%}.at thead{display:none}.at tbody{display:grid;gap:12px}
+.at tbody tr{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px;padding:14px;border:1px solid #CFE5D8;border-radius:14px;background:#fff;box-shadow:0 12px 26px -22px rgba(10,31,61,.3)}
+.at tbody th{position:static;grid-column:1/-1;padding:0 0 2px;border:0;background:none;text-align:left}
+.at tbody th a{font-size:16px}
+.at td{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 6px;border:0;border-radius:10px;background:#EEF7F1;font-size:15px;white-space:normal;text-align:center}
+.at td:before{content:attr(data-l);font:600 11px Inter,sans-serif;color:#5C7A69}
+.at td.x{display:none}.at td.no{background:#F3F5F8;font-size:12px;color:var(--muted)}
+.at tbody tr:hover td,.at tbody tr:hover th{background:revert}.at tbody tr:hover td.no{background:#F3F5F8}.at tbody tr:hover td:not(.no){background:#EEF7F1}.at tbody tr:hover th{background:none}
+}
+@media(max-width:700px){.at tbody td.v,.at tbody td.no{display:flex}}
+@media(max-width:700px){.at tbody tr{grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px;padding:12px}.at td{padding:7px 2px;font-size:14px}.at td:before{font-size:10px}}

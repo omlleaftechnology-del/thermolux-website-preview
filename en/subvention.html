@@ -9,8 +9,8 @@
 <link rel="alternate" hreflang="en" href="https://thermolux.ca/en/subvention.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css?v=143">
-<link rel="stylesheet" href="../css/content.css?v=80">
+<link rel="stylesheet" href="../css/site.css?v=153">
+<link rel="stylesheet" href="../css/content.css?v=122">
 </head>
 <body>
 
@@ -103,8 +103,8 @@
   var h='<h3 class="at-h">'+T[type]+'</h3><div class="at-wrap"><table class="at"><thead><tr><th>'+T.model+'</th>'+caps.map(function(c){return'<th>'+n(c)+'<small>'+T.btu+'</small></th>'}).join("")+'</tr></thead><tbody>';
   rows.forEach(function(p){var d=A.data[p.slug];
    h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th>'+caps.map(function(c){
-    if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d.grants[c]||(d.newhome&&d.newhome[c]);
-    return v?'<td class="v">'+A.fmt(v)+'</td>':'<td class="no">'+(d.combo?T.combo:T.none)+'</td>'}).join("")+'</tr>'});
+    if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d.grants[c]||(d.newhome&&d.newhome[c]),l=' data-l="'+n(c)+' '+T.btu+'"';
+    return v?'<td class="v"'+l+'>'+A.fmt(v)+'</td>':'<td class="no"'+l+'>'+(d.combo?T.combo:T.none)+'</td>'}).join("")+'</tr>'});
   box.insertAdjacentHTML("beforeend",h+'</tbody></table></div>')});
  var lk=document.getElementById("aidlink");if(lk)lk.href=A.url[L]||A.url.fr;
 })();

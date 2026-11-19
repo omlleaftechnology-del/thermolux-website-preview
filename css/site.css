@@ -560,3 +560,5 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 @media(min-width:901px){.phead.img.dx>img{transform:scaleX(-1);object-position:50% 30%}.phead.img.dx .wrap>*:not(.crumbs){max-width:min(560px,44%)!important;text-shadow:0 2px 18px rgba(5,20,40,.55)}}
 /* faq header: standard header overlay, text kept to the left */
 @media(min-width:901px){.phead.img.plain>img{object-position:50% 28%}.phead.img.plain .wrap>*:not(.crumbs){max-width:min(560px,44%)!important;text-shadow:0 2px 18px rgba(5,20,40,.5)}}
+/* mobile: photo headers with .tight/.short kept their desktop padding and left a navy gap above the photo */
+@media(max-width:900px){.phead.img.tight,.phead.img.cat-head,.phead.img.short,.phead.img.face-r,.phead.img.dx,.phead.img.plain{padding:0!important;min-height:0!important}}
