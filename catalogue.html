@@ -95,7 +95,7 @@
    '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
    '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+
    (cap||mid||p.tminC?'<ul class="specs">'+(cap?'<li><b>'+cap+'</b> BTU</li>':"")+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>':"")+aid(p)+
-   (p.href?'<a class="go" href="'+p.href+'" target="_blank" rel="noopener">'+I.pdf+'<i aria-hidden="true">\u2192</i></a>':'<a class="go" href="produit.html?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a>')+'</div></article>'}).join("");
+   '<a class="go" href="'+(p.acc?'accessoire.html':'produit.html')+'?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a>'+'</div></article>'}).join("");
  var cards=[].slice.call(document.querySelectorAll(".card"));
  function val(name){var e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:"all"}
  function apply(){
