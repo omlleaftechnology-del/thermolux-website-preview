@@ -3,14 +3,14 @@
 var en=/\/en\//.test(location.pathname),R=en?'../':'',P=location.pathname.split('/').pop()||'index.html';
 document.documentElement.lang=en?'en':'fr';
 var L=en?{
- nav:['Products','Services','Projects','Financing','Subsidies','Advice','About'],cta:'Contact us',ctaS:'Contact',aria:'Main',menu:'Open the menu',home:'Home',
+ nav:['Products','Services','Projects','Financing','Subsidies','Advice','About'],cta:'Contact us',ctaS:'Contact',aria:'Main',menu:'Open the menu',close:'Close the menu',home:'Home',
  f:{blurb:'Your expert in air conditioning, heating and ventilation in Greater Montréal.',
   c1:'Products',p:['Wall-mounted systems','Multi-zone','Central systems','Air exchangers','Thermostats'],
   c2:'Services',s:['Installation','Replacement','Repair and diagnostic','Maintenance and cleaning','Ventilation'],
   c3:'Resources',r:['LogisVert rebates','Guides and advice','FAQ','Projects','Blog'],c4:'Contact',area:'Greater Montréal, QC',
   rights:'© 2026 Thermolux Inc. All rights reserved.',legal:'Terms · Privacy · Sitemap'}
 }:{
- nav:['Produits','Services','Réalisations','Financement','Subventions','Conseils','À propos'],cta:'Nous joindre',ctaS:'Contact',aria:'Principal',menu:'Ouvrir le menu',home:'Accueil',
+ nav:['Produits','Services','Réalisations','Financement','Subventions','Conseils','À propos'],cta:'Nous joindre',ctaS:'Contact',aria:'Principal',menu:'Ouvrir le menu',close:'Fermer le menu',home:'Accueil',
  f:{blurb:'Votre expert en climatisation, chauffage et ventilation dans le Grand Montréal.',
   c1:'Produits',p:['Systèmes muraux','Multizones','Systèmes centraux','Échangeurs d’air','Thermostats'],
   c2:'Services',s:['Installation','Remplacement','Réparation et diagnostic','Entretien et nettoyage','Ventilation'],
@@ -27,11 +27,11 @@ var SOC='<div class="soc">'+SO.map(function(s){return '<a href="'+s[1]+'" target
 var H='<header><div class="wrap nav"><a href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><nav aria-label="'+L.aria+'"><ul>'+
  ['index.html'].concat(pages).map(function(h,i){return '<li><a href="'+h+'">'+(i?L.nav[i-1]:L.home)+'</a></li>'}).join('')+'</ul></nav>'+
  '<div class="r">'+lang+'<a class="btn btn-p" href="contact.html#soumission"><span class="d">'+L.cta+'</span><span class="m">'+L.ctaS+'</span></a>'+
- '<button type="button" class="burger" id="burger" aria-label="'+L.menu+'" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button></div></div>'+
- '<div class="mnav" id="mnav" hidden><div class="wrap"><ul>'+
+ '<button type="button" class="burger" id="burger" aria-label="'+L.menu+'" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button></div></div></header>'+
+ '<div class="mnav" id="mnav" hidden><div class="wrap"><div class="mtop"><a href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><button type="button" class="mclose" aria-label="'+L.close+'"></button></div><ul>'+
  ['index.html'].concat(pages).map(function(h,i){return '<li><a href="'+h+'">'+(i?L.nav[i-1]:L.home)+'</a></li>'}).join('')+'</ul>'+
  '<div class="mrow"><span class="mlang">'+(en?'<a href="'+other+'" hreflang="fr" lang="fr">FR</a><a aria-current="true" href="#" lang="en">EN</a>':'<a aria-current="true" href="#" lang="fr">FR</a><a href="'+other+'" hreflang="en" lang="en">EN</a>')+'</span><a class="mtel" href="tel:4385091823">438-509-1823</a></div>'+
- '<a class="btn btn-p mcta" href="contact.html#soumission">'+L.cta+'</a>'+SOC+'</div></div></header>';
+ '<a class="btn btn-p mcta" href="contact.html#soumission">'+L.cta+'</a>'+SOC+'</div></div>';
 var f=L.f,fp=['catalogue.html?type=mural','catalogue.html?type=multizone','catalogue.html?type=central','catalogue.html','catalogue.html'],fs=['installation.html','installation.html','reparation.html','entretien.html','services.html'],fr=['subvention.html','blogue.html','faq.html','realisations.html','blogue.html'];
 function ul(t,h){return '<ul>'+t.map(function(x,i){return '<li><a href="'+h[i]+'">'+x+'</a></li>'}).join('')+'</ul>'}
 var F='<footer><div class="wrap"><div class="fg"><div><a class="flogo" href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><p>'+f.blurb+'</p>'+SOC+'</div>'+
@@ -44,9 +44,13 @@ document.addEventListener('DOMContentLoaded',function(){
  document.querySelectorAll('.nav ul a').forEach(function(a){var h=a.getAttribute('href');if(h===P&&h!=='index.html'){a.setAttribute('aria-current','page');a.style.color='var(--blue)'}});
  var b=document.getElementById('burger'),m=document.getElementById('mnav');
  if(b&&m){
-  var set=function(open){m.hidden=!open;b.setAttribute('aria-expanded',open);b.classList.toggle('open',open);document.body.classList.toggle('menu-open',open)};
+  var y=0,locked=false,set=function(open){if(open===locked)return;m.hidden=!open;b.setAttribute('aria-expanded',open);b.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);
+   var s=document.body.style;
+   if(open){y=window.pageYOffset;s.position='fixed';s.top=-y+'px';s.left='0';s.right='0';s.width='100%'}
+   else{s.position=s.top=s.left=s.right=s.width='';window.scrollTo({top:y,left:0,behavior:'instant'})}
+   locked=open;if(open)m.scrollTop=0};
   b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden)});
-  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);e.stopPropagation()});
+  m.addEventListener('click',function(e){if(e.target.closest('a')||e.target.closest('.mclose'))set(false);e.stopPropagation()});
   document.addEventListener('click',function(){set(false)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
   window.addEventListener('resize',function(){if(innerWidth>1270)set(false)});
