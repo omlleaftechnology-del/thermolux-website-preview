@@ -531,6 +531,74 @@ window.PRODUCTS=[
   "imgs": [
    "img/products/kinghome-ultranixx-r32-1.jpg"
   ]
+ },
+ {
+  "slug": "canair-c22",
+  "name": "Canair C22",
+  "brand": "Canair",
+  "type": "mural",
+  "series": "C22",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "seer2": "22.8",
+  "hspf2": "9.1",
+  "tminC": "-15",
+  "refrigerant": "R-410A",
+  "img": "img/products/canair-c22-1.jpg",
+  "src": "https://www.canair.com/heat-pumps-and-air-conditioners",
+  "imgs": [
+   "img/products/canair-c22-1.jpg"
+  ]
+ },
+ {
+  "slug": "canair-4c22",
+  "name": "Canair 4C22 R454b",
+  "brand": "Canair",
+  "type": "mural",
+  "series": "4C22",
+  "btu": [
+   9000,
+   12000,
+   18000
+  ],
+  "seer2": "21.5",
+  "hspf2": "9.1",
+  "tminC": "-15",
+  "refrigerant": "R-454B",
+  "img": "img/products/canair-4c22-1.jpg",
+  "src": "https://www.canair.com/heat-pumps-and-air-conditioners",
+  "imgs": [
+   "img/products/canair-4c22-1.jpg"
+  ]
+ },
+ {
+  "slug": "canair-c28",
+  "name": "Canair C28",
+  "brand": "Canair",
+  "type": "mural",
+  "series": "C28",
+  "btu": [
+   6000,
+   9000,
+   12000,
+   18000,
+   24000,
+   30000,
+   36000
+  ],
+  "seer2": "28.1",
+  "hspf2": "11.5",
+  "tminC": "-30",
+  "refrigerant": "R-410A",
+  "img": "img/products/canair-c28-1.jpg",
+  "src": "https://www.canair.com/heat-pumps-and-air-conditioners",
+  "imgs": [
+   "img/products/canair-c28-1.jpg"
+  ]
  }
 ];
 
@@ -1871,6 +1939,201 @@ window.PRODUCT_DETAILS={
     "warr": "—",
     "ahri": "AHRI 218855728, 218855726, 218855729, 218855727",
     "models": "KU36UXO / KU24UXI · KU36UXO / KU36UXI · KU60UXO / KU48UXI · KU60UXO / KU60UXI"
+   }
+  }
+ },
+ "canair-c22": {
+  "brochure": "https://cms.canair.com/assets/brochure_canairc22-r-410a_2025__ang__webp.pdf",
+  "fr": {
+   "intro": "Le système mural Canair C22 est un système simple zone conçu pour le climat du Québec. Il chauffe et climatise de 9 000 à 24 000 BTU/h, avec des modes silencieux et Turbo, l’autonettoyage et la fonction Follow Me.",
+   "why": [
+    [
+     "Jusqu’à 22,8 SEER2, 9,1 HSPF2",
+     "Cotes d’efficacité publiées, de 9 000 à 24 000 BTU/h."
+    ],
+    [
+     "Chauffage jusqu’à −15 °C",
+     "Démarrage automatique après une panne de courant."
+    ],
+    [
+     "Autonettoyage et mode Turbo",
+     "Mode silencieux, fonction Follow Me, protection contre les courants d’air froid."
+    ],
+    [
+     "Versions 115 V et 230 V",
+     "Aussi offert en climatiseur seul (froid)."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "115 V ou 230 V selon le modèle",
+    "wifi": "Optionnel",
+    "cert": "—",
+    "warr": "Compresseur 5 ans · pièces 1 an (garantie prolongée possible jusqu’à 10 ans)",
+    "ahri": "—",
+    "models": "C22 09HP 230V · C22 12HP 115V / 230V · C22 18HP 230V · C22 24HP 230V (climatiseur seul : C22 09AC · 12AC · 18AC · 24AC)"
+   }
+  },
+  "en": {
+   "intro": "The Canair C22 wall-mounted system is a single-zone unit designed for Quebec’s climate. It heats and cools from 9,000 to 24,000 BTU/h, with quiet and Turbo modes, self-cleaning and the Follow Me function.",
+   "why": [
+    [
+     "Up to 22.8 SEER2, 9.1 HSPF2",
+     "Published efficiency ratings, from 9,000 to 24,000 BTU/h."
+    ],
+    [
+     "Heating down to −15 °C",
+     "Automatic restart after a power outage."
+    ],
+    [
+     "Self-cleaning and Turbo mode",
+     "Quiet mode, Follow Me function, cold-draft prevention."
+    ],
+    [
+     "115 V and 230 V versions",
+     "Also available as a cooling-only air conditioner."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "115 V or 230 V depending on the model",
+    "wifi": "Optional",
+    "cert": "—",
+    "warr": "Compressor 5 years · parts 1 year (extended warranty available up to 10 years)",
+    "ahri": "—",
+    "models": "C22 09HP 230V · C22 12HP 115V / 230V · C22 18HP 230V · C22 24HP 230V (cooling only: C22 09AC · 12AC · 18AC · 24AC)"
+   }
+  }
+ },
+ "canair-4c22": {
+  "brochure": "https://cms.canair.com/assets/brochure_canair4c22-r-454b_2025__ang__webp-(1).pdf",
+  "fr": {
+   "intro": "Le système mural Canair 4C22 fonctionne au réfrigérant R-454B. Simple zone, de 9 000 à 18 000 BTU/h, avec des modes silencieux et Turbo, l’autonettoyage et la fonction Follow Me.",
+   "why": [
+    [
+     "Jusqu’à 21,5 SEER2, 9,1 HSPF2",
+     "Cotes d’efficacité publiées, réfrigérant R-454B."
+    ],
+    [
+     "Chauffage jusqu’à −15 °C",
+     "Démarrage automatique après une panne de courant."
+    ],
+    [
+     "Silencieux et autonettoyant",
+     "Mode Turbo, fonction Follow Me, protection contre les courants d’air froid."
+    ],
+    [
+     "Admissible LogisVert",
+     "Modèles 12 000 et 18 000 BTU/h, versions 115 V et 230 V."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "115 V ou 230 V selon le modèle",
+    "wifi": "Optionnel",
+    "cert": "—",
+    "warr": "Compresseur 5 ans · pièces 1 an (garantie prolongée possible jusqu’à 10 ans)",
+    "ahri": "AHRI 218472389, 218472390",
+    "models": "4C22 09HP 115V / 230V · 4C22 12HP 115V / 230V · 4C22 18HP 230V"
+   }
+  },
+  "en": {
+   "intro": "The Canair 4C22 wall-mounted system uses R-454B refrigerant. Single-zone, from 9,000 to 18,000 BTU/h, with quiet and Turbo modes, self-cleaning and the Follow Me function.",
+   "why": [
+    [
+     "Up to 21.5 SEER2, 9.1 HSPF2",
+     "Published efficiency ratings, R-454B refrigerant."
+    ],
+    [
+     "Heating down to −15 °C",
+     "Automatic restart after a power outage."
+    ],
+    [
+     "Quiet and self-cleaning",
+     "Turbo mode, Follow Me function, cold-draft prevention."
+    ],
+    [
+     "LogisVert eligible",
+     "12,000 and 18,000 BTU/h models, 115 V and 230 V versions."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "115 V or 230 V depending on the model",
+    "wifi": "Optional",
+    "cert": "—",
+    "warr": "Compressor 5 years · parts 1 year (extended warranty available up to 10 years)",
+    "ahri": "AHRI 218472389, 218472390",
+    "models": "4C22 09HP 115V / 230V · 4C22 12HP 115V / 230V · 4C22 18HP 230V"
+   }
+  }
+ },
+ "canair-c28": {
+  "brochure": "https://cms.canair.com/assets/brochure_canairc28-r-410a_2025__ang__webp.pdf",
+  "fr": {
+   "intro": "Le système mural Canair C28 couvre de 6 000 à 36 000 BTU/h, en simple zone ou avec des unités extérieures multizones (2 à 5 zones). Chauffage jusqu’à −30 °C pour les modèles de 9 000 à 24 000 BTU/h.",
+   "why": [
+    [
+     "Jusqu’à 28,1 SEER2, 11,5 HSPF2",
+     "Cotes les plus élevées pour les modèles de 9 000 à 24 000 BTU/h."
+    ],
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Les modèles de 30 000 et 36 000 BTU/h : jusqu’à −15 °C."
+    ],
+    [
+     "De 6 000 à 36 000 BTU/h",
+     "Aussi offert avec des unités extérieures multizones."
+    ],
+    [
+     "Silencieux et autonettoyant",
+     "Mode Turbo, fonction Follow Me, protection contre les courants d’air froid."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "Optionnel",
+    "cert": "—",
+    "warr": "Compresseur 5 ans · pièces 1 an (garantie prolongée possible jusqu’à 10 ans)",
+    "ahri": "AHRI 207683257, 207683258, 207683259",
+    "models": "C28 06HP · 09HP · 12HP · 18HP · 24HP · 30HP · 36HP (multizones : C28 18MULTI 2HP · 28MULTI 3HP · 36MULTI 4HP · 48MULTI 5HP)"
+   }
+  },
+  "en": {
+   "intro": "The Canair C28 wall-mounted system covers 6,000 to 36,000 BTU/h, single-zone or with multi-zone outdoor units (2 to 5 zones). Heating down to −30 °C for the 9,000 to 24,000 BTU/h models.",
+   "why": [
+    [
+     "Up to 28.1 SEER2, 11.5 HSPF2",
+     "Highest ratings, on the 9,000 to 24,000 BTU/h models."
+    ],
+    [
+     "Heating down to −30 °C",
+     "The 30,000 and 36,000 BTU/h models: down to −15 °C."
+    ],
+    [
+     "From 6,000 to 36,000 BTU/h",
+     "Also available with multi-zone outdoor units."
+    ],
+    [
+     "Quiet and self-cleaning",
+     "Turbo mode, Follow Me function, cold-draft prevention."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "Optional",
+    "cert": "—",
+    "warr": "Compressor 5 years · parts 1 year (extended warranty available up to 10 years)",
+    "ahri": "AHRI 207683257, 207683258, 207683259",
+    "models": "C28 06HP · 09HP · 12HP · 18HP · 24HP · 30HP · 36HP (multi-zone: C28 18MULTI 2HP · 28MULTI 3HP · 36MULTI 4HP · 48MULTI 5HP)"
    }
   }
  }
