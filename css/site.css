@@ -556,3 +556,5 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 @media(min-width:901px){.phead.img.img-right{background:var(--navy)}.phead.img.img-right>img{left:auto;right:0;width:60%;object-position:50% 30%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}.phead.img.img-right .wrap>*:not(.crumbs){max-width:min(520px,42%)!important}.split.solo{grid-template-columns:minmax(0,820px)}}
 @media(min-width:901px){.phead.img.short{min-height:clamp(340px,26vw,440px)!important;padding:clamp(80px,7vw,112px) 0 clamp(48px,4vw,64px)!important}}
 @media(min-width:901px){.phead.img.img-right.dx>img{width:68%;object-position:30% 40%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 24%);mask-image:linear-gradient(90deg,transparent,#000 24%)}}
+/* diagnostic header: plain full-bleed photo, even tint, no fade (mirrored so the technician sits on the right) */
+@media(min-width:901px){.phead.img.dx:before{background:rgba(8,28,54,.52)!important}.phead.img.dx>img{transform:scaleX(-1);object-position:50% 30%}.phead.img.dx .wrap>*:not(.crumbs){max-width:min(560px,44%)!important;text-shadow:0 2px 18px rgba(5,20,40,.55)}}
