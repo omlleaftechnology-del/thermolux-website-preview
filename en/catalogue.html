@@ -63,14 +63,14 @@
 </main>
 
 <div id="site-footer"></div>
-<script src="../js/layout.js?v=151"></script>
-<script src="../js/subsidies.js?v=210"></script>
-<script src="../js/products.js?v=211"></script>
+<script src="../js/layout.js?v=152"></script>
+<script src="../js/subsidies.js?v=220"></script>
+<script src="../js/products.js?v=220"></script>
 <script>
 (function(){
  var L=window.LANG;
  var I={fr:{mural:"Système mural",multizone:"Multizone",central:"Système central",all:"Tous",allf:"Toutes",view:"Voir les détails",cold:"Temp. min.",noise:"Bruit",model:["modèle","modèles"],of:"sur",btu1:"9 000 – 12 000",btu2:"18 000 – 24 000",btu3:"30 000 et +",sep:"\u00a0"},
-        en:{mural:"Wall-mounted system",multizone:"Multi-zone system",central:"Central system",all:"All",allf:"All",view:"View details",cold:"Min. temp.",noise:"Noise",model:["model","models"],of:"of",btu1:"9,000 – 12,000",btu2:"18,000 – 24,000",btu3:"30,000 +",sep:","}}[L];
+        en:{mural:"Wall-mounted system",multizone:"Multi-zone system",central:"Central system",exchanger:"Air exchanger",humidifier:"Humidifier",thermostat:"Thermostat",pdf:"View the brochure (PDF)",all:"All",allf:"All",view:"View details",cold:"Min. temp.",noise:"Noise",model:["product","products"],of:"of",btu1:"9,000 – 12,000",btu2:"18,000 – 24,000",btu3:"30,000 +",sep:","}}[L];
 
  function aid(p){var A=window.AID,d=A&&A.data[p.slug];if(!d)return "";
   var m=A.max(p.slug),en=L=="en";
@@ -84,18 +84,18 @@
  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
  var norm=function(s){return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim()};
  function chip(name,type,val,label,checked){return '<label class="chip"><input type="'+type+'" name="'+name+'" value="'+val+'"'+(checked?' checked':'')+'><span>'+label+'</span></label>'}
- $("f-type").innerHTML=chip("type","radio","all",I.all,1)+["mural","multizone","central"].map(function(k){return chip("type","radio",k,I[k])}).join("");
+ $("f-type").innerHTML=chip("type","radio","all",I.all,1)+["mural","multizone","central","exchanger","humidifier","thermostat"].map(function(k){return chip("type","radio",k,I[k])}).join("");
  var brands=P.map(function(p){return p.brand}).filter(function(b,i,a){return a.indexOf(b)==i}).sort();
  $("f-brand").innerHTML=brands.map(function(b){return chip("brand","checkbox",b,b)}).join("");
  $("f-btu").innerHTML=BTU.map(function(b,i){return chip("btu","radio",b[0],b[1],i==0)}).join("");
  $("grid").innerHTML=P.map(function(p,i){
-  var cap=n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):"");
+  var cap=p.btu.length?n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):""):"";
   var mid=p.seer2?'<li><b>'+num(p.seer2)+'</b> SEER2</li>':p.dB?'<li><b>'+num(p.dB)+'</b> dB</li>':"";
   return '<article class="card" data-i="'+i+'" data-type="'+p.type+'" data-brand="'+esc(p.brand)+'" data-btu="'+p.btu.join(",")+'" data-seer="'+(p.seer2||0)+'" data-cold="'+(p.tminC||0)+'" data-name="'+esc(p.name)+'" data-q="'+esc(norm(p.name+" "+p.brand+" "+p.slug))+'">'+
    '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
    '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+
-   '<ul class="specs"><li><b>'+cap+'</b> BTU</li>'+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>'+aid(p)+
-   '<a class="go" href="produit.html?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a></div></article>'}).join("");
+   (cap||mid||p.tminC?'<ul class="specs">'+(cap?'<li><b>'+cap+'</b> BTU</li>':"")+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>':"")+aid(p)+
+   (p.href?'<a class="go" href="'+p.href+'" target="_blank" rel="noopener">'+I.pdf+'<i aria-hidden="true">\u2192</i></a>':'<a class="go" href="produit.html?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a>')+'</div></article>'}).join("");
  var cards=[].slice.call(document.querySelectorAll(".card"));
  function val(name){var e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:"all"}
  function apply(){

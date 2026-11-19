@@ -599,6 +599,102 @@ window.PRODUCTS=[
   "imgs": [
    "img/products/canair-c28-1.jpg"
   ]
+ },
+ {
+  "slug": "lifebreath",
+  "name": "Lifebreath",
+  "brand": "Lifebreath",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/lifebreath-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/life_breath_web.pdf",
+  "imgs": [
+   "img/products/lifebreath-1.jpg"
+  ]
+ },
+ {
+  "slug": "venmar-avs-n",
+  "name": "Venmar AVS N-Series",
+  "brand": "Venmar",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/venmar-avs-n-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/1526_2_en_v_brochure.pdf",
+  "imgs": [
+   "img/products/venmar-avs-n-1.jpg"
+  ]
+ },
+ {
+  "slug": "aprilaire-300",
+  "name": "AprilAire 300",
+  "brand": "AprilAire",
+  "type": "humidifier",
+  "btu": [],
+  "img": "img/products/aprilaire-300-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/Model-300-Humidifier-Model-300-Humidifier-Literature.pdf",
+  "imgs": [
+   "img/products/aprilaire-300-1.jpg"
+  ]
+ },
+ {
+  "slug": "clean-comfort-steam",
+  "name": "Clean Comfort Steam",
+  "brand": "Clean Comfort",
+  "type": "humidifier",
+  "btu": [],
+  "img": "img/products/clean-comfort-steam-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/Humidificateur-Vapeur-Clean-Comfort.pdf",
+  "imgs": [
+   "img/products/clean-comfort-steam-1.jpg"
+  ]
+ },
+ {
+  "slug": "honeywell-he150",
+  "name": "Honeywell HE150",
+  "brand": "Honeywell",
+  "type": "humidifier",
+  "btu": [],
+  "img": "img/products/honeywell-he150-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/Honeywell-HE-150.pdf",
+  "imgs": [
+   "img/products/honeywell-he150-1.jpg"
+  ]
+ },
+ {
+  "slug": "ecobee",
+  "name": "Ecobee",
+  "brand": "Ecobee",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/ecobee-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/factsheet_ecobee3_090514-2.pdf",
+  "imgs": [
+   "img/products/ecobee-1.jpg"
+  ]
+ },
+ {
+  "slug": "google-nest-learning",
+  "name": "Google Nest Learning Thermostat",
+  "brand": "Google Nest",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/google-nest-learning-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/3rd-gen-thermostat-welcome-guide-US-1.pdf",
+  "imgs": [
+   "img/products/google-nest-learning-1.jpg"
+  ]
+ },
+ {
+  "slug": "honeywell-d6",
+  "name": "Honeywell D6",
+  "brand": "Honeywell",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/honeywell-d6-1.jpg",
+  "href": "https://thermolux.ca/wp-content/uploads/2022/04/Brochure-D6_thermostat-1.pdf",
+  "imgs": [
+   "img/products/honeywell-d6-1.jpg"
+  ]
  }
 ];
 

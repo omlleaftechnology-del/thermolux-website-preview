@@ -32,7 +32,7 @@ var H='<header><div class="wrap nav"><a href="index.html"><img src="'+R+'img/log
  ['index.html'].concat(pages).map(function(h,i){return '<li><a href="'+h+'">'+(i?L.nav[i-1]:L.home)+'</a></li>'}).join('')+'</ul>'+
  '<div class="mrow"><span class="mlang">'+(en?'<a href="'+other+'" hreflang="fr" lang="fr">FR</a><a aria-current="true" href="#" lang="en">EN</a>':'<a aria-current="true" href="#" lang="fr">FR</a><a href="'+other+'" hreflang="en" lang="en">EN</a>')+'</span><a class="mtel" href="tel:4385091823">438-509-1823</a></div>'+
  '<a class="btn btn-p mcta" href="contact.html#soumission">'+L.cta+'</a>'+SOC+'</div></div>';
-var f=L.f,fp=['catalogue.html?type=mural','catalogue.html?type=multizone','catalogue.html?type=central','catalogue.html','catalogue.html'],fs=['installation.html','installation.html','reparation.html','entretien.html','services.html'],fr=['subvention.html','blogue.html','faq.html','realisations.html','blogue.html'];
+var f=L.f,fp=['catalogue.html?type=mural','catalogue.html?type=multizone','catalogue.html?type=central','catalogue.html?type=exchanger','catalogue.html?type=thermostat'],fs=['installation.html','installation.html','reparation.html','entretien.html','services.html'],fr=['subvention.html','blogue.html','faq.html','realisations.html','blogue.html'];
 function ul(t,h){return '<ul>'+t.map(function(x,i){return '<li><a href="'+h[i]+'">'+x+'</a></li>'}).join('')+'</ul>'}
 var F='<footer><div class="wrap"><div class="fg"><div><a class="flogo" href="index.html"><img src="'+R+'img/logo.png" alt="Thermolux"></a><p>'+f.blurb+'</p>'+SOC+'</div>'+
  '<div><h4>'+f.c1+'</h4>'+ul(f.p,fp)+'</div><div><h4>'+f.c2+'</h4>'+ul(f.s,fs)+'</div><div><h4>'+f.c3+'</h4>'+ul(f.r,fr)+'</div>'+

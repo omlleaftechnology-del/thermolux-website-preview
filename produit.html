@@ -60,10 +60,10 @@
 <div class="qbar" id="qbar" aria-hidden="true"><div class="wrap"><div><b id="qn"></b><span id="qs"></span></div><a class="btn btn-p" href="contact.html#soumission" tabindex="-1">Nous joindre</a></div></div>
 
 <div id="site-footer"></div>
-<script src="js/layout.js?v=151"></script>
-<script src="js/subsidies.js?v=210"></script>
-<script src="js/variants.js?v=210"></script>
-<script src="js/products.js?v=211"></script>
+<script src="js/layout.js?v=152"></script>
+<script src="js/subsidies.js?v=220"></script>
+<script src="js/variants.js?v=220"></script>
+<script src="js/products.js?v=220"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -76,6 +76,7 @@
  var neg=function(v){return String(v).replace("-","−")};
  var slug=new URLSearchParams(location.search).get("p");
  var p=P.filter(function(x){return x.slug==slug})[0]||P[0];
+ if(p.href){location.replace(p.href);return}
  var D=(window.PRODUCT_DETAILS||{})[p.slug]||{},d=D[L]||{};
  var cap=n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):"")+" BTU";
  var SEO=L=="en"?{mural:"Wall-mounted heat pump",multizone:"Multi-zone heat pump",central:"Central heat pump"}:{mural:"Thermopompe murale",multizone:"Thermopompe multizone",central:"Thermopompe centrale"}; // mots-clés SEO: champs cachés seulement
@@ -113,7 +114,7 @@
  $("whyl").innerHTML=(d.why||[]).map(function(w){return "<li><h3>"+esc(w[0]).replace(/ °C/g,"\u00a0°C")+"</h3><p>"+esc(w[1])+"</p></li>"}).join("");
  $("intro").textContent=d.intro||"";
  if(D.brochure){$("brochure").href=D.brochure;$("dl").hidden=false;var bb=$("brochureBtn");if(bb){bb.href=D.brochure;bb.hidden=false}}
- var sim=P.filter(function(x){return x.slug!=p.slug}).sort(function(a,b){return (b.type==p.type)-(a.type==p.type)||(b.brand==p.brand)-(a.brand==p.brand)}).slice(0,4);
+ var sim=P.filter(function(x){return x.slug!=p.slug&&!x.href}).sort(function(a,b){return (b.type==p.type)-(a.type==p.type)||(b.brand==p.brand)-(a.brand==p.brand)}).slice(0,4);
  $("sim").innerHTML=sim.map(function(q){
   var c=n(q.btu[0])+(q.btu.length>1?" – "+n(q.btu[q.btu.length-1]):"");
   var mid=q.seer2?'<li><b>'+num(q.seer2)+'</b> SEER2</li>':q.dB?'<li><b>'+num(q.dB)+'</b> dB</li>':"";
