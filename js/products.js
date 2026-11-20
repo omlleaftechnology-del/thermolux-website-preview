@@ -695,6 +695,197 @@ window.PRODUCTS=[
   "imgs": [
    "img/products/honeywell-d6-1.jpg"
   ]
+ },
+ {
+  "slug": "forestair-e20",
+  "name": "ForestAir E-20",
+  "brand": "ForestAir",
+  "type": "mural",
+  "series": "E-20",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000,
+   36000
+  ],
+  "tminC": "-25",
+  "dB": "32",
+  "refrigerant": "R-410A",
+  "wifi": true,
+  "img": "img/products/forestair-e20-1.png",
+  "src": "https://thermolux.ca/produit/forestair-serie-e-20-seer-25c",
+  "imgs": [
+   "img/products/forestair-e20-1.png",
+   "img/products/forestair-e20-2.png",
+   "img/products/forestair-e20-3.png"
+  ]
+ },
+ {
+  "slug": "forestair-e23",
+  "name": "ForestAir E-23",
+  "brand": "ForestAir",
+  "type": "mural",
+  "series": "E-23",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "tminC": "-25",
+  "dB": "29",
+  "refrigerant": "R-410A",
+  "wifi": true,
+  "img": "img/products/forestair-e23-1.png",
+  "src": "https://thermolux.ca/produit/forestair-e-23-seer-25c",
+  "imgs": [
+   "img/products/forestair-e23-1.png",
+   "img/products/forestair-e23-2.png",
+   "img/products/forestair-e23-3.png"
+  ]
+ },
+ {
+  "slug": "forestair-e38",
+  "name": "ForestAir E-38",
+  "brand": "ForestAir",
+  "type": "mural",
+  "series": "E-38",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000
+  ],
+  "tminC": "-30",
+  "refrigerant": "R-410A",
+  "wifi": true,
+  "img": "img/products/forestair-e38-1.png",
+  "src": "https://thermolux.ca/produit/forestair-series-e-38-seer-30c",
+  "imgs": [
+   "img/products/forestair-e38-1.png",
+   "img/products/forestair-e38-2.png",
+   "img/products/forestair-e38-3.png"
+  ]
+ },
+ {
+  "slug": "elios-emc",
+  "name": "Elios EMC",
+  "brand": "Elios",
+  "type": "mural",
+  "series": "EMC",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000,
+   33000
+  ],
+  "seer2": "26",
+  "hspf2": "10.1",
+  "tminC": "-30",
+  "dB": "20",
+  "refrigerant": "R-454B",
+  "img": "img/products/elios-emc-1.png",
+  "src": "https://www.eliospro.com/en-ca/comfort/",
+  "imgs": [
+   "img/products/elios-emc-1.png"
+  ]
+ },
+ {
+  "slug": "elios-ebc",
+  "name": "Elios EBC",
+  "brand": "Elios",
+  "type": "mural",
+  "series": "EBC",
+  "btu": [
+   9000,
+   12000,
+   18000,
+   24000,
+   30000,
+   36000
+  ],
+  "seer2": "22.3",
+  "hspf2": "7.2",
+  "tminC": "-20",
+  "dB": "18.5",
+  "refrigerant": "R-454B",
+  "img": "img/products/elios-ebc-1.png",
+  "src": "https://www.eliospro.com/en-ca/comfort/",
+  "imgs": [
+   "img/products/elios-ebc-1.png"
+  ]
+ },
+ {
+  "slug": "mainline-nexus-ultra-heat",
+  "name": "Mainline Nexus Ultra Heat",
+  "brand": "Mainline",
+  "type": "mural",
+  "series": "Nexus Ultra Heat",
+  "btu": [
+   6000,
+   9000,
+   12000,
+   18000,
+   24000,
+   33000
+  ],
+  "seer2": "26",
+  "hspf2": "14.6",
+  "tminC": "-30",
+  "dB": "20",
+  "refrigerant": "R-454B",
+  "wifi": true,
+  "img": "img/products/mainline-nexus-1.jpg",
+  "src": "https://mainlinethermopompe.ca/nexus-ultra-heat/",
+  "imgs": [
+   "img/products/mainline-nexus-1.jpg"
+  ]
+ },
+ {
+  "slug": "elios-emulti",
+  "name": "Elios e-Multi",
+  "brand": "Elios",
+  "type": "multizone",
+  "series": "e-Multi",
+  "btu": [
+   18000,
+   27000,
+   36000,
+   48000
+  ],
+  "seer2": "23.1",
+  "hspf2": "8.1",
+  "tminC": "-25",
+  "refrigerant": "R-454B",
+  "img": "img/products/elios-emulti-1.jpg",
+  "src": "https://www.eliospro.com/en-ca/comfort/",
+  "imgs": [
+   "img/products/elios-emulti-1.jpg"
+  ]
+ },
+ {
+  "slug": "elios-central-addon",
+  "name": "Elios Central Add-on Coil",
+  "brand": "Elios",
+  "type": "central",
+  "series": "Central Add-on",
+  "btu": [
+   18000,
+   24000,
+   30000,
+   36000
+  ],
+  "seer2": "16.1",
+  "hspf2": "8.2",
+  "tminC": "-30",
+  "refrigerant": "R-454B",
+  "img": "img/products/elios-central-addon-1.png",
+  "src": "https://www.eliospro.com/en-ca/comfort/",
+  "imgs": [
+   "img/products/elios-central-addon-1.png"
+  ]
  }
 ];
 
@@ -2234,9 +2425,520 @@ window.PRODUCT_DETAILS={
     "models": "C28 06HP · 09HP · 12HP · 18HP · 24HP · 30HP · 36HP (multi-zone: C28 18MULTI 2HP · 28MULTI 3HP · 36MULTI 4HP · 48MULTI 5HP)"
    }
   }
+ },
+ "forestair-e20": {
+  "fr": {
+   "intro": "La série E-20 ForestAir par Gree est un système mural sans conduits conçu pour nos hivers froids : l’un des rares à pouvoir chauffer ou climatiser par des températures aussi rigoureuses. Idéale pour un usage résidentiel, commercial ou une salle de serveurs. De 9 000 à 36 000 BTU, jusqu’à 20 SEER.",
+   "why": [
+    [
+     "Jusqu’à 20 SEER, 11,5 HSPF",
+     "Certifié ENERGY STAR, technologie Inverter G10 à compresseur à deux étages."
+    ],
+    [
+     "Chauffage jusqu’à −25 °C",
+     "Dégivrage intelligent, préchauffage intelligent, mode de panne de courant."
+    ],
+    [
+     "Wi-Fi et fonctions pratiques",
+     "Contrôle Wi-Fi, minuterie, mode veille, verrouillage des commandes, autodiagnostic."
+    ],
+    [
+     "Construction robuste",
+     "Armoire en acier de gros calibre et ailettes à revêtement anticorrosion."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "32 dB(A)",
+    "volt": "—",
+    "wifi": "Oui",
+    "cert": "ENERGY STAR",
+    "warr": "Pièces 10 ans · main-d’œuvre 10 ans",
+    "ahri": "—",
+    "models": "FA-H09-D20TL · FA-H12-D20TL · FA-H12-A20TL · FA-H18-D20TL · FA-H24-D20TL · FA-H36-D20TL (intérieur /I, extérieur /O)"
+   }
+  },
+  "en": {
+   "intro": "The ForestAir E-20 series by Gree is a ductless wall-mounted system built for our cold winters: one of the few able to heat or cool at such harsh temperatures. Ideal for residential, commercial or server-room use. From 9,000 to 36,000 BTU, up to 20 SEER.",
+   "why": [
+    [
+     "Up to 20 SEER, 11.5 HSPF",
+     "ENERGY STAR certified, G10 Inverter technology with a two-stage compressor."
+    ],
+    [
+     "Heating down to −25 °C",
+     "Smart defrost, smart preheating, power-failure mode."
+    ],
+    [
+     "Wi-Fi and handy functions",
+     "Wi-Fi control, timer, sleep mode, control lock, self-diagnosis."
+    ],
+    [
+     "Rugged build",
+     "Heavy-gauge steel cabinet and anti-corrosion coated fins."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "32 dB(A)",
+    "volt": "—",
+    "wifi": "Yes",
+    "cert": "ENERGY STAR",
+    "warr": "Parts 10 years · labour 10 years",
+    "ahri": "—",
+    "models": "FA-H09-D20TL · FA-H12-D20TL · FA-H12-A20TL · FA-H18-D20TL · FA-H24-D20TL · FA-H36-D20TL (indoor /I, outdoor /O)"
+   }
+  }
+ },
+ "forestair-e23": {
+  "fr": {
+   "intro": "La série E-23 ForestAir ajoute performance et style à toute pièce : un confort constant quelle que soit la météo, avec un chauffage jusqu’à −25 °C. De 9 000 à 24 000 BTU, jusqu’à 23 SEER (EER 14,29 ; HSPF 10,5).",
+   "why": [
+    [
+     "Jusqu’à 23 SEER, 10,5 HSPF",
+     "EER 14,29, certifié ENERGY STAR."
+    ],
+    [
+     "Chauffage jusqu’à −25 °C",
+     "Dégivrage intelligent, préchauffage intelligent, mode de panne de courant."
+    ],
+    [
+     "Wi-Fi intégré",
+     "Modes silencieux, veille et économie d’énergie, autodiagnostic."
+    ],
+    [
+     "Inverter G10 à deux étages",
+     "Condenseur à revêtement Blue Fin, démarrage basse tension."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "29 dB(A)",
+    "volt": "—",
+    "wifi": "Oui, intégré",
+    "cert": "ENERGY STAR",
+    "warr": "Pièces 10 ans · main-d’œuvre 10 ans",
+    "ahri": "AHRI 206720373, 206720374, 206720375",
+    "models": "FGH-09E-E23 · FGH-12E-E23 · FGH-18E-E23 · FGH-24E-E23 (intérieur -I, extérieur -O)"
+   }
+  },
+  "en": {
+   "intro": "The ForestAir E-23 series adds performance and style to any room: steady comfort whatever the weather, with heating down to −25 °C. From 9,000 to 24,000 BTU, up to 23 SEER (EER 14.29; HSPF 10.5).",
+   "why": [
+    [
+     "Up to 23 SEER, 10.5 HSPF",
+     "EER 14.29, ENERGY STAR certified."
+    ],
+    [
+     "Heating down to −25 °C",
+     "Smart defrost, smart preheating, power-failure mode."
+    ],
+    [
+     "Built-in Wi-Fi",
+     "Quiet, sleep and energy-saving modes, self-diagnosis."
+    ],
+    [
+     "Two-stage G10 Inverter",
+     "Blue Fin condenser coating, low-voltage start."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "29 dB(A)",
+    "volt": "—",
+    "wifi": "Yes, built in",
+    "cert": "ENERGY STAR",
+    "warr": "Parts 10 years · labour 10 years",
+    "ahri": "AHRI 206720373, 206720374, 206720375",
+    "models": "FGH-09E-E23 · FGH-12E-E23 · FGH-18E-E23 · FGH-24E-E23 (indoor -I, outdoor -O)"
+   }
+  }
+ },
+ "forestair-e38": {
+  "fr": {
+   "intro": "La série E-38 ForestAir offre jusqu’à 38 SEER avec un chauffage jusqu’à −30 °C, de 9 000 à 24 000 BTU. Un confort constant quelle que soit la météo, avec Wi-Fi et plusieurs modes de fonctionnement.",
+   "why": [
+    [
+     "Jusqu’à 38 SEER",
+     "Certifié ENERGY STAR."
+    ],
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Dégivrage intelligent, préchauffage intelligent, mode de panne de courant."
+    ],
+    [
+     "Wi-Fi et modes pratiques",
+     "Modes silencieux, veille et économie d’énergie, autodiagnostic."
+    ]
+   ],
+   "spec": {
+    "clim": "Climatisation jusqu’à −20 °C",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "Oui",
+    "cert": "ENERGY STAR",
+    "warr": "—",
+    "ahri": "—",
+    "models": "—"
+   }
+  },
+  "en": {
+   "intro": "The ForestAir E-38 series delivers up to 38 SEER with heating down to −30 °C, from 9,000 to 24,000 BTU. Steady comfort whatever the weather, with Wi-Fi and several operating modes.",
+   "why": [
+    [
+     "Up to 38 SEER",
+     "ENERGY STAR certified."
+    ],
+    [
+     "Heating down to −30 °C",
+     "Smart defrost, smart preheating, power-failure mode."
+    ],
+    [
+     "Wi-Fi and handy modes",
+     "Quiet, sleep and energy-saving modes, self-diagnosis."
+    ]
+   ],
+   "spec": {
+    "clim": "Cooling down to −20 °C",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "Yes",
+    "cert": "ENERGY STAR",
+    "warr": "—",
+    "ahri": "—",
+    "models": "—"
+   }
+  }
+ },
+ "elios-emc": {
+  "brochure": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EMC_202509_EN_V01.pdf",
+  "fr": {
+   "intro": "Les systèmes muraux Elios EMC sont conçus pour les hivers québécois : jusqu’à 26 SEER2 et 10,1 HSPF2, chauffage jusqu’à −30 °C et 100 % de la capacité à −15 °C. Compresseur Inverter, de 9 000 à 33 000 BTU/h.",
+   "why": [
+    [
+     "Jusqu’à 26 SEER2, 10,1 HSPF2",
+     "ENERGY STAR V6.1 et climat froid."
+    ],
+    [
+     "Chauffage jusqu’à −30 °C",
+     "100 % de la capacité de chauffage à −15 °C, technologie Heat+."
+    ],
+    [
+     "Double filtration",
+     "Filtre à poussière, pollen et poils ; filtre au carbone (fumée, bactéries)."
+    ],
+    [
+     "Réfrigérant R-454B",
+     "Détecteur de fuite, serpentins en cuivre TU1, redémarrage automatique."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 50 °C",
+    "noise": "Intérieur dès 20 dB(A) · extérieur 56 à 63,5 dB(A)",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "Optionnel (accessoire)",
+    "cert": "ENERGY STAR V6.1, climat froid",
+    "warr": "Pièces 1 an · compresseur 5 ans (10 ans en option)",
+    "ahri": "AHRI 216046614, 216046615, 216046616, 216046617",
+    "models": "EWHMA09C2AS1 / ESHMA09C2AN1 · EWHMA12C2AS1 / ESHMA12C2AN1 · EWHMA18C2AS1 / ESHMA18C2AN1 · EWHMA24C2AS1 / ESHMA24C2AN1 · EWHMA33C2AS1 / ESHMA33C2AN1"
+   }
+  },
+  "en": {
+   "intro": "Elios EMC wall-mounted systems are built for Quebec winters: up to 26 SEER2 and 10.1 HSPF2, heating down to −30 °C and 100% of capacity at −15 °C. Inverter compressor, from 9,000 to 33,000 BTU/h.",
+   "why": [
+    [
+     "Up to 26 SEER2, 10.1 HSPF2",
+     "ENERGY STAR V6.1 and Cold Climate."
+    ],
+    [
+     "Heating down to −30 °C",
+     "100% heating capacity at −15 °C, Heat+ technology."
+    ],
+    [
+     "Double filtration",
+     "Filter for dust, pollen and pet hair; carbon filter (smoke, bacteria)."
+    ],
+    [
+     "R-454B refrigerant",
+     "Leak detection, TU1 copper coils, auto-restart."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 50 °C",
+    "noise": "Indoor from 20 dB(A) · outdoor 56 to 63.5 dB(A)",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "Optional (accessory)",
+    "cert": "ENERGY STAR V6.1, Cold Climate",
+    "warr": "Parts 1 year · compressor 5 years (10 years optional)",
+    "ahri": "AHRI 216046614, 216046615, 216046616, 216046617",
+    "models": "EWHMA09C2AS1 / ESHMA09C2AN1 · EWHMA12C2AS1 / ESHMA12C2AN1 · EWHMA18C2AS1 / ESHMA18C2AN1 · EWHMA24C2AS1 / ESHMA24C2AN1 · EWHMA33C2AS1 / ESHMA33C2AN1"
+   }
+  }
+ },
+ "elios-ebc": {
+  "brochure": "https://cdn.master.ca/documents/en/elios/brochures/2026/Elios_EBC_202086_EN_V01.pdf",
+  "fr": {
+   "intro": "La série EBC est la gamme d’entrée Elios : un système mural sans conduits pour le confort de tous les jours, jusqu’à 22,3 SEER2 et 7,2 HSPF2, avec un chauffage jusqu’à −20 °C. Modulation en 100 étapes, de 9 000 à 36 000 BTU/h.",
+   "why": [
+    [
+     "Jusqu’à 22,3 SEER2",
+     "Modulation en 100 étapes pour un confort constant."
+    ],
+    [
+     "Chauffage jusqu’à −20 °C",
+     "Modèles de 30 000 et 36 000 BTU/h : jusqu’à −25 °C."
+    ],
+    [
+     "Double filtration",
+     "Filtre à poussière, pollen et poils ; filtre au carbone."
+    ],
+    [
+     "Réfrigérant R-454B",
+     "Tous les modèles ENERGY STAR V6.1 climat froid."
+    ]
+   ],
+   "spec": {
+    "clim": "−15 °C à 50 °C (−25 °C pour 30 000 et 36 000 BTU/h)",
+    "noise": "Intérieur dès 18,5 dB(A) · extérieur 52,5 à 63 dB(A)",
+    "volt": "115 V (12 000 BTU/h, version C1) ou 208–230 V / 1 ph / 60 Hz",
+    "wifi": "Optionnel (accessoire)",
+    "cert": "ENERGY STAR V6.1 climat froid",
+    "warr": "Pièces 1 an · compresseur 5 ans (10 ans en option)",
+    "ahri": "AHRI 218465703, 218465704, 218465705, 218631540, 218631541",
+    "models": "EWHBA09C2AN* · EWHBA12C1AN* · EWHBA12C2AN* · EWHBA18C2AN* · EWHBA24C2AN* · EWHBA30C2AS* · EWHBA36C2AS* (extérieur ESHBA…)"
+   }
+  },
+  "en": {
+   "intro": "The EBC series is Elios’s entry-level range: a ductless wall-mounted system for everyday comfort, up to 22.3 SEER2 and 7.2 HSPF2, with heating down to −20 °C. 100-step modulation, from 9,000 to 36,000 BTU/h.",
+   "why": [
+    [
+     "Up to 22.3 SEER2",
+     "100-step modulation for steady comfort."
+    ],
+    [
+     "Heating down to −20 °C",
+     "30,000 and 36,000 BTU/h models: down to −25 °C."
+    ],
+    [
+     "Double filtration",
+     "Filter for dust, pollen and pet hair; carbon filter."
+    ],
+    [
+     "R-454B refrigerant",
+     "All models ENERGY STAR V6.1 Cold Climate."
+    ]
+   ],
+   "spec": {
+    "clim": "−15 °C to 50 °C (−25 °C for 30,000 and 36,000 BTU/h)",
+    "noise": "Indoor from 18.5 dB(A) · outdoor 52.5 to 63 dB(A)",
+    "volt": "115 V (12,000 BTU/h, version C1) or 208–230 V / 1 ph / 60 Hz",
+    "wifi": "Optional (accessory)",
+    "cert": "ENERGY STAR V6.1 Cold Climate",
+    "warr": "Parts 1 year · compressor 5 years (10 years optional)",
+    "ahri": "AHRI 218465703, 218465704, 218465705, 218631540, 218631541",
+    "models": "EWHBA09C2AN* · EWHBA12C1AN* · EWHBA12C2AN* · EWHBA18C2AN* · EWHBA24C2AN* · EWHBA30C2AS* · EWHBA36C2AS* (outdoor ESHBA…)"
+   }
+  }
+ },
+ "mainline-nexus-ultra-heat": {
+  "brochure": "https://mainlinethermopompe.ca/wp-content/uploads/2026/11/Depliant_MainlineNexusUltraHeat_WEB.pdf",
+  "fr": {
+   "intro": "La série Nexus Ultra Heat de Mainline est un système mural simple zone aux performances exceptionnelles en chauffage : une température agréable même à −30 °C, avec un fonctionnement silencieux. Jusqu’à 26 SEER2 et 14,6 HSPF2, de 6 000 à 33 000 BTU/h.",
+   "why": [
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Compresseur Inverter ; fonctionnement en climatisation de −30 à 50 °C."
+    ],
+    [
+     "Jusqu’à 26 SEER2, 14,6 HSPF2",
+     "Réfrigérant écoresponsable R-454B."
+    ],
+    [
+     "Wi-Fi inclus",
+     "Application, contrôle vocal Google et Alexa, compatible Sinopé."
+    ],
+    [
+     "Garantie limitée de 10 ans",
+     "Installateurs certifiés exclusifs ; élément chauffant de drainage inclus."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 50 °C",
+    "noise": "Intérieur dès 19 dB(A)",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "Oui, inclus",
+    "cert": "ENERGY STAR climat froid",
+    "warr": "Garantie limitée de 10 ans",
+    "ahri": "AHRI 215864340, 215864341, 215864342, 215864343",
+    "models": "ML06HP230NEX · ML09HP230NEX · ML12HP230NEX · ML18HP230NEX · ML24HP230NEX · ML33HP230NEX (intérieur -I, extérieur NEXH-O)"
+   }
+  },
+  "en": {
+   "intro": "Mainline’s Nexus Ultra Heat series is a single-zone wall-mounted system with exceptional heating performance: a comfortable temperature even at −30 °C, with quiet operation. Up to 26 SEER2 and 14.6 HSPF2, from 6,000 to 33,000 BTU/h.",
+   "why": [
+    [
+     "Heating down to −30 °C",
+     "Inverter compressor; cooling operation from −30 to 50 °C."
+    ],
+    [
+     "Up to 26 SEER2, 14.6 HSPF2",
+     "Eco-responsible R-454B refrigerant."
+    ],
+    [
+     "Wi-Fi included",
+     "App, Google and Alexa voice control, Sinopé compatible."
+    ],
+    [
+     "10-year limited warranty",
+     "Exclusive certified installers; drain pan heater included."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 50 °C",
+    "noise": "Indoor from 19 dB(A)",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "Yes, included",
+    "cert": "ENERGY STAR Cold Climate",
+    "warr": "10-year limited warranty",
+    "ahri": "AHRI 215864340, 215864341, 215864342, 215864343",
+    "models": "ML06HP230NEX · ML09HP230NEX · ML12HP230NEX · ML18HP230NEX · ML24HP230NEX · ML33HP230NEX (indoor -I, outdoor NEXH-O)"
+   }
+  }
+ },
+ "elios-emulti": {
+  "brochure": "https://cdn.master.ca/documents/en/elios/brochures/2026/Elios_e-Multi_202603_EN_V03.pdf",
+  "fr": {
+   "intro": "Le système multizone e-Multi d’Elios, pour climat standard, raccorde jusqu’à 6 zones à une seule unité extérieure, de 18 000 à 48 000 BTU/h. Jusqu’à 23,1 SEER2 et 8,1 HSPF2, chauffage jusqu’à −25 °C (−30 °C avec Heat+).",
+   "why": [
+    [
+     "Jusqu’à 6 zones",
+     "Une unité extérieure ; unités intérieures murales, gainables, cassettes ou consoles."
+    ],
+    [
+     "Jusqu’à 23,1 SEER2, 8,1 HSPF2",
+     "Réfrigérant R-454B."
+    ],
+    [
+     "Heat+ jusqu’à −30 °C",
+     "Versions standard : chauffage jusqu’à −25 °C."
+    ],
+    [
+     "ENERGY STAR V6.1",
+     "Plusieurs modèles aussi certifiés climat froid."
+    ]
+   ],
+   "spec": {
+    "clim": "−25 °C à 50 °C (−30 °C à 50 °C avec Heat+)",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1",
+    "warr": "—",
+    "ahri": "Selon la combinaison",
+    "models": "EXHSA1832AN1 · EXHSA2742AV1 · EXHSA3652AV1 · EXHSA4862AV1 (standard) · EXHZA1832AV1 · EXHZA2742AV1 · EXHZA3652AV1 · EXHZA4862AV1 (Heat+)"
+   }
+  },
+  "en": {
+   "intro": "Elios’s e-Multi multi-zone system for standard climates connects up to 6 zones to a single outdoor unit, from 18,000 to 48,000 BTU/h. Up to 23.1 SEER2 and 8.1 HSPF2, heating down to −25 °C (−30 °C with Heat+).",
+   "why": [
+    [
+     "Up to 6 zones",
+     "One outdoor unit; wall-mounted, ducted, cassette or console indoor units."
+    ],
+    [
+     "Up to 23.1 SEER2, 8.1 HSPF2",
+     "R-454B refrigerant."
+    ],
+    [
+     "Heat+ down to −30 °C",
+     "Standard versions: heating down to −25 °C."
+    ],
+    [
+     "ENERGY STAR V6.1",
+     "Several models also Cold Climate certified."
+    ]
+   ],
+   "spec": {
+    "clim": "−25 °C to 50 °C (−30 °C to 50 °C with Heat+)",
+    "noise": "—",
+    "volt": "—",
+    "wifi": "—",
+    "cert": "ENERGY STAR V6.1",
+    "warr": "—",
+    "ahri": "Depends on the combination",
+    "models": "EXHSA1832AN1 · EXHSA2742AV1 · EXHSA3652AV1 · EXHSA4862AV1 (standard) · EXHZA1832AV1 · EXHZA2742AV1 · EXHZA3652AV1 · EXHZA4862AV1 (Heat+)"
+   }
+  }
+ },
+ "elios-central-addon": {
+  "brochure": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_Central-EliosADDON_202509_EN_V02.pdf",
+  "fr": {
+   "intro": "Le système Central-Elios à serpentin d’appoint (add-on coil) convient aux installations neuves ou de remplacement, électriques ou hybrides (avec fournaise). Jusqu’à 16,1 SEER2 et 8,2 HSPF2, chauffage jusqu’à −30 °C, de 18 000 à 36 000 BTU/h.",
+   "why": [
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Jusqu’à 16,1 SEER2 et 8,2 HSPF2."
+    ],
+    [
+     "Interface de serpentin A-Coil",
+     "Communication bidirectionnelle avec le compresseur à vitesse variable : meilleure gestion de l’humidité."
+    ],
+    [
+     "Neuf ou remplacement",
+     "Électrique ou hybride (combustible fossile)."
+    ],
+    [
+     "Réfrigérant R-454B",
+     "Prêt pour les réfrigérants A2L."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "—",
+    "warr": "Pièces 1 an · compresseur 5 ans (10 ans en option)",
+    "ahri": "Selon la combinaison",
+    "models": "Unités extérieures ESHMA18R2AN1 · ESHMA24R2AN1 · ESHMA30R2AN1 · ESHMB36R2AN1 avec serpentins GCHMA24RBAS1 · GCHMA36RBAS1 · GCHMA36RCAS1 (avec boîtier) ou GUHMA… (sans boîtier)"
+   }
+  },
+  "en": {
+   "intro": "The Central-Elios add-on coil system suits new and retrofit installations, electric or hybrid (with a furnace). Up to 16.1 SEER2 and 8.2 HSPF2, heating down to −30 °C, from 18,000 to 36,000 BTU/h.",
+   "why": [
+    [
+     "Heating down to −30 °C",
+     "Up to 16.1 SEER2 and 8.2 HSPF2."
+    ],
+    [
+     "A-Coil interface",
+     "Two-way communication with the variable-speed compressor: better humidity control."
+    ],
+    [
+     "New or retrofit",
+     "Electric or hybrid (fossil fuel)."
+    ],
+    [
+     "R-454B refrigerant",
+     "A2L-ready."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208–230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "—",
+    "warr": "Parts 1 year · compressor 5 years (10 years optional)",
+    "ahri": "Depends on the combination",
+    "models": "ESHMA18R2AN1 · ESHMA24R2AN1 · ESHMA30R2AN1 · ESHMB36R2AN1 outdoor units with GCHMA24RBAS1 · GCHMA36RBAS1 · GCHMA36RCAS1 (cased) or GUHMA… (uncased) coils"
+   }
+  }
  }
 };
 
 // Langue: /en/ => anglais. Les pages /en/ vivent un dossier plus bas, donc les images reçoivent "../".
 window.LANG=/\/en\//.test(location.pathname)?"en":"fr";
 if(window.LANG=="en")window.PRODUCTS.forEach(function(p){p.img="../"+p.img;if(p.imgs)p.imgs=p.imgs.map(function(s){return"../"+s})});
+// Accessories (exchangers, humidifiers, thermostats) always come last in the catalogue.
+window.PRODUCTS=window.PRODUCTS.map(function(p,i){return{p:p,i:i}}).sort(function(a,b){return (!!a.p.acc-!!b.p.acc)||a.i-b.i}).map(function(x){return x.p});

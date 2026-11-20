@@ -323,7 +323,10 @@ window.AID={asOf:"2026-11-12",
  "zephyr-cb22": {"grants": {"18000": 740}, "newhome": {}, "plex": {}, "combo": false},
  "kinghome-ultranixx-r32": {"grants": {"24000": 2472, "36000": 3384, "48000": 4740, "60000": 5400}, "newhome": {}, "plex": {}, "combo": false},
  "canair-c28": {"grants": {"12000": 1200, "18000": 1800, "24000": 2544}, "newhome": {}, "plex": {}, "combo": false},
- "canair-4c22": {"grants": {"12000": 996, "18000": 1680}, "newhome": {}, "plex": {}, "combo": false}
+ "canair-4c22": {"grants": {"12000": 996, "18000": 1680}, "newhome": {}, "plex": {}, "combo": false},
+ "mainline-nexus-ultra-heat": {"grants": {"12000": 1440, "18000": 1992, "24000": 2760, "33000": 3720}, "newhome": {}, "plex": {}, "combo": false},
+ "elios-emc": {"grants": {"12000": 1440, "18000": 1992, "24000": 2760, "33000": 3720}, "newhome": {}, "plex": {}, "combo": false},
+ "elios-ebc": {"grants": {"12000": 996, "18000": 1680, "24000": 2496, "30000": 2400, "36000": 3072}, "newhome": {}, "plex": {}, "combo": false}
 },
  fmt:function(v){return window.LANG=="en"?"$"+String(v).replace(/\B(?=(\d{3})+(?!\d))/g,","):String(v).replace(/\B(?=(\d{3})+(?!\d))/g,"\u00a0")+"\u00a0$"},
  max:function(slug){var d=this.data[slug];if(!d)return 0;var v=Object.keys(d.grants).map(function(k){return d.grants[k]});return v.length?Math.max.apply(null,v):0}
