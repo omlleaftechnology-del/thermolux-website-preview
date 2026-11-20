@@ -844,6 +844,55 @@ window.PRODUCTS=[
   ]
  },
  {
+  "slug": "mainline-ultraheat-central",
+  "name": "Mainline UltraHeat Cold Climate",
+  "brand": "Mainline",
+  "type": "central",
+  "series": "UltraHeat Cold Climate",
+  "btu": [
+   24000,
+   30000,
+   36000,
+   42000,
+   48000,
+   60000
+  ],
+  "seer2": "18.3",
+  "hspf2": "10.3",
+  "tminC": "-30",
+  "refrigerant": "R-454B",
+  "wifi": true,
+  "img": "img/products/mainline-ultraheat-central-1.png",
+  "src": "https://www.expair.ca/marques/mainline/mainline-ultraheat-cold-climate/",
+  "imgs": [
+   "img/products/mainline-ultraheat-central-1.png"
+  ]
+ },
+ {
+  "slug": "mainline-ultraheat-multi-zones",
+  "name": "Mainline UltraHeat Multi-zones",
+  "brand": "Mainline",
+  "type": "multizone",
+  "series": "UltraHeat Multi-zones",
+  "btu": [
+   18000,
+   27000,
+   36000,
+   48000,
+   55000
+  ],
+  "seer2": "22.3",
+  "hspf2": "11.3",
+  "tminC": "-30",
+  "refrigerant": "R-454B",
+  "wifi": true,
+  "img": "img/products/mainline-ultraheat-multi-1.png",
+  "src": "https://www.expair.ca/marques/mainline/mainline-ultraheat-multi-zones/",
+  "imgs": [
+   "img/products/mainline-ultraheat-multi-1.png"
+  ]
+ },
+ {
   "slug": "elios-emulti",
   "name": "Elios e-Multi",
   "brand": "Elios",
@@ -2737,6 +2786,136 @@ window.PRODUCT_DETAILS={
     "warr": "Parts 1 year · compressor 5 years (10 years optional)",
     "ahri": "AHRI 218465703, 218465704, 218465705, 218631540, 218631541",
     "models": "EWHBA09C2AN* · EWHBA12C1AN* · EWHBA12C2AN* · EWHBA18C2AN* · EWHBA24C2AN* · EWHBA30C2AS* · EWHBA36C2AS* (outdoor ESHBA…)"
+   }
+  }
+ },
+ "mainline-ultraheat-central": {
+  "brochure": "https://www.expair.ca/wp-content/uploads/Brochure.pdf",
+  "fr": {
+   "intro": "Thermopompe centrale Mainline UltraHeat Cold Climate : un confort constant dans toute la maison, même par grand froid. Jusqu’à 18,3 SEER2 et 10,3 HSPF2, de 24 000 à 60 000 BTU, avec le cabinet de ventilation Mainline.",
+   "why": [
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Compresseur Inverter rotatif ; plus de 80 % de la capacité de chauffage à −30 °C."
+    ],
+    [
+     "Jusqu’à 18,3 SEER2, 10,3 HSPF2",
+     "Réfrigérant écoresponsable R-454B."
+    ],
+    [
+     "Wi-Fi inclus",
+     "Application, contrôle vocal Google et Alexa, télécommande incluse."
+    ],
+    [
+     "Neuf ou remplacement",
+     "Système communicant avec le cabinet Mainline, ou jumelage à une fournaise existante."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 50 °C",
+    "noise": "Extérieur 60 à 65 dB(A)",
+    "volt": "Extérieur 208/230 V / 1 ph / 60 Hz",
+    "wifi": "Oui, inclus",
+    "cert": "Éligible LogisVert",
+    "warr": "Garantie limitée de 10 ans",
+    "ahri": "—",
+    "models": "ML24HP230LMNTH · ML30HP230LMNTH · ML36HP230LMNTH · ML42HP230LMNTH · ML48HP230LMNTH · ML60HP230LMNTH"
+   }
+  },
+  "en": {
+   "intro": "Mainline UltraHeat Cold Climate central heat pump: steady comfort throughout the home, even in deep cold. Up to 18.3 SEER2 and 10.3 HSPF2, from 24,000 to 60,000 BTU, with the Mainline air handler.",
+   "why": [
+    [
+     "Heating down to −30 °C",
+     "Rotary Inverter compressor; over 80% of heating capacity at −30 °C."
+    ],
+    [
+     "Up to 18.3 SEER2, 10.3 HSPF2",
+     "Eco-responsible R-454B refrigerant."
+    ],
+    [
+     "Wi-Fi included",
+     "App, Google and Alexa voice control, remote included."
+    ],
+    [
+     "New or replacement",
+     "Communicating with the Mainline air handler, or paired with an existing furnace."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 50 °C",
+    "noise": "Outdoor 60 to 65 dB(A)",
+    "volt": "Outdoor 208/230 V / 1 ph / 60 Hz",
+    "wifi": "Yes, included",
+    "cert": "LogisVert eligible",
+    "warr": "10-year limited warranty",
+    "ahri": "—",
+    "models": "ML24HP230LMNTH · ML30HP230LMNTH · ML36HP230LMNTH · ML42HP230LMNTH · ML48HP230LMNTH · ML60HP230LMNTH"
+   }
+  }
+ },
+ "mainline-ultraheat-multi-zones": {
+  "brochure": "https://www.expair.ca/wp-content/uploads/Brochure-2.pdf",
+  "fr": {
+   "intro": "Une seule unité extérieure pour plusieurs pièces. La série Mainline UltraHeat Multi-zones offre jusqu’à 22,3 SEER2 et 11,3 HSPF2, de 18 000 à 55 000 BTU, dans une conception compacte à éjection latérale.",
+   "why": [
+    [
+     "Chauffage jusqu’à −30 °C",
+     "Compresseur Inverter ; climatisation de −30 à 50 °C."
+    ],
+    [
+     "Jusqu’à 22,3 SEER2, 11,3 HSPF2",
+     "Réfrigérant écoresponsable R-454B."
+    ],
+    [
+     "Wi-Fi inclus",
+     "Application NetHome Plus, contrôle vocal Google et Alexa, compatible Sinopé."
+    ],
+    [
+     "Compact et silencieux",
+     "Unité extérieure à éjection latérale ; élément chauffant de drainage inclus."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C à 50 °C",
+    "noise": "Extérieur 61 à 65 dB(A)",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "Oui, inclus",
+    "cert": "Éligible LogisVert",
+    "warr": "Garantie limitée de 10 ans",
+    "ahri": "—",
+    "models": "ML18HP230MULH · ML27HP230MULH · ML36HP230MULH · ML48HP230MULH · ML55HP230MULH"
+   }
+  },
+  "en": {
+   "intro": "One outdoor unit for several rooms. The Mainline UltraHeat Multi-zone series delivers up to 22.3 SEER2 and 11.3 HSPF2, from 18,000 to 55,000 BTU, in a compact side-discharge design.",
+   "why": [
+    [
+     "Heating down to −30 °C",
+     "Inverter compressor; cooling operation from −30 to 50 °C."
+    ],
+    [
+     "Up to 22.3 SEER2, 11.3 HSPF2",
+     "Eco-responsible R-454B refrigerant."
+    ],
+    [
+     "Wi-Fi included",
+     "NetHome Plus app, Google and Alexa voice control, Sinopé compatible."
+    ],
+    [
+     "Compact and quiet",
+     "Side-discharge outdoor unit; drain pan heater included."
+    ]
+   ],
+   "spec": {
+    "clim": "−30 °C to 50 °C",
+    "noise": "Outdoor 61 to 65 dB(A)",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "Yes, included",
+    "cert": "LogisVert eligible",
+    "warr": "10-year limited warranty",
+    "ahri": "—",
+    "models": "ML18HP230MULH · ML27HP230MULH · ML36HP230MULH · ML48HP230MULH · ML55HP230MULH"
    }
   }
  },
