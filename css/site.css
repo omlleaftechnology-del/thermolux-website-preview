@@ -595,7 +595,7 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .bl a:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,31,58,.08)}
 @media(max-width:600px){.brands{margin-top:36px}.bl{gap:8px}.bl a{width:calc(50% - 4px);height:68px}.bl a img{max-height:34px}.bl a img[src*="mainline"]{max-height:none;width:150px}}
 .bl a .bt{margin-left:8px;font:800 13px Manrope,Inter,sans-serif;letter-spacing:.02em;color:#0a84c6}
-.bl a img[src*="kinghome"]{max-height:54px}
+.bl a img[src*="kinghome"]{max-height:74px}
 .bl a{overflow:hidden}
 .bl a img[src*="mainline"]{max-height:none;max-width:none;width:172px;flex:none}
-@media(max-width:600px){.bl a img[src*="kinghome"]{max-height:46px}.bl a img[src*="mainline"]{max-height:none;width:150px}.bl a .bt{font-size:12px}}
+@media(max-width:600px){.bl a img[src*="kinghome"]{max-height:62px}.bl a img[src*="mainline"]{max-height:none;width:150px}.bl a .bt{font-size:12px}}
