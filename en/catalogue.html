@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="x-default" href="https://thermolux.ca/catalogue.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css?v=157">
+<link rel="stylesheet" href="../css/site.css?v=158">
 <link rel="stylesheet" href="../css/catalogue.css?v=90">
 </head>
 <body>
@@ -118,6 +118,7 @@
  function reset(){$("filters").reset();$("q").value="";apply()}
  $("filters").addEventListener("change",apply);$("q").addEventListener("input",apply);$("reset").onclick=reset;$("reset2").onclick=reset;$("sort").onchange=sort;
  var qt=new URLSearchParams(location.search).get("type"),qr=qt&&document.querySelector('input[name="type"][value="'+qt+'"]');if(qr)qr.checked=true;
+ var qb=new URLSearchParams(location.search).get("brand");if(qb)document.querySelectorAll('input[name="brand"]').forEach(function(e){if(e.value==qb)e.checked=true});
  apply();
 })();
 </script>
