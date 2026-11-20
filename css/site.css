@@ -574,3 +574,15 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .mnav li a{min-height:66px;font-size:22px}
 .mnav li:first-child a{border-top:1px solid var(--line)}
 .mrow{padding-top:26px}
+/* mobile menu fits one screen: same logo size as the header, rows share the free height, no scrolling */
+.mnav{overflow:hidden}
+.mnav .wrap{height:100%;display:flex;flex-direction:column;padding-bottom:calc(16px + env(safe-area-inset-bottom))}
+.mtop{height:72px;flex:none}
+.mtop img{height:26px}
+@media(min-width:601px){.mtop img{height:34px}}
+.mnav ul{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+.mnav li{flex:1 1 0;min-height:0;display:flex}
+.mnav li a{flex:1;min-height:0;font-size:clamp(17px,2.9dvh,22px)}
+.mrow{flex:none;padding-top:14px}
+.mnav .soc{margin-top:14px}
+.mtop{padding-left:4px}
