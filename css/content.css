@@ -448,3 +448,6 @@ body.pm-lock{overflow:hidden}
 .sp-tbl{margin-top:0!important;padding-top:0!important}
 .sp-card .sp-cap{margin-top:auto}
 .sp-card .checks+.sp-cap{margin-top:auto}
+.sp-t th,.sp-t td{text-align:center!important;vertical-align:middle}
+.sp-t th{white-space:nowrap;font-size:13px}
+.sp-card .sp-cap{padding-top:22px;margin-bottom:10px}
