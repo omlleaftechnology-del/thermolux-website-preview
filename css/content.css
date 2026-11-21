@@ -451,3 +451,13 @@ body.pm-lock{overflow:hidden}
 .sp-t th,.sp-t td{text-align:center!important;vertical-align:middle}
 .sp-t th{white-space:nowrap;font-size:13px}
 .sp-card .sp-cap{padding-top:22px;margin-bottom:10px}
+.sp-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.sp-card{min-width:0}.sp-card .at-wrap{max-width:100%}
+.sp-bot{margin-top:auto;display:flex;flex-direction:column;min-height:350px}
+.sp-bot .sp-cap{margin-top:0!important;padding-top:22px}
+.sp-bot .btn{margin-top:auto}
+@media(max-width:900px){.sp-grid{grid-template-columns:minmax(0,1fr)!important}.sp-bot{min-height:0}}
+.sp-card .sp-t{min-width:0!important;width:100%!important;table-layout:fixed}
+.sp-card .at-wrap{overflow:visible}
+@media(min-width:901px){.sp-bot .sp-cap{min-height:3.2em;box-sizing:content-box}}
+@media(min-width:901px){.sp-bot{min-height:430px}}
