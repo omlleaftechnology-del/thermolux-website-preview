@@ -424,7 +424,7 @@ body.pm-lock{overflow:hidden}
 @media(max-width:700px){.at tbody td.v,.at tbody td.no{display:flex}}
 @media(max-width:700px){.at tbody tr{grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px;padding:12px}.at td{padding:7px 2px;font-size:14px}.at td:before{font-size:10px}}
 /* subsidy page: extra programs (multi-unit top-up, federal rebate) */
-.sp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;align-items:start}
+.sp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;align-items:stretch}
 .sp-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column}
 .sp-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
 .sp-tag{font:700 12px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -441,4 +441,10 @@ body.pm-lock{overflow:hidden}
 .sp-t th{text-align:center}.sp-t td{text-align:center;white-space:nowrap}
 @media(max-width:900px){.sp-grid{grid-template-columns:1fr}.sp-card{padding:24px}.sp-fig b{font-size:34px}
  .sp-t thead{display:none}.sp-t,.sp-t tbody,.sp-t tr{display:block}.sp-t td{display:flex!important;justify-content:space-between;text-align:left;padding:10px 0;border-bottom:1px solid var(--line)}.sp-t td:before{content:attr(data-l);color:var(--muted);font-weight:500}}
-.sp-t caption{display:block!important;width:100%!important;max-width:none!important}
+
+.sp-t{table-layout:fixed;width:100%}.sp-t th,.sp-t td{width:20%;padding-left:6px;padding-right:6px}.sp-t th:first-child,.sp-t td:first-child{padding-left:6px}
+@media(min-width:901px){.sp-tbl{margin-top:auto;padding-top:22px}.sp-card .sp-note{margin-bottom:16px}}
+.sp-cap{margin:22px 0 10px;font-weight:700;font-size:14px;color:var(--ink)}
+.sp-tbl{margin-top:0!important;padding-top:0!important}
+.sp-card .sp-cap{margin-top:auto}
+.sp-card .checks+.sp-cap{margin-top:auto}
