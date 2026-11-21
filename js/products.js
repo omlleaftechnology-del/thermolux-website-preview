@@ -1007,6 +1007,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "kinghome-polaris-r32": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2026/09/Brochure-Kinghome-Polaris-Thermolux-WEB.pdf",
   "fr": {
    "intro": "La Kinghome Polaris R32 Ultra Heat est conçue pour le climat exigeant du Québec. Elle offre un chauffage fiable jusqu’à −30 °C et une climatisation jusqu’à 50 °C, avec le réfrigérant R-32 et la technologie G-AI.",
    "why": [
@@ -1136,6 +1137,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-hiultra": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/ZEPHYR-SERIES-HiULTRA-Brochure.pdf",
   "fr": {
    "intro": "Le système mural Zephyr HiUltra allie confort, durabilité et intelligence, avec le réfrigérant R-454B, la technologie I-Feel et plusieurs vitesses de ventilation.",
    "why": [
@@ -1200,6 +1202,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lg-art-cool-prestige": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/LG-Art-Cool-Prestige-Serie-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "L’Art Cool Prestige répond au besoin de design et de confort dans chaque pièce, avec un chauffage et un refroidissement performants. Le module LG Smart AC, en option, permet de la gérer par Wi-Fi.",
    "why": [
@@ -1264,6 +1267,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lennox-mwpd": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2026/01/LENNOX-MWPD-Thermopompe-Climatiseur-Mural-Brochure.pdf",
   "fr": {
    "intro": "Alliant la fiabilité de Lennox à l’innovation de Samsung, le Lennox MWPD est un système mural haute performance, offert de 9 000 à 24 000 BTU pour les applications à zone unique.",
    "why": [
@@ -1328,6 +1332,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "tosot-pular-25": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/09/TOSOT-PULAR-25-Wall-Mounted-Heat-Pumps-Air-Conditioners-Brochure.pdf",
   "fr": {
    "intro": "Le Tosot Pular 25 est un système mural alliant haute efficacité et design moderne, pour une performance fiable en chauffage et en climatisation. Il est offert en capacités de 9 000 à 36 000 BTU.",
    "why": [
@@ -1392,6 +1397,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-clivia-r32": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/09/GREE-CLIVIA-R32-Wall-Mounted-Heat-Pumps-Air-Conditioners-Brochure.pdf",
   "fr": {
    "intro": "Le Gree Clivia R32 intègre l’intelligence artificielle à un contrôle climatique haute performance. Conçu pour résister aux conditions extrêmes du Québec, il offre un chauffage puissant jusqu’à −30 °C.",
    "why": [
@@ -1456,6 +1462,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-free-match-extreme": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/FREE-MATCH-EXTREME-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Le Gree Free Match Extreme est un système multizone sans conduits à variateur (inverter), pour un confort flexible de deux à cinq zones, avec des performances stables jusqu’à −35 °C.",
    "why": [
@@ -1520,6 +1527,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-hi-pro-hd": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2026/03/ZEPHYR-Hi-PRO-HD-R454b-THERMOPOMPE.pdf",
   "fr": {
    "intro": "Le système central Zephyr Hi-PRO HD est une solution de chauffage et de climatisation haute performance conçue pour le Québec. Sa technologie Inverter à vitesse variable assure un confort stable toute l’année.",
    "why": [
@@ -1584,6 +1592,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "elios-central-r454b": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2026/06/Elios_Central-Elios_FR_THERMOLUX.pdf",
   "fr": {
    "intro": "Le Central-Elios R-454B est un système central conçu pour offrir un confort fiable en chauffage et en climatisation, même dans les hivers québécois les plus rigoureux.",
    "why": [
@@ -1713,6 +1722,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-vita-r32": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2026/01/GREE-BROCHURE-SIMPLE-ZONE-VITA-R32-2026-FR.pdf",
   "fr": {
    "intro": "La Gree Vita R32 est un système mural simple zone qui offre un confort fiable, des fonctions modernes et une bonne efficacité énergétique à un prix accessible. Son compresseur Inverter ajuste la puissance selon les besoins réels pour une température stable et un fonctionnement silencieux.",
    "why": [
@@ -1777,6 +1787,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-sapphire": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/SAPPHIRE-38-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Le système sans conduits ultra-haute efficacité de la série Sapphire de Gree garde n’importe quelle pièce agréable sans compromettre l’esthétique. En hiver, il peut fournir jusqu’à 90 % de sa capacité de chauffage à des températures aussi basses que −30 °C.",
    "why": [
@@ -1841,6 +1852,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "kinghome-airy": {
+  "brochure": "https://tticlimatisation.com/manuels/40/telecharger",
   "fr": {
    "intro": "L’Airy est le sommet de la gamme simple-zone Kinghome : un système mural sans conduits qui atteint jusqu’à 30 SEER2 et 11,2 HSPF2, certifié ENERGY STAR avec désignation climat froid. Son compresseur G-Storm garde 100 % de sa capacité de chauffage à −15 °C.",
    "why": [
@@ -1905,6 +1917,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "kinghome-charmo": {
+  "brochure": "https://tticlimatisation.com/manuels/42/telecharger",
   "fr": {
    "intro": "La série Charmo offre un excellent rapport performance-prix, avec jusqu’à 20,5 SEER2 et 8,8 HSPF2 et le réfrigérant R32. Chauffage fiable jusqu’à −25 °C et refroidissement performant jusqu’à 48 °C.",
    "why": [
@@ -1969,6 +1982,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-cb22": {
+  "brochure": "https://tticlimatisation.com/manuels/34/telecharger",
   "fr": {
    "intro": "Le système mural Zephyr CB22 est performant là où ça compte : jusqu’à 22,5 SEER2 et 9,8 HSPF2, pour un excellent rapport qualité-prix. Chauffage optimal jusqu’à −25 °C, avec châssis chauffant, dégivrage automatique et chauffage du compresseur.",
    "why": [
@@ -2033,6 +2047,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-ub32": {
+  "brochure": "https://tticlimatisation.com/manuels/33/telecharger",
   "fr": {
    "intro": "Le système mural Zephyr UB32 offre un confort sans compromis, été comme hiver : jusqu’à 32 SEER2 et 11,8 HSPF2, parmi les plus performants du marché, avec un chauffage optimal jusqu’à −30 °C.",
    "why": [
@@ -2097,6 +2112,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "kinghome-multizone-r32": {
+  "brochure": "https://tticlimatisation.com/manuels/39/telecharger",
   "fr": {
    "intro": "Une seule unité extérieure, jusqu’à 6 zones. Le système multizone Kinghome R32 raccorde jusqu’à six unités intérieures à un seul condenseur de 18 000 à 60 000 BTU/h, avec un chauffage stable jusqu’à −30 °C.",
    "why": [
@@ -2217,6 +2233,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "kinghome-ultranixx-r32": {
+  "brochure": "https://tticlimatisation.com/manuels/37/telecharger",
   "fr": {
    "intro": "Conçu pour les vrais hivers canadiens, le système central Kinghome Ultranixx offre sa pleine capacité de chauffage jusqu’à −15 °C et fonctionne de façon fiable jusqu’à −30 °C. Compresseur modulant et réfrigérant R32 : jusqu’à 19 SEER2 et 10,5 HSPF2.",
    "why": [
@@ -2540,6 +2557,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "forestair-e23": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/E-23-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "La série E-23 ForestAir ajoute performance et style à toute pièce : un confort constant quelle que soit la météo, avec un chauffage jusqu’à −25 °C. De 9 000 à 24 000 BTU, jusqu’à 23 SEER (EER 14,29 ; HSPF 10,5).",
    "why": [
