@@ -118,8 +118,8 @@
 </main>
 
 <div id="site-footer"></div>
-<script src="../js/subsidies.js?v=230"></script>
-<script src="../js/products.js?v=233"></script>
+<script src="../js/subsidies.js?v=231"></script>
+<script src="../js/products.js?v=234"></script>
 <script>
 (function(){
  var A=window.AID,P=window.PRODUCTS,L=window.LANG,box=document.getElementById("aidtables");if(!A||!P||!box)return;
@@ -127,7 +127,7 @@
  var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
  ["mural","multizone","central"].forEach(function(type){
-  var rows=P.filter(function(p){return p.type==type&&A.data[p.slug]});if(!rows.length)return;
+  var rows=P.filter(function(p){return p.type==type&&A.data[p.slug]&&(A.data[p.slug].combo||Object.keys(A.data[p.slug].grants).length)});if(!rows.length)return;
   var caps=[];rows.forEach(function(p){p.btu.forEach(function(b){if(caps.indexOf(b)<0)caps.push(b)})});caps.sort(function(a,b){return a-b});
   var h='<h3 class="at-h">'+T[type]+'</h3><div class="at-wrap"><table class="at"><thead><tr><th>'+T.model+'</th>'+caps.map(function(c){return'<th>'+n(c)+'<small>'+T.btu+'</small></th>'}).join("")+'</tr></thead><tbody>';
   rows.forEach(function(p){var d=A.data[p.slug];

@@ -2836,7 +2836,7 @@ window.PRODUCT_DETAILS={
     "wifi": "Oui, inclus",
     "cert": "Éligible LogisVert",
     "warr": "Garantie limitée de 10 ans",
-    "ahri": "—",
+    "ahri": "AHRI 215864311, 215864312, 215864314, 215864315, 215864316, 215864318",
     "models": "ML24HP230LMNTH · ML30HP230LMNTH · ML36HP230LMNTH · ML42HP230LMNTH · ML48HP230LMNTH · ML60HP230LMNTH"
    }
   },
@@ -2867,7 +2867,7 @@ window.PRODUCT_DETAILS={
     "wifi": "Yes, included",
     "cert": "LogisVert eligible",
     "warr": "10-year limited warranty",
-    "ahri": "—",
+    "ahri": "AHRI 215864311, 215864312, 215864314, 215864315, 215864316, 215864318",
     "models": "ML24HP230LMNTH · ML30HP230LMNTH · ML36HP230LMNTH · ML42HP230LMNTH · ML48HP230LMNTH · ML60HP230LMNTH"
    }
   }

@@ -2,6 +2,50 @@
    Source : liste des appareils admissibles d'Hydro-Québec (LogisVert), appariement par numéro AHRI ;
    les modèles absents de la liste (ex. 9 000 BTU) viennent de la fiche du fabricant. À mettre à jour avec subsidies.js. */
 window.VARIANTS={
+ "mainline-ultraheat-central": {
+  "24000": {
+   "a": "215864311",
+   "i": "ML24HP230LMNTAHU-I",
+   "o": "ML24HP230LMNTH-O",
+   "c": 23000,
+   "h": 20800
+  },
+  "30000": {
+   "a": "215864312",
+   "i": "ML30HP230LMNTAHU-I",
+   "o": "ML30HP230LMNTH-O",
+   "c": 30000,
+   "h": 23800
+  },
+  "36000": {
+   "a": "215864314",
+   "i": "ML36HP230LMNTAHU-I",
+   "o": "ML36HP230LMNTH-O",
+   "c": 36000,
+   "h": 31800
+  },
+  "42000": {
+   "a": "215864315",
+   "i": "ML42HP230LMNTAHU-I",
+   "o": "ML42HP230LMNTH-O",
+   "c": 42000,
+   "h": 39500
+  },
+  "48000": {
+   "a": "215864316",
+   "i": "ML48HP230LMNTAHU-I",
+   "o": "ML48HP230LMNTH-O",
+   "c": 48000,
+   "h": 39500
+  },
+  "60000": {
+   "a": "215864318",
+   "i": "ML60HP230LMNTAHU-I",
+   "o": "ML60HP230LMNTH-O",
+   "c": 54000,
+   "h": 45000
+  }
+ },
  "gree-fairy-ultra-heat": {
   "9000": {
    "a": "202360989",

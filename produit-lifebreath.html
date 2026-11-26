@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lifebreath — Échangeur d’air | Thermolux</title>
+<meta name="description" content="Lifebreath — Ventilateurs récupérateurs de chaleur (VRC) et d’énergie (VRE). Thermolux.">
+<link rel="canonical" href="https://thermolux.ca/produit-lifebreath.html">
+<link rel="alternate" hreflang="fr" href="https://thermolux.ca/produit-lifebreath.html">
+<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/produit-lifebreath.html">
+<link rel="alternate" hreflang="x-default" href="https://thermolux.ca/produit-lifebreath.html">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Thermolux">
+<meta property="og:title" content="Lifebreath — Échangeur d’air | Thermolux">
+<meta property="og:description" content="Lifebreath — Ventilateurs récupérateurs de chaleur (VRC) et d’énergie (VRE). Thermolux.">
+<meta property="og:url" content="https://thermolux.ca/produit-lifebreath.html">
+<meta property="og:image" content="https://thermolux.ca/img/products/lifebreath-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=173">
+<link rel="stylesheet" href="css/catalogue.css?v=92">
+</head>
+<body class="pdp">
+<div id="site-header"></div>
+
+<main>
+<section class="phead" style="padding:28px 0">
+ <div class="wrap"><nav class="crumbs" style="margin:0" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>/</span><a href="catalogue.html">Catalogue</a><span>/</span><span style="margin:0;opacity:1" id="crumb">Gree Fairy Ultra Heat</span></nav></div>
+</section>
+
+<section class="pp"><div class="wrap">
+ <div class="grid">
+  <div class="gal">
+   <div class="tile"><img id="main" src="img/products/gree-fairy-1.png" alt="Système mural Gree Fairy Ultra Heat"></div>
+   <div class="thumbs" id="thumbs"></div>
+  </div>
+  <div class="buy">
+   <div class="meta" id="meta"></div>
+   <h1 id="name">Gree Fairy Ultra Heat</h1>
+   <p class="lead" id="lead" hidden></p>
+   <dl class="keys" id="keys"></dl>
+      <div class="acts" id="acts"><a class="btn btn-p" href="contact.html#soumission">Nous joindre</a><a class="btn btn-o" href="tel:4385091823">Appeler 438-509-1823</a><a class="btn btn-d" id="brochureBtn" hidden target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M12 11v6m0 0-2.500-2.500M12 17l2.500-2.500"/></svg>Télécharger la brochure (PDF)</a></div>
+   <p class="note">Une question ? Notre équipe à Montréal, Laval et Longueuil vous répond.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="blk"><div class="wrap"><div class="det"><h2>Caractéristiques techniques</h2><table class="spec"><tbody id="spec"></tbody></table></div></div></section>
+
+<section class="blk blk-end" id="about"><div class="wrap"><div class="det"><h2>Description</h2><div><p id="intro"></p><p class="dl" id="dl" hidden><a class="link" target="_blank" rel="noopener" id="brochure" href="#">Brochure du fabricant (PDF, en anglais)</a></p></div></div></div></section>
+
+<section class="wy" id="why"><div class="wrap">
+ <div class="head"><p class="eyebrow">Pourquoi ce produit</p><h2>Ses points forts</h2></div>
+ <ol id="whyl"></ol>
+</div></section>
+<section class="sim">
+ <div class="wrap">
+  <div class="head"><h2>Autres accessoires</h2><a class="link" href="catalogue.html">Voir tout le catalogue</a></div>
+  <div class="grid4" id="sim"></div>
+ </div>
+</section>
+</main>
+
+<div class="qbar" id="qbar" aria-hidden="true"><div class="wrap"><div><b id="qn"></b><span id="qs"></span></div><a class="btn btn-p" href="contact.html#soumission" tabindex="-1">Nous joindre</a></div></div>
+
+<div id="site-footer"></div>
+<script>window.PSLUG="lifebreath"</script>
+<script src="js/layout.js?v=152"></script>
+<script src="js/products.js?v=234"></script>
+<script src="js/accessories.js?v=230"></script>
+<script>
+(function(){
+ var L=window.LANG,P=window.PRODUCTS,A=window.ACC,$=function(i){return document.getElementById(i)};
+ var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+ var I={fr:{exchanger:"Échangeur d’air",humidifier:"Humidificateur",thermostat:"Thermostat",view:"Voir les détails"},en:{exchanger:"Air exchanger",humidifier:"Humidifier",thermostat:"Thermostat",view:"View details"}}[L];
+ var slug=(window.PSLUG||new URLSearchParams(location.search).get("p"));
+ var p=P.filter(function(x){return x.slug==slug&&x.acc})[0]||P.filter(function(x){return x.acc})[0];
+ var D=A[p.slug],d=D[L];
+ document.title=p.name+" — "+I[p.type]+" | Thermolux";
+ document.querySelector('meta[name=description]').content=p.name+" — "+d.lead+". Thermolux.";
+ $("crumb").textContent=p.name;$("name").textContent=p.name;$("qn").textContent=p.name;$("qs").textContent=I[p.type];
+ var m=$("main");m.src=p.img;m.alt=p.name;$("thumbs").hidden=true;
+ $("meta").innerHTML=[p.brand,I[p.type]].map(function(t){return "<span>"+esc(t)+"</span>"}).join("");
+ $("lead").textContent=d.lead;$("lead").hidden=false;
+ $("keys").innerHTML=d.keys.map(function(k){return "<div><dt>"+esc(k[0])+"</dt><dd>"+esc(k[1])+"</dd></div>"}).join("");
+ $("spec").innerHTML=d.spec.map(function(r){return '<tr><th scope="row">'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>'}).join("");
+ $("intro").textContent=d.intro;
+ var bb=$("brochureBtn");bb.href=D.brochure;bb.hidden=false;$("brochure").href=D.brochure;$("dl").hidden=false;
+ $("whyl").innerHTML=d.why.map(function(w){return "<li><h3>"+esc(w[0])+"</h3><p>"+esc(w[1])+"</p></li>"}).join("");
+ var sim=P.filter(function(x){return x.acc&&x.slug!=p.slug}).sort(function(a,b){return (b.type==p.type)-(a.type==p.type)}).slice(0,4);
+ $("sim").innerHTML=sim.map(function(q){var k=A[q.slug][L].keys;return '<article class="card"><div class="tile"><span class="brand">'+esc(q.brand)+'</span><img src="'+q.img+'" alt="'+esc(q.name)+'" loading="lazy"></div><div class="body"><p class="meta">'+I[q.type]+'</p><h2>'+esc(q.name)+'</h2><ul class="specs">'+k.slice(0,2).map(function(x){return '<li><b>'+esc(x[1])+'</b></li>'}).join("")+'</ul><a class="go" href="accessoire.html?p='+q.slug+'">'+I.view+'<i aria-hidden="true">→</i></a></div></article>'}).join("");
+ var qb=$("qbar");
+ if("IntersectionObserver" in window)new IntersectionObserver(function(e){var on=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;qb.classList.toggle("on",on);qb.querySelector("a").tabIndex=on?0:-1;qb.setAttribute("aria-hidden",!on)}).observe($("acts"));
+})();
+</script>
+</body>
+</html>

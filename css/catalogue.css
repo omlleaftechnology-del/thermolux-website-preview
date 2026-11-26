@@ -296,3 +296,11 @@
 .btn-d[hidden]{display:none}
 .btn-d svg{width:20px;height:20px;flex:none}
 .btn-d:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+/* mobile: product/accessory page must never grow wider than the screen; key figures centered */
+@media(max-width:700px){
+ .pp .grid,.det{grid-template-columns:minmax(0,1fr)!important}
+ .pp .grid>*{min-width:0}
+ .keys div{padding:16px 4px;text-align:center}.keys div+div{padding-left:4px}
+ .keys dt{font-size:10px;letter-spacing:.08em}
+ .keys dd{white-space:normal;font-size:20px;line-height:1.15;overflow-wrap:anywhere}
+}

@@ -3,15 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gree Fairy Ultra Heat — Système mural | Thermolux</title>
-<meta name="description" content="Thermopompe murale Gree Fairy Ultra Heat : chauffage jusqu’à −30 °C, 27 SEER2, 11 HSPF2, 9 000 à 24 000 BTU. Demandez une soumission à Thermolux.">
-<link rel="alternate" hreflang="fr" href="https://thermolux.ca/produit.html">
-<link rel="alternate" hreflang="en" href="https://thermolux.ca/en/produit.html">
-<link rel="alternate" hreflang="x-default" href="https://thermolux.ca/produit.html">
+<title>Fiche produit | Thermolux</title>
+<meta name="description" content="Fiche produit Thermolux : caractéristiques, capacités (BTU), brochure PDF et aide financière. Demandez une soumission.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=173">
-<link rel="stylesheet" href="css/catalogue.css?v=91">
+<link rel="stylesheet" href="css/catalogue.css?v=92">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -61,9 +58,9 @@
 
 <div id="site-footer"></div>
 <script src="js/layout.js?v=152"></script>
-<script src="js/subsidies.js?v=230"></script>
-<script src="js/variants.js?v=230"></script>
-<script src="js/products.js?v=233"></script>
+<script src="js/subsidies.js?v=231"></script>
+<script src="js/variants.js?v=231"></script>
+<script src="js/products.js?v=234"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -74,7 +71,7 @@
  var num=function(v){return L=="fr"?String(v).replace(".",","):String(v)};
  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
  var neg=function(v){return String(v).replace("-","−")};
- var slug=new URLSearchParams(location.search).get("p");
+ var slug=(window.PSLUG||new URLSearchParams(location.search).get("p"));
  var p=P.filter(function(x){return x.slug==slug})[0]||P[0];
  if(p.acc){location.replace('accessoire.html?p='+p.slug);return}
  var D=(window.PRODUCT_DETAILS||{})[p.slug]||{},d=D[L]||{};
@@ -127,7 +124,7 @@
 <script>
 (function(){
  var A=window.AID,L=window.LANG,P=window.PRODUCTS;if(!A||!P)return;
- var slug=new URLSearchParams(location.search).get("p"),p=P.filter(function(x){return x.slug==slug})[0]||P[0],d=A.data[p.slug];if(!d)return;
+ var slug=(window.PSLUG||new URLSearchParams(location.search).get("p")),p=P.filter(function(x){return x.slug==slug})[0]||P[0],d=A.data[p.slug];if(!d)return;
  var T={"cap": "Capacité (BTU)", "val": "Subvention", "eff": "Option efficacité", "opt": "Option optimisation", "no": "Non inscrit à la liste", "combo": "Selon la combinaison", "notes": {"existing": "Propriétaire d’une habitation existante. Les offices d’habitation (logements sociaux) reçoivent les mêmes montants.", "newhome": "Entrepreneur, nouvelle construction (maison).", "plex": "Entrepreneur, nouvelle construction (multiplex ou immeuble)."}},n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
  var $=function(i){return document.getElementById(i)};
  var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>Subvention LogisVert</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
