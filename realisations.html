@@ -53,6 +53,7 @@ var PROJETS=[
  var cur=[],cnt=document.getElementById("cnt"),fg=document.getElementById("fg"),pr=document.getElementById("proj"),em=document.getElementById("empty"),sel={city:"Tous",type:"Tous"};
  var types=PROJETS.map(function(p){return p.type}).filter(function(t,i,a){return a.indexOf(t)===i});
  var groups=[["city","Ville",["Tous","Montréal","Laval","Longueuil"]]];
+ var qc=new URLSearchParams(location.search).get("city");if(qc&&groups[0][2].indexOf(qc)>0)sel.city=qc;
  if(types.length>1)groups.push(["type","Type",["Tous"].concat(types)]);
  groups.forEach(function(g){
   var d=document.createElement("div");d.innerHTML='<small id="l-'+g[0]+'">'+g[1]+'</small>';
