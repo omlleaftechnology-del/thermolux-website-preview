@@ -64,8 +64,8 @@
 
 <div id="site-footer"></div>
 <script src="js/layout.js?v=152"></script>
-<script src="js/subsidies.js?v=232"></script>
-<script src="js/products.js?v=235"></script>
+<script src="js/subsidies.js?v=233"></script>
+<script src="js/products.js?v=236"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -90,7 +90,7 @@
  $("f-btu").innerHTML=BTU.map(function(b,i){return chip("btu","radio",b[0],b[1],i==0)}).join("");
  $("grid").innerHTML=P.map(function(p,i){
   var cap=p.btu.length?n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):""):"";
-  var mid=p.seer2?'<li><b>'+num(p.seer2)+'</b> SEER2</li>':p.dB?'<li><b>'+num(p.dB)+'</b> dB</li>':"";
+  var mid=p.seer2?'<li><b>'+num(p.seer2)+'</b> SEER2</li>':p.seer?'<li><b>'+num(p.seer)+'</b> SEER</li>':p.dB?'<li><b>'+num(p.dB)+'</b> dB</li>':"";
   return '<article class="card" data-i="'+i+'" data-type="'+p.type+'" data-brand="'+esc(p.brand)+'" data-btu="'+p.btu.join(",")+'" data-seer="'+(p.seer2||0)+'" data-cold="'+(p.tminC||0)+'" data-name="'+esc(p.name)+'" data-q="'+esc(norm(p.name+" "+p.brand+" "+p.slug))+'">'+
    '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
    '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+

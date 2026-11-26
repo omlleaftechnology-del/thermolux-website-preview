@@ -70,9 +70,9 @@
 <div id="site-footer"></div>
 <script>window.PSLUG="tosot-pular-25"</script>
 <script src="js/layout.js?v=152"></script>
-<script src="js/subsidies.js?v=232"></script>
-<script src="js/variants.js?v=231"></script>
-<script src="js/products.js?v=235"></script>
+<script src="js/subsidies.js?v=233"></script>
+<script src="js/variants.js?v=232"></script>
+<script src="js/products.js?v=236"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -97,7 +97,7 @@
  $("thumbs").onclick=function(e){var b=e.target.closest("button");if(!b)return;m.style.opacity=.2;setTimeout(function(){m.src=imgs[b.dataset.i];m.style.opacity=1},120);[].forEach.call(this.children,function(c){c.removeAttribute("aria-current")});b.setAttribute("aria-current","true")};
  $("meta").innerHTML=[p.brand,I[p.type]].concat(p.series?[I.series+p.series]:[]).map(function(t){return "<span>"+esc(t)+"</span>"}).join("");
  if(d.lead){$("lead").textContent=d.lead;$("lead").hidden=false}
- var keys=[p.seer2&&["SEER2",num(p.seer2)],p.hspf2&&["HSPF2",num(p.hspf2)],p.tminC&&[I.cold,neg(p.tminC)+" °C"]].filter(Boolean);
+ var keys=[p.seer2?["SEER2",num(p.seer2)]:p.seer&&["SEER",num(p.seer)],p.hspf2?["HSPF2",num(p.hspf2)]:p.hspf&&["HSPF",num(p.hspf)],p.tminC&&[I.cold,neg(p.tminC)+" °C"]].filter(Boolean);
  if(keys.length<3&&p.dB)keys.push([I.noise,num(p.dB)+" dB"]);
  $("keys").innerHTML=keys.slice(0,3).map(function(k){return "<div><dt>"+k[0]+"</dt><dd>"+k[1]+"</dd></div>"}).join("");
  $("capl").innerHTML=p.btu.map(function(b){return "<li>"+n(b)+"</li>"}).join("");$("caps").firstChild.textContent=I.cap+" (BTU)";
@@ -111,7 +111,7 @@
   var h=tr(I.rCapSel,chips,"sel")+tr(I.rIn,cv(v.i),"sel")+tr(I.rOut,cv(v.o),"sel")+tr(I.rAhriN,ahri,"sel")+tr(I.rCool,v.c?n(v.c)+" BTU/h":dash,"sel")+tr(I.rHeat,v.h?n(v.h)+" BTU/h":dash,"sel");
   if(v.s)h+=tr(I.rEffC,num(v.s)+" / "+num(v.hs)+" / "+num(v.e),"sel");
   if(v.es)h+=tr(I.rEs,esc(v.es),"sel");
-  var eff=v.s?null:[I.rEff,(p.seer2?num(p.seer2):dash)+" / "+(p.hspf2?num(p.hspf2):dash)];
+  var eff=v.s?null:(!p.seer2&&p.seer?["SEER / HSPF",num(p.seer)+" / "+(p.hspf?num(p.hspf):dash)]:[I.rEff,(p.seer2?num(p.seer2):dash)+" / "+(p.hspf2?num(p.hspf2):dash)]);
   (eff?[eff]:[]).concat([[I.rMin,p.tminC?neg(p.tminC)+" °C":dash],[I.rClim,S.clim||dash],[I.rNoise,S.noise||dash],[I.rRef,p.refrigerant||dash],[I.rVolt,S.volt||dash],[I.rWifi,S.wifi||dash],[I.rCert,S.cert||dash],[I.rWarr,S.warr||dash]]).forEach(function(r){h+=tr(r[0],esc(r[1]))});
   if(D.brochure)h+=tr(I.rDl,'<a class="link" href="'+esc(D.brochure)+'" target="_blank" rel="noopener">'+I.rBro+'</a>');
   $("spec").innerHTML=h;
