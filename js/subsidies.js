@@ -8,12 +8,16 @@ window.AID={asOf:"2026-11-12",
  url:{fr:"https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html",
       en:"https://www.hydroquebec.com/residential/energy-wise/financial-assistance/logisvert/efficient-heat-pump-search.html"},
  data:{
+ "canair-c22": {"grants":{},"lo":{},"newhome":{},"plex":{},"combo":false},
+ "gree-free-match-extreme": {"grants":{"18000": 2040},"lo":{},"newhome":{},"plex":{},"combo":false},
+ "kinghome-charmo": {"grants":{"12000": 1164, "18000": 1836, "24000": 2304},"lo":{},"newhome":{},"plex":{},"combo":false},
+ "kinghome-airy": {"grants":{"12000": 1560, "18000": 2340, "24000": 2760},"lo":{"12000": 1236, "18000": 1860, "24000": 2400},"newhome":{},"plex":{},"combo":false},
+ "elios-central-addon": {"grants":{"18000": 1824, "24000": 2496, "30000": 3000, "36000": 3816},"lo":{"24000": 2364, "30000": 2856, "36000": 3504},"newhome":{},"plex":{},"combo":true},
+ "elios-emulti": {"grants":{"18000": 2400, "27000": 3480, "36000": 4620, "48000": 5520},"lo":{"18000": 1920, "27000": 2376, "36000": 3408, "48000": 4416},"newhome":{},"plex":{},"combo":true},
+ "mainline-ultraheat-multi-zones": {"grants":{"18000": 2400, "27000": 3480, "36000": 4620, "48000": 5520, "55000": 6000},"lo":{"27000": 2880, "36000": 4560, "55000": 5760},"newhome":{},"plex":{},"combo":true},
+ "zephyr-multi-zone-r454b": {"grants":{"18000": 1428, "27000": 2184, "36000": 2712, "42000": 3384},"lo":{"18000": 1380, "27000": 2112, "36000": 2520, "42000": 3288},"newhome":{},"plex":{},"combo":true},
+ "kinghome-multizone-r32": {"grants":{"18000": 2112, "24000": 2832, "30000": 3360, "36000": 4320, "42000": 5340, "48000": 5340, "60000": 2050},"lo":{"18000": 1800, "24000": 2640, "30000": 3264, "42000": 4800, "48000": 4800, "60000": 2000},"newhome":{},"plex":{},"combo":true},
  "mainline-ultraheat-central": {"grants":{"24000":2496,"30000":2856,"36000":3816,"42000":4740,"48000":4740,"60000":5400},"newhome":{},"plex":{},"combo":false},
- "mainline-ultraheat-multi-zones": {"grants":{},"newhome":{},"plex":{},"combo":true},
- "kinghome-multizone-r32": {"grants":{},"newhome":{},"plex":{},"combo":true},
- "zephyr-multi-zone-r454b": {"grants":{},"newhome":{},"plex":{},"combo":true},
- "elios-emulti": {"grants":{},"newhome":{},"plex":{},"combo":true},
- "elios-central-addon": {"grants":{},"newhome":{},"plex":{},"combo":true},
  "forestair-e20": {"grants":{},"newhome":{},"plex":{},"combo":false},
  "forestair-e23": {"grants":{},"newhome":{},"plex":{},"combo":false},
  "forestair-e38": {"grants":{},"newhome":{},"plex":{},"combo":false},
@@ -259,21 +263,6 @@ window.AID={asOf:"2026-11-12",
   },
   "combo": false
  },
- "gree-free-match-extreme": {
-  "grants": {
-   "18000": 2040
-  },
-  "newhome": {
-   "18000": 2380
-  },
-  "plex": {
-   "18000": [
-    2040,
-    2975
-   ]
-  },
-  "combo": true
- },
  "zephyr-hi-pro-hd": {
   "grants": {
    "24000": 2448,
@@ -337,6 +326,7 @@ window.AID={asOf:"2026-11-12",
  "elios-emc": {"grants": {"12000": 1440, "18000": 1992, "24000": 2760, "33000": 3720}, "newhome": {}, "plex": {}, "combo": false},
  "elios-ebc": {"grants": {"12000": 996, "18000": 1680, "24000": 2496, "30000": 2400, "36000": 3072}, "newhome": {}, "plex": {}, "combo": false}
 },
+ val:function(d,c){var v=d.grants[c]||(d.newhome&&d.newhome[c]);if(!v)return"";var l=d.lo&&d.lo[c];return l&&l<v?this.fmt(l).replace(/\u00a0\$$/,"")+"\u2009–\u2009"+this.fmt(v):this.fmt(v)},
  fmt:function(v){return window.LANG=="en"?"$"+String(v).replace(/\B(?=(\d{3})+(?!\d))/g,","):String(v).replace(/\B(?=(\d{3})+(?!\d))/g,"\u00a0")+"\u00a0$"},
  max:function(slug){var d=this.data[slug];if(!d)return 0;var v=Object.keys(d.grants).map(function(k){return d.grants[k]});return v.length?Math.max.apply(null,v):0}
 };

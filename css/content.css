@@ -533,3 +533,4 @@ body.pm-lock{overflow:hidden}
 .sb-step p{color:var(--muted);font-size:15px;margin:0}
 .kf{justify-content:flex-start}
 @media(max-width:900px){.sb-steps{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:701px){.at td.v{white-space:nowrap;line-height:1.25}.at td.v br+*{display:inline}}

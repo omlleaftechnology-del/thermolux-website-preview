@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=173">
-<link rel="stylesheet" href="css/content.css?v=139">
+<link rel="stylesheet" href="css/content.css?v=140">
 </head>
 <body>
 
@@ -41,7 +41,7 @@
 <section class="sec paper" id="subventions"><div class="wrap">
  <div class="sec-h"><div class="eyebrow">Aide financière</div><h2>Subvention <em>LogisVert</em> par modèle</h2><p>Montants de l’aide d’Hydro-Québec pour un propriétaire d’une habitation existante, selon le modèle et la capacité (BTU). Cliquez sur un modèle pour voir ses détails.</p></div>
  <div id="aidtables"></div>
- <p class="fin-note aid-note">Montants selon la liste des appareils admissibles d’Hydro-Québec (novembre 2026). L’admissibilité et le montant final sont confirmés par Hydro-Québec. <a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Vérifier sur Hydro-Québec →</a></p>
+ <p class="fin-note aid-note">Montants selon la liste des appareils admissibles d’Hydro-Québec (novembre 2026). Une fourchette (ex. 1 800 – 2 112 $) signifie que le montant dépend de la combinaison d’unités intérieures. L’admissibilité et le montant final sont confirmés par Hydro-Québec. <a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Vérifier sur Hydro-Québec →</a></p>
 </div></section>
 
 <section class="sec" id="programmes"><div class="wrap">
@@ -103,8 +103,8 @@
 </main>
 
 <div id="site-footer"></div>
-<script src="js/subsidies.js?v=231"></script>
-<script src="js/products.js?v=234"></script>
+<script src="js/subsidies.js?v=232"></script>
+<script src="js/products.js?v=235"></script>
 <script>
 (function(){
  var A=window.AID,P=window.PRODUCTS,L=window.LANG,box=document.getElementById("aidtables");if(!A||!P||!box)return;
@@ -120,7 +120,7 @@
    if(d.combo&&!anyV){h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th><td class="cmb" colspan="'+caps.length+'">'+T.combo+' · '+p.btu.map(function(c){return n(c)}).join(" / ")+' '+T.btu+'</td></tr>';return}
    h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th>'+caps.map(function(c){
     if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d.grants[c]||(d.newhome&&d.newhome[c]),l=' data-l="'+n(c)+' '+T.btu+'"';
-    return v?'<td class="v"'+l+'>'+A.fmt(v)+'</td>':'<td class="no"'+l+'>'+(d.combo?T.cs:T.none)+'</td>'}).join("")+'</tr>'});
+    return v?'<td class="v"'+l+'>'+A.val(d,c).replace(/\u2009–\u2009/,'\u2009–<br>')+'</td>':'<td class="no"'+l+'>'+(d.combo?T.cs:T.none)+'</td>'}).join("")+'</tr>'});
   box.insertAdjacentHTML("beforeend",h+'</tbody></table></div>')});
  var lk=document.getElementById("aidlink");if(lk)lk.href=A.url[L]||A.url.fr;
 })();

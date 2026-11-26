@@ -473,14 +473,7 @@ window.PRODUCTS=[
   "brand": "Kinghome",
   "type": "multizone",
   "series": "R32 Ultra Heat",
-  "btu": [
-   18000,
-   24000,
-   36000,
-   42000,
-   48000,
-   60000
-  ],
+  "btu": [18000, 24000, 30000, 36000, 42000, 48000, 60000],
   "seer2": "21",
   "hspf2": "10",
   "tminC": "-30",
@@ -497,12 +490,7 @@ window.PRODUCTS=[
   "brand": "Zephyr",
   "type": "multizone",
   "series": "Multi Zone",
-  "btu": [
-   18000,
-   24000,
-   36000,
-   42000
-  ],
+  "btu": [18000, 27000, 36000, 42000],
   "refrigerant": "R-454B",
   "img": "img/products/zephyr-multi-zone-r454b-1.jpg",
   "src": "https://tticlimatisation.com/produits/zephyr-multi-zone-r454b",

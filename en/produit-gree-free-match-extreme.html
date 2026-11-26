@@ -70,9 +70,9 @@
 <div id="site-footer"></div>
 <script>window.PSLUG="gree-free-match-extreme"</script>
 <script src="../js/layout.js?v=152"></script>
-<script src="../js/subsidies.js?v=231"></script>
+<script src="../js/subsidies.js?v=232"></script>
 <script src="../js/variants.js?v=231"></script>
-<script src="../js/products.js?v=234"></script>
+<script src="../js/products.js?v=235"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -141,7 +141,7 @@
  var $=function(i){return document.getElementById(i)};
  var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>LogisVert rebate</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
  $("capl").innerHTML=p.btu.map(function(c){return '<li><button type="button" data-c="'+c+'">'+n(c)+'</button></li>'}).join("");
- function show(c){if(window.renderSpec)window.renderSpec(c);var v=d.grants[c]||d.newhome[c],s=v?A.fmt(v):(d.combo?T.combo:T.no);
+ function show(c){if(window.renderSpec)window.renderSpec(c);var v=d.grants[c]||d.newhome[c],s=v?A.val(d,c):(d.combo?T.combo:T.no);
   $("aidval").textContent=s;$("aidval").className=v?"":"na";$("topv").textContent=s;
   [].forEach.call(document.querySelectorAll("#aidtabs button,#capl button"),function(b){b.setAttribute("aria-selected",b.dataset.c==c);b.setAttribute("aria-pressed",b.dataset.c==c)})}
  window.showCap=show;
