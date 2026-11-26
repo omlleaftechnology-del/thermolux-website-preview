@@ -461,3 +461,14 @@ body.pm-lock{overflow:hidden}
 .sp-card .at-wrap{overflow:visible}
 @media(min-width:901px){.sp-bot .sp-cap{min-height:3.2em;box-sizing:content-box}}
 @media(min-width:901px){.sp-bot{min-height:430px}}
+/* subsidy program tables on phones: small grid of boxes, label above the amount */
+@media(max-width:900px){
+ .sp-card .at-wrap{overflow:visible;border:0!important;background:none!important;box-shadow:none!important}
+ .sp-card table.sp-t,.sp-card .sp-t tbody{display:block!important;width:100%!important;min-width:0!important}
+ .sp-card .sp-t thead{display:none!important}
+ .sp-card .sp-t tr{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+ .sp-card .sp-t td{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center!important;padding:12px 6px!important;border:0!important;border-radius:12px!important;background:#EEF7F1!important;box-shadow:none!important;font-size:16px;font-weight:800;color:#17703E;white-space:nowrap}
+ .sp-card .sp-t td:before{content:attr(data-l)!important;display:block!important;font:600 11px Inter,sans-serif;color:#5C7A69;white-space:normal;line-height:1.2}
+ .sp-card .sp-t td:after{content:none!important}
+}
+@media(max-width:900px){.sp-card .sp-t td{width:auto!important;max-width:none!important;min-width:0!important;box-sizing:border-box}}
