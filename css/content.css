@@ -472,3 +472,44 @@ body.pm-lock{overflow:hidden}
  .sp-card .sp-t td:after{content:none!important}
 }
 @media(max-width:900px){.sp-card .sp-t td{width:auto!important;max-width:none!important;min-width:0!important;box-sizing:border-box}}
+/* ===== subsidies hub + programme pages ===== */
+.sb-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.sb-w3{grid-column:span 3}.sb-w2{grid-column:span 2}
+.sb-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;color:inherit;transition:.18s}
+.sb-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(10,31,61,.35)}
+.sb-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.sb-org{font:700 12px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sb-badge{display:inline-block;padding:5px 12px;border-radius:999px;font:800 12px Manrope,Inter,sans-serif;white-space:nowrap;font-style:normal}
+.sb-badge.ok{background:#E6F5EC;border:1px solid #B7E0C6;color:#17703E}
+.sb-badge.soon{background:#E8F0FB;border:1px solid #BCD0EE;color:#1D4F9A}
+.sb-badge.chg{background:#FFF3DF;border:1px solid #F2D49B;color:#8A5A00}
+.sb-badge.end{background:#EEF0F3;border:1px solid #D5DAE1;color:#5B6676}
+.sb-card h3{font-size:24px;letter-spacing:-.02em;margin-bottom:16px}
+.sb-fig{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin-bottom:14px}
+.sb-fig b{font:800 40px/1 Manrope,Inter,sans-serif;color:#17703E}
+.sb-fig span{font-size:15px;font-weight:600;color:#2B3D57}
+.sb-card.sb-w2 .sb-fig b{font-size:34px}
+.sb-card p{color:var(--muted);font-size:15px;margin:0 0 18px}
+.sb-more{margin-top:auto;font-weight:700;color:var(--blue)}
+.sb-cmp{border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}
+.sb-rh,.sb-r{display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:16px;align-items:center;padding:16px 24px}
+.sb-rh{background:#EEF3F9;font:700 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sb-r{border-top:1px solid var(--line);color:inherit;transition:.15s}.sb-r:hover{background:#F6F9FC}
+.sb-r b{font-weight:700}
+.sb-others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sb-o{display:flex;flex-direction:column;align-items:flex-start;gap:8px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;color:inherit;transition:.15s}
+.sb-o:hover{border-color:var(--blue);transform:translateY(-2px)}.sb-o b{font-size:17px}.sb-o>span:last-child{color:var(--muted);font-size:14px}
+.kf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.kf{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.kf b{font:800 32px/1.05 Manrope,Inter,sans-serif;color:#17703E}.kf span{font-size:14px;color:#2B3D57}
+.kt{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kt div{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 10px;border-radius:14px;background:#EEF7F1;border:1px solid #CFE5D8;text-align:center}
+.kt small{font:600 12px Inter,sans-serif;color:#5C7A69}.kt b{font:800 20px Manrope,Inter,sans-serif;color:#17703E}
+.pt{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.pt li{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pt li span{color:#2B3D57}.pt li b{font-weight:800;color:#17703E;text-align:right}
+.sp-one{grid-template-columns:minmax(0,760px)!important;justify-content:center}.sp-one .sp-bot{min-height:0}
+@media(max-width:1100px){.sb-others{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-w2{grid-column:span 3}.sb-w3{grid-column:span 6}}
+@media(max-width:900px){.sb-grid{grid-template-columns:minmax(0,1fr)}.sb-w2,.sb-w3{grid-column:auto}.sb-card{padding:22px}.sb-fig b{font-size:34px}
+ .sb-rh{display:none}.sb-r{grid-template-columns:1fr;gap:6px;padding:16px 18px}.sb-c:before{content:attr(data-l);display:block;font:600 11px Inter,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+ .sb-others{grid-template-columns:minmax(0,1fr)}.kf b{font-size:28px}.pt li{flex-direction:column;gap:4px}.pt li b{text-align:left}}
