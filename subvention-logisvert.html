@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=173">
-<link rel="stylesheet" href="css/content.css?v=137">
+<link rel="stylesheet" href="css/content.css?v=138">
 </head>
 <body>
 
@@ -108,7 +108,7 @@
 <script>
 (function(){
  var A=window.AID,P=window.PRODUCTS,L=window.LANG,box=document.getElementById("aidtables");if(!A||!P||!box)return;
- var T=L=="en"?{mural:"Wall-mounted systems",multizone:"Multi-zone systems",central:"Central systems",model:"Model",none:"—",combo:"Depends on the combination",btu:"BTU"}:{mural:"Systèmes muraux",multizone:"Systèmes multizones",central:"Systèmes centraux",model:"Modèle",none:"—",combo:"Selon la combinaison",btu:"BTU"};
+ var T=L=="en"?{mural:"Wall-mounted systems",multizone:"Multi-zone systems",central:"Central systems",model:"Model",none:"—",combo:"Amount depends on the combination of units",cs:"Varies",btu:"BTU"}:{mural:"Systèmes muraux",multizone:"Systèmes multizones",central:"Systèmes centraux",model:"Modèle",none:"—",combo:"Montant selon la combinaison d’appareils",cs:"Variable",btu:"BTU"};
  var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
  ["mural","multizone","central"].forEach(function(type){
@@ -116,9 +116,11 @@
   var caps=[];rows.forEach(function(p){p.btu.forEach(function(b){if(caps.indexOf(b)<0)caps.push(b)})});caps.sort(function(a,b){return a-b});
   var h='<h3 class="at-h">'+T[type]+'</h3><div class="at-wrap"><table class="at"><thead><tr><th>'+T.model+'</th>'+caps.map(function(c){return'<th>'+n(c)+'<small>'+T.btu+'</small></th>'}).join("")+'</tr></thead><tbody>';
   rows.forEach(function(p){var d=A.data[p.slug];
+   var anyV=p.btu.some(function(c){return d.grants[c]||(d.newhome&&d.newhome[c])});
+   if(d.combo&&!anyV){h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th><td class="cmb" colspan="'+caps.length+'">'+T.combo+' · '+p.btu.map(function(c){return n(c)}).join(" / ")+' '+T.btu+'</td></tr>';return}
    h+='<tr><th scope="row"><a href="produit.html?p='+p.slug+'">'+esc(p.name)+'</a></th>'+caps.map(function(c){
     if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d.grants[c]||(d.newhome&&d.newhome[c]),l=' data-l="'+n(c)+' '+T.btu+'"';
-    return v?'<td class="v"'+l+'>'+A.fmt(v)+'</td>':'<td class="no"'+l+'>'+(d.combo?T.combo:T.none)+'</td>'}).join("")+'</tr>'});
+    return v?'<td class="v"'+l+'>'+A.fmt(v)+'</td>':'<td class="no"'+l+'>'+(d.combo?T.cs:T.none)+'</td>'}).join("")+'</tr>'});
   box.insertAdjacentHTML("beforeend",h+'</tbody></table></div>')});
  var lk=document.getElementById("aidlink");if(lk)lk.href=A.url[L]||A.url.fr;
 })();

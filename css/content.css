@@ -513,3 +513,13 @@ body.pm-lock{overflow:hidden}
 @media(max-width:900px){.sb-grid{grid-template-columns:minmax(0,1fr)}.sb-w2,.sb-w3{grid-column:auto}.sb-card{padding:22px}.sb-fig b{font-size:34px}
  .sb-rh{display:none}.sb-r{grid-template-columns:1fr;gap:6px;padding:16px 18px}.sb-c:before{content:attr(data-l);display:block;font:600 11px Inter,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
  .sb-others{grid-template-columns:minmax(0,1fr)}.kf b{font-size:28px}.pt li{flex-direction:column;gap:4px}.pt li b{text-align:left}}
+/* LogisVert model tables: fit without horizontal scroll on desktop */
+@media(min-width:701px){
+ .at{min-width:0;table-layout:auto;font-size:14px}
+ .at th,.at td{padding:12px 10px}
+ .at thead th{font-size:13px}
+ .at tbody th a{font-size:14px}
+ .at td.no{font-size:13px;color:var(--muted)}
+ .at td.cmb{text-align:left;font-size:13.5px;color:#2B3D57;background:#F6FAF7;white-space:normal}
+}
+@media(max-width:700px){.at td.cmb{grid-column:1/-1;display:block!important;background:#F3F5F8;font-size:13px;color:var(--muted);text-align:left}}
