@@ -1,6 +1,1515 @@
 /* Fiches des accessoires (échangeurs d’air, humidificateurs, thermostats). Source : brochures des fabricants (liens « brochure »).
    Un objet par produit, FR + EN. keys = 3 chiffres clés ; spec = lignes du tableau ; why = 4 points. */
 window.ACC={
+ "sinope-th6250wf": {
+  "brochure": "https://support.sinopetech.com/wp-content/uploads/2026/08/250-6730-0001-D-Product-fact-sheet-TH6250W-EN-web.pdf",
+  "fr": {
+   "lead": "Thermostat intelligent Wi-Fi pour chauffage et climatisation centraux",
+   "keys": [
+    [
+     "Économies",
+     "jusqu’à 25 %"
+    ],
+    [
+     "Modèles",
+     "3"
+    ],
+    [
+     "Garantie",
+     "3 à 6 ans"
+    ]
+   ],
+   "intro": "Contrôlez à distance votre système central : électrique, combustible, thermopompe ou géothermie. Avec l’application Neviweb (horaires, géorepérage, rapports de consommation), l’énergie est utilisée seulement quand c’est nécessaire.",
+   "why": [
+    [
+     "Application Neviweb",
+     "Horaires personnalisés, géorepérage, rappels de filtre et rapports de consommation."
+    ],
+    [
+     "Eco Sinopé",
+     "Profitez des programmes d’efficacité de votre fournisseur d’électricité aux heures de pointe."
+    ],
+    [
+     "Primes",
+     "Admissible à la prime Hilo de 150 $ et à la remise Énergir de 100 $."
+    ],
+    [
+     "Version Pro",
+     "Installée par un professionnel, garantie prolongée jusqu’à 6 ans."
+    ]
+   ],
+   "spec": [
+    [
+     "Systèmes",
+     "Électrique, combustible, thermopompe, géothermie"
+    ],
+    [
+     "Câblage TH6250WF / PRO",
+     "C, R, G, W, O/B, Y, ACC, IN"
+    ],
+    [
+     "Câblage TH6500WF",
+     "Thermostat : 2 fils vers le module ; module : C, R, RH, G, W1, W2, O/B, Y1, Y2, ACC (2), DE, C, VRC"
+    ],
+    [
+     "Application",
+     "Neviweb (gratuite)"
+    ],
+    [
+     "Garantie",
+     "3 ans (TH6250WF) · 6 ans (versions Pro)"
+    ]
+   ],
+   "models": [
+    {
+     "g": "Résidentiel",
+     "n": "TH6250WF",
+     "p": [
+      "Économies jusqu’à 23 %",
+      "Câblage C, R, G, W, O/B, Y, ACC, IN",
+      "Garantie 3 ans"
+     ]
+    },
+    {
+     "g": "Professionnel",
+     "n": "TH6250WF-PRO",
+     "p": [
+      "Économies jusqu’à 25 %",
+      "Plaque décorative incluse",
+      "Rideau d’air · SSR électrique",
+      "Garantie 6 ans"
+     ]
+    },
+    {
+     "g": "Professionnel",
+     "n": "TH6500WF",
+     "p": [
+      "Économies jusqu’à 25 %",
+      "Thermopompe : jusqu’à 4 étages chauffage / 2 climatisation",
+      "Rideau d’air · stockage thermique · SSR électrique",
+      "Garantie 6 ans"
+     ]
+    }
+   ]
+  },
+  "en": {
+   "lead": "Wi-Fi smart thermostat for central heating and cooling",
+   "keys": [
+    [
+     "Savings",
+     "up to 25%"
+    ],
+    [
+     "Models",
+     "3"
+    ],
+    [
+     "Warranty",
+     "3 to 6 years"
+    ]
+   ],
+   "intro": "Control your central system remotely: electric, fuel, heat pump or geothermal. With the Neviweb app (schedules, geofencing, energy reports), energy is used only when needed.",
+   "why": [
+    [
+     "Neviweb app",
+     "Custom schedules, geofencing, filter reminders and energy reports."
+    ],
+    [
+     "Eco Sinopé",
+     "Benefit from your utility’s energy-efficiency programs at peak times."
+    ],
+    [
+     "Rebates",
+     "Eligible for the $150 Hilo bonus and the $100 Énergir rebate."
+    ],
+    [
+     "Pro version",
+     "Installed by a pro, extended warranty up to 6 years."
+    ]
+   ],
+   "spec": [
+    [
+     "Systems",
+     "Electric, fuel, heat pump, geothermal"
+    ],
+    [
+     "Wiring TH6250WF / PRO",
+     "C, R, G, W, O/B, Y, ACC, IN"
+    ],
+    [
+     "Wiring TH6500WF",
+     "Thermostat: 2 wires to module; module: C, R, RH, G, W1, W2, O/B, Y1, Y2, ACC (2), DE, C, HRV"
+    ],
+    [
+     "App",
+     "Neviweb (free)"
+    ],
+    [
+     "Warranty",
+     "3 years (TH6250WF) · 6 years (Pro versions)"
+    ]
+   ],
+   "models": [
+    {
+     "g": "Residential",
+     "n": "TH6250WF",
+     "p": [
+      "Energy savings up to 23%",
+      "Wiring C, R, G, W, O/B, Y, ACC, IN",
+      "3-year warranty"
+     ]
+    },
+    {
+     "g": "Professional",
+     "n": "TH6250WF-PRO",
+     "p": [
+      "Energy savings up to 25%",
+      "Decorative plate included",
+      "Air curtain · SSR electric",
+      "6-year warranty"
+     ]
+    },
+    {
+     "g": "Professional",
+     "n": "TH6500WF",
+     "p": [
+      "Energy savings up to 25%",
+      "Heat pump: up to 4 heat / 2 cool stages",
+      "Air curtain · thermal storage · SSR electric",
+      "6-year warranty"
+     ]
+    }
+   ]
+  }
+ },
+ "ecobee-premium": {
+  "fr": {
+   "lead": "Le plus complet : SmartSensor et qualité de l’air",
+   "keys": [
+    [
+     "Économies",
+     "jusqu’à 26 %"
+    ],
+    [
+     "ENERGY STAR",
+     "certifié"
+    ],
+    [
+     "Garantie",
+     "3 ans"
+    ]
+   ],
+   "intro": "Le thermostat le plus avancé d’ecobee : SmartSensor dans la boîte, moniteur de qualité de l’air et capteur de présence radar. Jusqu’à 26 % d’économies sur le chauffage et la climatisation.",
+   "why": [
+    [
+     "SmartSensor inclus",
+     "Équilibre la température entre les pièces."
+    ],
+    [
+     "Qualité de l’air",
+     "Moniteur de qualité de l’air intérieur intégré."
+    ],
+    [
+     "Capteur radar",
+     "Détecte la présence pour ajuster le confort."
+    ],
+    [
+     "Siri ou Alexa",
+     "Assistant vocal intégré au choix."
+    ]
+   ],
+   "spec": [
+    [
+     "Économies de chauffage et climatisation",
+     "jusqu’à 26 % (vs consigne fixe de 22 °C)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "Application",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Intégrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Garantie",
+     "3 ans limitée"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "The most complete: SmartSensor and air quality",
+   "keys": [
+    [
+     "Savings",
+     "up to 26%"
+    ],
+    [
+     "ENERGY STAR",
+     "certified"
+    ],
+    [
+     "Warranty",
+     "3 years"
+    ]
+   ],
+   "intro": "ecobee’s most advanced thermostat: SmartSensor in the box, air quality monitor and radar occupancy sensor. Up to 26% savings on heating and cooling.",
+   "why": [
+    [
+     "SmartSensor included",
+     "Balances temperature between rooms."
+    ],
+    [
+     "Air quality",
+     "Built-in indoor air quality monitor."
+    ],
+    [
+     "Radar sensor",
+     "Detects occupancy to adjust comfort."
+    ],
+    [
+     "Siri or Alexa",
+     "Built-in voice assistant of your choice."
+    ]
+   ],
+   "spec": [
+    [
+     "Heating and cooling savings",
+     "up to 26% (vs 22 °C hold)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "App",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Integrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Warranty",
+     "3-year limited"
+    ]
+   ]
+  }
+ },
+ "ecobee-enhanced": {
+  "fr": {
+   "lead": "S’ajuste quand vous partez et revenez",
+   "keys": [
+    [
+     "Économies",
+     "jusqu’à 26 %"
+    ],
+    [
+     "ENERGY STAR",
+     "certifié"
+    ],
+    [
+     "Garantie",
+     "3 ans"
+    ]
+   ],
+   "intro": "Entièrement redessiné, avec un plus grand écran et un capteur radar qui ajuste le confort selon vos allées et venues. Jusqu’à 26 % d’économies.",
+   "why": [
+    [
+     "Capteur radar",
+     "S’ajuste quand vous partez et revenez."
+    ],
+    [
+     "Grand écran",
+     "Entièrement redessiné."
+    ],
+    [
+     "eco+",
+     "Apprend votre horaire pour maximiser les économies."
+    ],
+    [
+     "Application",
+     "Contrôle à distance et rapports d’énergie."
+    ]
+   ],
+   "spec": [
+    [
+     "Économies de chauffage et climatisation",
+     "jusqu’à 26 % (vs consigne fixe de 22 °C)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "Application",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Intégrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Garantie",
+     "3 ans limitée"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "Adjusts as you come and go",
+   "keys": [
+    [
+     "Savings",
+     "up to 26%"
+    ],
+    [
+     "ENERGY STAR",
+     "certified"
+    ],
+    [
+     "Warranty",
+     "3 years"
+    ]
+   ],
+   "intro": "Completely redesigned with a larger screen and radar sensing that adjusts comfort as you come and go. Up to 26% savings.",
+   "why": [
+    [
+     "Radar sensor",
+     "Adjusts as you come and go."
+    ],
+    [
+     "Larger screen",
+     "Completely redesigned."
+    ],
+    [
+     "eco+",
+     "Learns your schedule to maximize savings."
+    ],
+    [
+     "App",
+     "Remote control and energy reports."
+    ]
+   ],
+   "spec": [
+    [
+     "Heating and cooling savings",
+     "up to 26% (vs 22 °C hold)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "App",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Integrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Warranty",
+     "3-year limited"
+    ]
+   ]
+  }
+ },
+ "ecobee-essential": {
+  "fr": {
+   "lead": "Programmation simple, contrôle par application",
+   "keys": [
+    [
+     "Économies",
+     "jusqu’à 23 %"
+    ],
+    [
+     "ENERGY STAR",
+     "certifié"
+    ],
+    [
+     "Garantie",
+     "3 ans"
+    ]
+   ],
+   "intro": "Programmation simple et contrôle par application. Jusqu’à 23 % d’économies sur le chauffage et la climatisation.",
+   "why": [
+    [
+     "Horaire simple",
+     "Programmation facile du confort."
+    ],
+    [
+     "Application",
+     "Contrôle à distance du téléphone."
+    ],
+    [
+     "eco+",
+     "Économies automatiques avec votre fournisseur."
+    ],
+    [
+     "Prix accessible",
+     "Le thermostat ecobee le plus abordable."
+    ]
+   ],
+   "spec": [
+    [
+     "Économies de chauffage et climatisation",
+     "jusqu’à 23 % (vs consigne fixe de 22 °C)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "Application",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Intégrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Garantie",
+     "3 ans limitée"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "Simple scheduling, app control",
+   "keys": [
+    [
+     "Savings",
+     "up to 23%"
+    ],
+    [
+     "ENERGY STAR",
+     "certified"
+    ],
+    [
+     "Warranty",
+     "3 years"
+    ]
+   ],
+   "intro": "Simple scheduling and app control. Up to 23% savings on heating and cooling.",
+   "why": [
+    [
+     "Simple schedule",
+     "Easy comfort scheduling."
+    ],
+    [
+     "App",
+     "Remote control from your phone."
+    ],
+    [
+     "eco+",
+     "Automatic savings with your utility."
+    ],
+    [
+     "Affordable",
+     "ecobee’s most affordable thermostat."
+    ]
+   ],
+   "spec": [
+    [
+     "Heating and cooling savings",
+     "up to 23% (vs 22 °C hold)"
+    ],
+    [
+     "Certification",
+     "ENERGY STAR"
+    ],
+    [
+     "App",
+     "ecobee, Apple Watch"
+    ],
+    [
+     "Integrations",
+     "Apple Home, Amazon Alexa, Google Assistant, Samsung SmartThings"
+    ],
+    [
+     "Warranty",
+     "3-year limited"
+    ]
+   ]
+  }
+ },
+ "broan-ai-hrv": {
+  "brochure": "https://www.broan-nutone.com/getmedia/764deee6-6e0c-4895-8592-f610a484224d/Broan-NuTone_Product_Lineup_EN.pdf?ext=.pdf",
+  "fr": {
+   "lead": "Ventilateur récupérateur de chaleur, technologie VIRTUO",
+   "keys": [
+    [
+     "Type",
+     "VRC (HRV)"
+    ],
+    [
+     "Débit",
+     "112 à 231 CFM"
+    ],
+    [
+     "Récupération",
+     "jusqu’à 78 %"
+    ]
+   ],
+   "intro": "La série AI de Broan apporte de l’air frais filtré en récupérant la chaleur de l’air évacué. Cinq modèles de 112 à 231 CFM, avec sorties sur le dessus ou latérales.",
+   "why": [
+    [
+     "Air frais filtré",
+     "Évacue l’humidité et les polluants."
+    ],
+    [
+     "Récupération de chaleur",
+     "Jusqu’à 78 % d’efficacité sensible."
+    ],
+    [
+     "Technologie VIRTUO",
+     "Réglages simples à l’installation."
+    ],
+    [
+     "5 modèles",
+     "De 112 à 231 CFM selon la maison."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRC (HRV)"
+    ],
+    [
+     "Modèles",
+     "V110H65RT, V160H65RT, V150H75NS, V180H75RT, V230H75RT"
+    ],
+    [
+     "Débit",
+     "112 à 231 CFM"
+    ],
+    [
+     "Efficacité sensible à 0 °C",
+     "68 à 78 %"
+    ]
+   ],
+   "models": [
+    {
+     "g": "VRC",
+     "n": "V110H65RT",
+     "p": [
+      "112 CFM · 68 % SRE"
+     ]
+    },
+    {
+     "g": "VRC",
+     "n": "V160H65RT",
+     "p": [
+      "159 CFM · 68 % SRE"
+     ]
+    },
+    {
+     "g": "VRC",
+     "n": "V150H75NS",
+     "p": [
+      "150 CFM · 77 % SRE · sorties latérales"
+     ]
+    },
+    {
+     "g": "VRC",
+     "n": "V180H75RT",
+     "p": [
+      "199 CFM · 78 % SRE"
+     ]
+    },
+    {
+     "g": "VRC",
+     "n": "V230H75RT",
+     "p": [
+      "231 CFM · 78 % SRE · sorties sur le dessus"
+     ]
+    }
+   ]
+  },
+  "en": {
+   "lead": "Heat recovery ventilator with VIRTUO technology",
+   "keys": [
+    [
+     "Type",
+     "HRV"
+    ],
+    [
+     "Airflow",
+     "112 to 231 CFM"
+    ],
+    [
+     "Recovery",
+     "up to 78%"
+    ]
+   ],
+   "intro": "Broan’s AI Series brings in fresh filtered air while recovering heat from exhaust air. Five models from 112 to 231 CFM, with top or side ports.",
+   "why": [
+    [
+     "Filtered fresh air",
+     "Removes excess humidity and pollutants."
+    ],
+    [
+     "Heat recovery",
+     "Up to 78% sensible efficiency."
+    ],
+    [
+     "VIRTUO technology",
+     "Simple setup at installation."
+    ],
+    [
+     "5 models",
+     "112 to 231 CFM to suit the home."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "HRV"
+    ],
+    [
+     "Models",
+     "V110H65RT, V160H65RT, V150H75NS, V180H75RT, V230H75RT"
+    ],
+    [
+     "Airflow",
+     "112 to 231 CFM"
+    ],
+    [
+     "Sensible recovery at 32 °F",
+     "68 to 78%"
+    ]
+   ],
+   "models": [
+    {
+     "g": "HRV",
+     "n": "V110H65RT",
+     "p": [
+      "112 CFM · 68 % SRE"
+     ]
+    },
+    {
+     "g": "HRV",
+     "n": "V160H65RT",
+     "p": [
+      "159 CFM · 68 % SRE"
+     ]
+    },
+    {
+     "g": "HRV",
+     "n": "V150H75NS",
+     "p": [
+      "150 CFM · 77 % SRE · side ports"
+     ]
+    },
+    {
+     "g": "HRV",
+     "n": "V180H75RT",
+     "p": [
+      "199 CFM · 78 % SRE"
+     ]
+    },
+    {
+     "g": "HRV",
+     "n": "V230H75RT",
+     "p": [
+      "231 CFM · 78 % SRE · top ports"
+     ]
+    }
+   ]
+  }
+ },
+ "broan-ai-erv": {
+  "brochure": "https://www.broan-nutone.com/getmedia/764deee6-6e0c-4895-8592-f610a484224d/Broan-NuTone_Product_Lineup_EN.pdf?ext=.pdf",
+  "fr": {
+   "lead": "Ventilateur récupérateur d’énergie, technologie VIRTUO",
+   "keys": [
+    [
+     "Type",
+     "VRE (ERV)"
+    ],
+    [
+     "Débit",
+     "131 à 210 CFM"
+    ],
+    [
+     "Récupération",
+     "jusqu’à 82 %"
+    ]
+   ],
+   "intro": "La série AI de Broan en version VRE récupère la chaleur et une partie de l’humidité de l’air évacué. Cinq modèles de 131 à 210 CFM.",
+   "why": [
+    [
+     "Chaleur et humidité",
+     "Garde l’air intérieur plus confortable l’hiver."
+    ],
+    [
+     "Efficacité élevée",
+     "Jusqu’à 82 % d’efficacité sensible."
+    ],
+    [
+     "Technologie VIRTUO",
+     "Réglages simples à l’installation."
+    ],
+    [
+     "5 modèles",
+     "De 131 à 210 CFM."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRE (ERV)"
+    ],
+    [
+     "Modèles",
+     "V130E65RT, V150E75NT, V150E75NS, V160E75RT, V210E75RT"
+    ],
+    [
+     "Débit",
+     "131 à 210 CFM"
+    ],
+    [
+     "Efficacité sensible à 0 °C",
+     "67 à 82 %"
+    ]
+   ],
+   "models": [
+    {
+     "g": "VRE",
+     "n": "V130E65RT",
+     "p": [
+      "131 CFM · 67 % SRE"
+     ]
+    },
+    {
+     "g": "VRE",
+     "n": "V150E75NT",
+     "p": [
+      "138 CFM · 82 % SRE · sorties sur le dessus"
+     ]
+    },
+    {
+     "g": "VRE",
+     "n": "V150E75NS",
+     "p": [
+      "138 CFM · 82 % SRE · sorties latérales"
+     ]
+    },
+    {
+     "g": "VRE",
+     "n": "V160E75RT",
+     "p": [
+      "140 CFM · 81 % SRE"
+     ]
+    },
+    {
+     "g": "VRE",
+     "n": "V210E75RT",
+     "p": [
+      "210 CFM · 81 % SRE · sorties sur le dessus"
+     ]
+    }
+   ]
+  },
+  "en": {
+   "lead": "Energy recovery ventilator with VIRTUO technology",
+   "keys": [
+    [
+     "Type",
+     "ERV"
+    ],
+    [
+     "Airflow",
+     "131 to 210 CFM"
+    ],
+    [
+     "Recovery",
+     "up to 82%"
+    ]
+   ],
+   "intro": "The ERV version of Broan’s AI Series recovers heat and some moisture from exhaust air. Five models from 131 to 210 CFM.",
+   "why": [
+    [
+     "Heat and moisture",
+     "Keeps indoor air more comfortable in winter."
+    ],
+    [
+     "High efficiency",
+     "Up to 82% sensible efficiency."
+    ],
+    [
+     "VIRTUO technology",
+     "Simple setup at installation."
+    ],
+    [
+     "5 models",
+     "131 to 210 CFM."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "ERV"
+    ],
+    [
+     "Models",
+     "V130E65RT, V150E75NT, V150E75NS, V160E75RT, V210E75RT"
+    ],
+    [
+     "Airflow",
+     "131 to 210 CFM"
+    ],
+    [
+     "Sensible recovery at 32 °F",
+     "67 to 82%"
+    ]
+   ],
+   "models": [
+    {
+     "g": "ERV",
+     "n": "V130E65RT",
+     "p": [
+      "131 CFM · 67 % SRE"
+     ]
+    },
+    {
+     "g": "ERV",
+     "n": "V150E75NT",
+     "p": [
+      "138 CFM · 82 % SRE · top ports"
+     ]
+    },
+    {
+     "g": "ERV",
+     "n": "V150E75NS",
+     "p": [
+      "138 CFM · 82 % SRE · side ports"
+     ]
+    },
+    {
+     "g": "ERV",
+     "n": "V160E75RT",
+     "p": [
+      "140 CFM · 81 % SRE"
+     ]
+    },
+    {
+     "g": "ERV",
+     "n": "V210E75RT",
+     "p": [
+      "210 CFM · 81 % SRE · top ports"
+     ]
+    }
+   ]
+  }
+ },
+ "broan-one-erv": {
+  "brochure": "https://www.broan-nutone.com/getmedia/764deee6-6e0c-4895-8592-f610a484224d/Broan-NuTone_Product_Lineup_EN.pdf?ext=.pdf",
+  "fr": {
+   "lead": "VRE avec écran ACL et réglage du débit au CFM près",
+   "keys": [
+    [
+     "Type",
+     "VRE (ERV)"
+    ],
+    [
+     "Efficacité apparente",
+     "87 % à 0 °C"
+    ],
+    [
+     "Garantie",
+     "5 ans"
+    ]
+   ],
+   "intro": "Le Broan ONE simplifie l’installation : son écran ACL intégré permet de choisir le débit par tranche de 1 CFM et affiche le débit réel. Offert avec cordon, câblé ou prêt pour l’intérieur.",
+   "why": [
+    [
+     "Écran ACL",
+     "Réglage du débit au CFM près, débit réel affiché."
+    ],
+    [
+     "Efficacité",
+     "87 % d’efficacité sensible apparente à 0 °C."
+    ],
+    [
+     "Garantie 5 ans",
+     "Noyau et pièces."
+    ],
+    [
+     "3 versions",
+     "Cordon, câblé ou prêt pour l’intérieur."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRE (ERV)"
+    ],
+    [
+     "Modèles",
+     "BLP150E75NS-PC (cordon), BLP150E75NS-HW (câblé), BLP150E75NS-HWF (prêt pour l’intérieur)"
+    ],
+    [
+     "Sorties",
+     "Latérales, 6 po"
+    ],
+    [
+     "Dégivrage",
+     "Par évacuation"
+    ],
+    [
+     "Dimensions",
+     "20,94 × 32 × 9,97 po, 39 lb"
+    ],
+    [
+     "Garantie",
+     "5 ans noyau et pièces"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "ERV with LCD screen and 1-CFM airflow setting",
+   "keys": [
+    [
+     "Type",
+     "ERV"
+    ],
+    [
+     "Apparent efficiency",
+     "87% at 32 °F"
+    ],
+    [
+     "Warranty",
+     "5 years"
+    ]
+   ],
+   "intro": "Broan ONE simplifies installation: its built-in LCD screen sets airflow in 1-CFM steps and shows real-time airflow. Available with power cord, hardwired or interior-ready.",
+   "why": [
+    [
+     "LCD screen",
+     "1-CFM airflow setting, real-time airflow shown."
+    ],
+    [
+     "Efficiency",
+     "87% apparent sensible efficiency at 32 °F."
+    ],
+    [
+     "5-year warranty",
+     "Core and parts."
+    ],
+    [
+     "3 versions",
+     "Power cord, hardwired or interior-ready."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "ERV"
+    ],
+    [
+     "Models",
+     "BLP150E75NS-PC (power cord), BLP150E75NS-HW (hardwired), BLP150E75NS-HWF (interior-ready)"
+    ],
+    [
+     "Ports",
+     "Side, 6 in"
+    ],
+    [
+     "Defrost",
+     "Exhaust"
+    ],
+    [
+     "Dimensions",
+     "20.94 × 32 × 9.97 in, 39 lb"
+    ],
+    [
+     "Warranty",
+     "5 years core and parts"
+    ]
+   ]
+  }
+ },
+ "broan-edge-erv": {
+  "brochure": "https://www.broan-nutone.com/getmedia/764deee6-6e0c-4895-8592-f610a484224d/Broan-NuTone_Product_Lineup_EN.pdf?ext=.pdf",
+  "fr": {
+   "lead": "VRE compact avec écran ACL",
+   "keys": [
+    [
+     "Type",
+     "VRE (ERV)"
+    ],
+    [
+     "Efficacité apparente",
+     "84 % à 0 °C"
+    ],
+    [
+     "Garantie",
+     "5 ans"
+    ]
+   ],
+   "intro": "Le Broan EDGE est un VRE compact avec écran ACL et réglage du débit au CFM près. Filtre lavable, sorties latérales de 4 ou 5 po.",
+   "why": [
+    [
+     "Compact",
+     "28 × 18,6 × 9,9 po."
+    ],
+    [
+     "Écran ACL",
+     "Réglage précis du débit."
+    ],
+    [
+     "Filtre lavable",
+     "Entretien simple."
+    ],
+    [
+     "Garantie 5 ans",
+     "Noyau et pièces."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRE (ERV)"
+    ],
+    [
+     "Modèles",
+     "BLP120E80NS-PC, BLP120E80NS-HW (sorties 4 po), BLP130E80NS-PC (sorties 5 po)"
+    ],
+    [
+     "Dégivrage",
+     "Par évacuation"
+    ],
+    [
+     "Dimensions",
+     "18,63 × 28,13 × 9,88 po, 34 lb"
+    ],
+    [
+     "Garantie",
+     "5 ans noyau et pièces"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "Compact ERV with LCD screen",
+   "keys": [
+    [
+     "Type",
+     "ERV"
+    ],
+    [
+     "Apparent efficiency",
+     "84% at 32 °F"
+    ],
+    [
+     "Warranty",
+     "5 years"
+    ]
+   ],
+   "intro": "Broan EDGE is a compact ERV with an LCD screen and 1-CFM airflow setting. Washable filter, 4 or 5 in side ports.",
+   "why": [
+    [
+     "Compact",
+     "28 × 18.6 × 9.9 in."
+    ],
+    [
+     "LCD screen",
+     "Precise airflow setting."
+    ],
+    [
+     "Washable filter",
+     "Simple maintenance."
+    ],
+    [
+     "5-year warranty",
+     "Core and parts."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "ERV"
+    ],
+    [
+     "Models",
+     "BLP120E80NS-PC, BLP120E80NS-HW (4 in ports), BLP130E80NS-PC (5 in ports)"
+    ],
+    [
+     "Defrost",
+     "Exhaust"
+    ],
+    [
+     "Dimensions",
+     "18.63 × 28.13 × 9.88 in, 34 lb"
+    ],
+    [
+     "Warranty",
+     "5 years core and parts"
+    ]
+   ]
+  }
+ },
+ "fantech-hero": {
+  "brochure": "https://stepimassets.blob.core.windows.net/dsassetsprod/E1994_FAA_SELECTION_RESIDENTIAL.PDF",
+  "fr": {
+   "lead": "VRC ou VRE haut de gamme, sorties sur le dessus",
+   "keys": [
+    [
+     "Type",
+     "VRC ou VRE"
+    ],
+    [
+     "Débit",
+     "jusqu’à 252 CFM"
+    ],
+    [
+     "Récupération",
+     "jusqu’à 85 %"
+    ]
+   ],
+   "intro": "La série HERO est l’option haut de gamme de Fantech : sorties sur le dessus et échangeur à contre-courant pour un taux de récupération élevé. Pour maisons unifamiliales et multilogements.",
+   "why": [
+    [
+     "Contre-courant",
+     "Récupération jusqu’à 85 % à 0 °C."
+    ],
+    [
+     "VRC ou VRE",
+     "Chaleur seule ou chaleur et humidité."
+    ],
+    [
+     "Dégivrage par recirculation",
+     "Fonctionne bien par grand froid."
+    ],
+    [
+     "Efficacité du ventilateur",
+     "Jusqu’à 3,0 CFM/W."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRC ou VRE"
+    ],
+    [
+     "Débit à 0,4 po CE",
+     "jusqu’à 252 CFM"
+    ],
+    [
+     "Sorties",
+     "Sur le dessus"
+    ],
+    [
+     "Efficacité sensible à 0 °C",
+     "jusqu’à 85 %"
+    ],
+    [
+     "Dégivrage",
+     "Recirculation"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "Premium HRV or ERV, top ports",
+   "keys": [
+    [
+     "Type",
+     "HRV or ERV"
+    ],
+    [
+     "Airflow",
+     "up to 252 CFM"
+    ],
+    [
+     "Recovery",
+     "up to 85%"
+    ]
+   ],
+   "intro": "HERO is Fantech’s premium series: top ports and a counterflow exchanger for high recovery. For single- and multi-family homes.",
+   "why": [
+    [
+     "Counterflow",
+     "Up to 85% recovery at 32 °F."
+    ],
+    [
+     "HRV or ERV",
+     "Heat only or heat and moisture."
+    ],
+    [
+     "Recirculation defrost",
+     "Works well in deep cold."
+    ],
+    [
+     "Fan efficacy",
+     "Up to 3.0 CFM/W."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "HRV or ERV"
+    ],
+    [
+     "Airflow at 0.4 in wg",
+     "up to 252 CFM"
+    ],
+    [
+     "Ports",
+     "Top"
+    ],
+    [
+     "Sensible recovery at 32 °F",
+     "up to 85%"
+    ],
+    [
+     "Defrost",
+     "Recirculation"
+    ]
+   ]
+  }
+ },
+ "fantech-atmo": {
+  "brochure": "https://stepimassets.blob.core.windows.net/dsassetsprod/E1994_FAA_SELECTION_RESIDENTIAL.PDF",
+  "fr": {
+   "lead": "VRC ou VRE pour maison unifamiliale, sorties latérales",
+   "keys": [
+    [
+     "Type",
+     "VRC ou VRE"
+    ],
+    [
+     "Débit",
+     "jusqu’à 300 CFM"
+    ],
+    [
+     "Récupération",
+     "jusqu’à 75 %"
+    ]
+   ],
+   "intro": "La série ATMO offre une ventilation équilibrée dans un boîtier à sorties latérales avec noyau à flux croisés. Idéale pour les maisons unifamiliales.",
+   "why": [
+    [
+     "Grand débit",
+     "Jusqu’à 300 CFM."
+    ],
+    [
+     "VRC ou VRE",
+     "Chaleur seule ou chaleur et humidité."
+    ],
+    [
+     "Sorties latérales",
+     "Installation flexible."
+    ],
+    [
+     "Récupération",
+     "Jusqu’à 75 % à 0 °C."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRC ou VRE"
+    ],
+    [
+     "Débit à 0,4 po CE",
+     "jusqu’à 300 CFM"
+    ],
+    [
+     "Sorties",
+     "Latérales"
+    ],
+    [
+     "Efficacité sensible à 0 °C",
+     "jusqu’à 75 %"
+    ],
+    [
+     "Dégivrage",
+     "Arrêt du ventilateur d’alimentation"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "HRV or ERV for single-family homes, side ports",
+   "keys": [
+    [
+     "Type",
+     "HRV or ERV"
+    ],
+    [
+     "Airflow",
+     "up to 300 CFM"
+    ],
+    [
+     "Recovery",
+     "up to 75%"
+    ]
+   ],
+   "intro": "ATMO offers balanced ventilation in a side-ported housing with a cross-flow core. Ideal for single-family homes.",
+   "why": [
+    [
+     "High airflow",
+     "Up to 300 CFM."
+    ],
+    [
+     "HRV or ERV",
+     "Heat only or heat and moisture."
+    ],
+    [
+     "Side ports",
+     "Flexible installation."
+    ],
+    [
+     "Recovery",
+     "Up to 75% at 32 °F."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "HRV or ERV"
+    ],
+    [
+     "Airflow at 0.4 in wg",
+     "up to 300 CFM"
+    ],
+    [
+     "Ports",
+     "Side"
+    ],
+    [
+     "Sensible recovery at 32 °F",
+     "up to 75%"
+    ],
+    [
+     "Defrost",
+     "Supply fan shutdown"
+    ]
+   ]
+  }
+ },
+ "fantech-fit": {
+  "brochure": "https://stepimassets.blob.core.windows.net/dsassetsprod/E1994_FAA_SELECTION_RESIDENTIAL.PDF",
+  "fr": {
+   "lead": "VRE mince de 10 po pour multilogements",
+   "keys": [
+    [
+     "Type",
+     "VRE (ERV)"
+    ],
+    [
+     "Débit",
+     "jusqu’à 130 CFM"
+    ],
+    [
+     "Profondeur",
+     "10 po"
+    ]
+   ],
+   "intro": "La série FIT est un VRE à sorties latérales de seulement 10 po de profondeur une fois installé : la solution idéale pour les condos et multilogements.",
+   "why": [
+    [
+     "Mince",
+     "Seulement 10 po de profondeur."
+    ],
+    [
+     "VRE",
+     "Récupère chaleur et humidité."
+    ],
+    [
+     "Récupération",
+     "Jusqu’à 77 % à 0 °C."
+    ],
+    [
+     "Multilogement",
+     "Options pensées pour les condos."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRE (ERV)"
+    ],
+    [
+     "Débit à 0,4 po CE",
+     "jusqu’à 130 CFM"
+    ],
+    [
+     "Sorties",
+     "Latérales"
+    ],
+    [
+     "Efficacité sensible à 0 °C",
+     "jusqu’à 77 %"
+    ],
+    [
+     "Dégivrage",
+     "Arrêt du ventilateur d’alimentation"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "Slim 10-in ERV for multi-family homes",
+   "keys": [
+    [
+     "Type",
+     "ERV"
+    ],
+    [
+     "Airflow",
+     "up to 130 CFM"
+    ],
+    [
+     "Depth",
+     "10 in"
+    ]
+   ],
+   "intro": "FIT is a side-ported ERV only 10 in deep when installed: ideal for condos and multi-family buildings.",
+   "why": [
+    [
+     "Slim",
+     "Only 10 in deep."
+    ],
+    [
+     "ERV",
+     "Recovers heat and moisture."
+    ],
+    [
+     "Recovery",
+     "Up to 77% at 32 °F."
+    ],
+    [
+     "Multi-family",
+     "Options designed for condos."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "ERV"
+    ],
+    [
+     "Airflow at 0.4 in wg",
+     "up to 130 CFM"
+    ],
+    [
+     "Ports",
+     "Side"
+    ],
+    [
+     "Sensible recovery at 32 °F",
+     "up to 77%"
+    ],
+    [
+     "Defrost",
+     "Supply fan shutdown"
+    ]
+   ]
+  }
+ },
+
  "lifebreath":{brochure:"https://thermolux.ca/wp-content/uploads/2022/04/life_breath_web.pdf",
   fr:{lead:"Ventilateurs récupérateurs de chaleur (VRC) et d’énergie (VRE)",
    keys:[["Débit net max.","279 pi³/min"],["Récupération","jusqu’à 83 %"],["Alimentation","120 V · 60 Hz"]],

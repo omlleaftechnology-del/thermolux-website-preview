@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=173">
-<link rel="stylesheet" href="../css/catalogue.css?v=98">
+<link rel="stylesheet" href="../css/catalogue.css?v=99">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -46,6 +46,7 @@
  </div>
 </div></section>
 
+<section class="blk mdl-sec" id="mdl" hidden><div class="wrap"><div class="det"><h2>Available models</h2><div class="mdl" id="mdll"></div></div></div></section>
 <section class="blk"><div class="wrap"><div class="det"><h2>Technical specifications</h2><table class="spec"><tbody id="spec"></tbody></table></div></div></section>
 
 <section class="blk blk-end" id="about"><div class="wrap"><div class="det"><h2>Description</h2><div><p id="intro"></p><p class="dl" id="dl" hidden><a class="link" target="_blank" rel="noopener" id="brochure" href="#">Manufacturer brochure (PDF)</a></p></div></div></div></section>
@@ -67,8 +68,8 @@
 <div id="site-footer"></div>
 <script>window.PSLUG="venmar-avs-n"</script>
 <script src="../js/layout.js?v=152"></script>
-<script src="../js/products.js?v=236"></script>
-<script src="../js/accessories.js?v=230"></script>
+<script src="../js/products.js?v=237"></script>
+<script src="../js/accessories.js?v=300"></script>
 <script>
 (function(){
  var L=window.LANG,P=window.PRODUCTS,A=window.ACC,$=function(i){return document.getElementById(i)};
@@ -84,6 +85,7 @@
  $("meta").innerHTML=[p.brand,I[p.type]].map(function(t){return "<span>"+esc(t)+"</span>"}).join("");
  $("lead").textContent=d.lead;$("lead").hidden=false;
  $("keys").innerHTML=d.keys.map(function(k){return "<div><dt>"+esc(k[0])+"</dt><dd>"+esc(k[1])+"</dd></div>"}).join("");
+ if(d.models&&d.models.length){var gs=[];d.models.forEach(function(m){var g=gs.filter(function(x){return x.g==m.g})[0];if(!g){g={g:m.g,a:[]};gs.push(g)}g.a.push(m)});$("mdll").innerHTML=gs.map(function(g){return '<div class="mdl-g"><p class="mdl-h">'+esc(g.g)+'</p><div class="mdl-r">'+g.a.map(function(m){return '<div class="mdl-c"><b>'+esc(m.n)+'</b><ul>'+m.p.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+'</ul></div>'}).join("")+'</div></div>'}).join("");$("mdl").hidden=false}
  $("spec").innerHTML=d.spec.map(function(r){return '<tr><th scope="row">'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>'}).join("");
  $("intro").textContent=d.intro;
  var bb=$("brochureBtn");bb.href=D.brochure;bb.hidden=false;$("brochure").href=D.brochure;$("dl").hidden=false;

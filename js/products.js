@@ -589,7 +589,163 @@ window.PRODUCTS=[
   ]
  },
  {
+  "slug": "sinope-th6250wf",
+  "name": "Sinopé TH6250WF",
+  "brand": "Sinopé",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/sinope-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/sinope-1.jpg"
+  ]
+ },
+ {
+  "slug": "ecobee-premium",
+  "name": "ecobee Smart Thermostat Premium",
+  "brand": "Ecobee",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/ecobee-premium-1.png",
+  "acc": true,
+  "imgs": [
+   "img/products/ecobee-premium-1.png"
+  ]
+ },
+ {
+  "slug": "ecobee-enhanced",
+  "name": "ecobee Smart Thermostat Enhanced",
+  "brand": "Ecobee",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/ecobee-enhanced-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/ecobee-enhanced-1.jpg"
+  ]
+ },
+ {
+  "slug": "ecobee-essential",
+  "name": "ecobee Smart Thermostat Essential",
+  "brand": "Ecobee",
+  "type": "thermostat",
+  "btu": [],
+  "img": "img/products/ecobee-essential-1.png",
+  "acc": true,
+  "imgs": [
+   "img/products/ecobee-essential-1.png"
+  ]
+ },
+ {
+  "slug": "broan-ai-hrv",
+  "name": "Broan AI Series VRC (HRV)",
+  "brand": "Broan",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/broan-ai-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/broan-ai-1.jpg"
+  ],
+  "sub": [
+   "hrv"
+  ]
+ },
+ {
+  "slug": "broan-ai-erv",
+  "name": "Broan AI Series VRE (ERV)",
+  "brand": "Broan",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/broan-ai-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/broan-ai-1.jpg"
+  ],
+  "sub": [
+   "erv"
+  ]
+ },
+ {
+  "slug": "broan-one-erv",
+  "name": "Broan ONE VRE (ERV)",
+  "brand": "Broan",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/broan-one-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/broan-one-1.jpg"
+  ],
+  "sub": [
+   "erv"
+  ]
+ },
+ {
+  "slug": "broan-edge-erv",
+  "name": "Broan EDGE VRE (ERV)",
+  "brand": "Broan",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/broan-edge-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/broan-edge-1.jpg"
+  ],
+  "sub": [
+   "erv"
+  ]
+ },
+ {
+  "slug": "fantech-hero",
+  "name": "Fantech HERO",
+  "brand": "Fantech",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/fantech-hero-1.jpg",
+  "acc": true,
+  "imgs": [
+   "img/products/fantech-hero-1.jpg"
+  ],
+  "sub": [
+   "hrv",
+   "erv"
+  ]
+ },
+ {
+  "slug": "fantech-atmo",
+  "name": "Fantech ATMO",
+  "brand": "Fantech",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/fantech-atmo-1.png",
+  "acc": true,
+  "imgs": [
+   "img/products/fantech-atmo-1.png"
+  ],
+  "sub": [
+   "hrv",
+   "erv"
+  ]
+ },
+ {
+  "slug": "fantech-fit",
+  "name": "Fantech FIT",
+  "brand": "Fantech",
+  "type": "exchanger",
+  "btu": [],
+  "img": "img/products/fantech-fit-1.png",
+  "acc": true,
+  "imgs": [
+   "img/products/fantech-fit-1.png"
+  ],
+  "sub": [
+   "erv"
+  ]
+ },
+ {
   "slug": "lifebreath",
+  "sub": ["hrv","erv"],
   "name": "Lifebreath",
   "brand": "Lifebreath",
   "type": "exchanger",
@@ -602,6 +758,7 @@ window.PRODUCTS=[
  },
  {
   "slug": "venmar-avs-n",
+  "sub": ["hrv","erv"],
   "name": "Venmar AVS N-Series",
   "brand": "Venmar",
   "type": "exchanger",

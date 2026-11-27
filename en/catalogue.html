@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=173">
-<link rel="stylesheet" href="../css/catalogue.css?v=98">
+<link rel="stylesheet" href="../css/catalogue.css?v=99">
 </head>
 <body>
 <div id="site-header"></div>
@@ -31,6 +31,7 @@
   <form class="filters" id="filters" aria-label="Filter products" onsubmit="return false">
  <div class="wrap">
     <fieldset><legend>Type</legend><div class="chips" id="f-type"></div></fieldset>
+  <fieldset class="fs-sub" hidden><legend>Core</legend><div class="chips" id="f-sub"><label class="chip"><input type="radio" name="sub" value="all" checked><span>All</span></label><label class="chip"><input type="radio" name="sub" value="hrv"><span>HRV (heat)</span></label><label class="chip"><input type="radio" name="sub" value="erv"><span>ERV (energy)</span></label></div></fieldset>
   <fieldset><legend>Brand</legend><div class="chips" id="f-brand"></div></fieldset>
   <fieldset><legend>Capacity (BTU)</legend><div class="chips" id="f-btu"></div></fieldset>
  </div>
@@ -65,7 +66,7 @@
 <div id="site-footer"></div>
 <script src="../js/layout.js?v=152"></script>
 <script src="../js/subsidies.js?v=234"></script>
-<script src="../js/products.js?v=236"></script>
+<script src="../js/products.js?v=237"></script>
 <script>
 (function(){
  var L=window.LANG;
@@ -91,7 +92,7 @@
  $("grid").innerHTML=P.map(function(p,i){
   var cap=p.btu.length?n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):""):"";
   var mid=p.seer2?'<li><b>'+num(p.seer2)+'</b> SEER2</li>':p.seer?'<li><b>'+num(p.seer)+'</b> SEER</li>':p.dB?'<li><b>'+num(p.dB)+'</b> dB</li>':"";
-  return '<article class="card" data-i="'+i+'" data-type="'+p.type+'" data-brand="'+esc(p.brand)+'" data-btu="'+p.btu.join(",")+'" data-seer="'+(p.seer2||0)+'" data-cold="'+(p.tminC||0)+'" data-name="'+esc(p.name)+'" data-q="'+esc(norm(p.name+" "+p.brand+" "+p.slug))+'">'+
+  return '<article class="card" data-i="'+i+'" data-type="'+p.type+'" data-sub="'+(p.sub||[]).join(" ")+'" data-brand="'+esc(p.brand)+'" data-btu="'+p.btu.join(",")+'" data-seer="'+(p.seer2||0)+'" data-cold="'+(p.tminC||0)+'" data-name="'+esc(p.name)+'" data-q="'+esc(norm(p.name+" "+p.brand+" "+p.slug))+'">'+
    '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
    '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+
    (cap||mid||p.tminC?'<ul class="specs">'+(cap?'<li><b>'+cap+'</b> BTU</li>':"")+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>':"")+aid(p)+
@@ -103,12 +104,12 @@
   var bs=[].slice.call(document.querySelectorAll('input[name="brand"]:checked')).map(function(e){return e.value});
   var q=norm($("q").value),shown=0;
   cards.forEach(function(c){
-   var ok=(!q||q.split(" ").every(function(w){return c.dataset.q.indexOf(w)>-1}))&&(t=="all"||c.dataset.type==t)&&(!bs.length||bs.indexOf(c.dataset.brand)>-1)&&
+   var ok=(!q||q.split(" ").every(function(w){return c.dataset.q.indexOf(w)>-1}))&&(t=="all"||c.dataset.type==t)&&(t!="exchanger"||val("sub")=="all"||(" "+c.dataset.sub+" ").indexOf(" "+val("sub")+" ")>-1)&&(!bs.length||bs.indexOf(c.dataset.brand)>-1)&&
     (r[0]=="all"||c.dataset.btu.split(",").some(function(b){return +b>=r[2]&&+b<=r[3]}));
    c.hidden=!ok;if(ok)shown++});
   $("count").innerHTML="<b>"+shown+"</b> "+I.model[shown>1?1:0]+" "+I.of+" "+cards.length;
   $("empty").hidden=shown>0;
-  $("reset").hidden=!q&&t=="all"&&!bs.length&&r[0]=="all";
+  $("reset").hidden=!q&&t=="all"&&val("sub")=="all"&&!bs.length&&r[0]=="all";
  }
  function sort(){
   var k=$("sort").value,g=$("grid");
@@ -178,6 +179,6 @@
  draw();
 })();
 </script>
-<script src="../js/cattiles.js?v=1"></script>
+<script src="../js/cattiles.js?v=2"></script>
 </body>
 </html>

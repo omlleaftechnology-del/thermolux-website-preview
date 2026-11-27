@@ -23,7 +23,19 @@
    var n=cnt(i.value),lab=i.nextElementSibling.textContent.trim();if(!n)return"";
    return '<button type="button" class="ctile" data-t="'+i.value+'" aria-pressed="false"><span class="ct-ic">'+(IC[i.value]||"")+'</span><span class="ct-t">'+lab+'</span><span class="ct-n">'+n+' '+W[n>1?1:0]+'</span></button>'}).join("")+'</div>';
  var res=grid.closest(".wrap");res.insertBefore(box,res.firstChild);
- function sync(){var v=(form.querySelector('input[name="type"]:checked')||{}).value||"all";[].forEach.call(box.querySelectorAll(".ctile"),function(b){b.setAttribute("aria-pressed",b.dataset.t==v)})}
+ // sub-type (HRV / ERV) for air exchangers: a row of chips under the tiles + the "Core" drop-down, shown only for exchangers
+ var subIn=[].slice.call(form.querySelectorAll('input[name="sub"]')),subFs=form.querySelector(".fs-sub"),subDd=subFs&&subFs.closest(".dd"),srow=null;
+ if(subIn.length){if(subFs)subFs.hidden=false;
+  var cnS=function(v){return cards.filter(function(c){return c.dataset.type=="exchanger"&&(v=="all"||(" "+c.dataset.sub+" ").indexOf(" "+v+" ")>-1)}).length};
+  srow=document.createElement("div");srow.className="csub";srow.hidden=true;
+  srow.innerHTML='<span class="csub-l">'+(en?"Core type":"Type de noyau")+'</span>'+subIn.map(function(i){return '<button type="button" class="csub-b" data-s="'+i.value+'" aria-pressed="false">'+i.nextElementSibling.textContent+' <small>'+cnS(i.value)+'</small></button>'}).join("");
+  box.appendChild(srow);
+  srow.addEventListener("click",function(e){var b=e.target.closest(".csub-b");if(!b)return;var r=form.querySelector('input[name="sub"][value="'+b.dataset.s+'"]');r.checked=true;r.dispatchEvent(new Event("change",{bubbles:true}))});
+ }
+ function sync(){var v=(form.querySelector('input[name="type"]:checked')||{}).value||"all";[].forEach.call(box.querySelectorAll(".ctile"),function(b){b.setAttribute("aria-pressed",b.dataset.t==v)});
+  if(srow){var ex=v=="exchanger";srow.hidden=!ex;if(subDd)subDd.hidden=!ex;
+   if(!ex){var a=form.querySelector('input[name="sub"][value="all"]');if(a&&!a.checked){a.checked=true}}
+   var sv=(form.querySelector('input[name="sub"]:checked')||{}).value||"all";[].forEach.call(srow.querySelectorAll(".csub-b"),function(b){b.setAttribute("aria-pressed",b.dataset.s==sv)})}}
  box.addEventListener("click",function(e){var b=e.target.closest(".ctile");if(!b)return;var r=form.querySelector('input[name="type"][value="'+b.dataset.t+'"]');if(!r)return;r.checked=true;r.dispatchEvent(new Event("change",{bubbles:true}));sync()});
  form.addEventListener("change",sync);
  ["reset","reset2"].forEach(function(id){var r=document.getElementById(id);if(r)r.addEventListener("click",function(){setTimeout(sync,0)})});
