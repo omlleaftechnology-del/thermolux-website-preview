@@ -40,4 +40,6 @@
  form.addEventListener("change",sync);
  ["reset","reset2"].forEach(function(id){var r=document.getElementById(id);if(r)r.addEventListener("click",function(){setTimeout(sync,0)})});
  sync();
+ // phones: bring the active tile into view inside the horizontal row
+ var act=box.querySelector('.ctile[aria-pressed="true"]'),row=box.querySelector(".ctiles");if(act&&row&&row.scrollWidth>row.clientWidth)row.scrollLeft=Math.max(0,act.offsetLeft-row.offsetLeft-20);
 })();

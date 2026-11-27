@@ -1,6 +1,133 @@
 /* Fiches des accessoires (échangeurs d’air, humidificateurs, thermostats). Source : brochures des fabricants (liens « brochure »).
    Un objet par produit, FR + EN. keys = 3 chiffres clés ; spec = lignes du tableau ; why = 4 points. */
 window.ACC={
+ "fantech-vhr": {
+  "brochure": "https://stepimassets.blob.core.windows.net/dsassetsprod/428686_VHR70_SPEC_SHEET_EN.PDF",
+  "fr": {
+   "lead": "VRC pour maisons unifamiliales et multilogements",
+   "keys": [
+    [
+     "Type",
+     "VRC (HRV)"
+    ],
+    [
+     "Débit",
+     "70 à 150 CFM"
+    ],
+    [
+     "Récupération",
+     "jusqu’à 65 %"
+    ]
+   ],
+   "intro": "La série VHR de Fantech offre une ventilation équilibrée avec récupération de chaleur. Sorties sur le dessus avec collets ovales, accès frontal dégagé pour un entretien rapide et noyau en aluminium.",
+   "why": [
+    [
+     "Polyvalent",
+     "Convient aux maisons unifamiliales et aux multilogements."
+    ],
+    [
+     "Mode Air Boost",
+     "Jusqu’à 50 % de capacité d’évacuation en plus (FLEX 100H)."
+    ],
+    [
+     "Noyau en aluminium",
+     "Meilleur transfert de chaleur et efficacité énergétique."
+    ],
+    [
+     "Mesure du débit intégrée",
+     "Lecture rapide et précise à l’installation."
+    ]
+   ],
+   "spec": [
+    [
+     "Type de noyau",
+     "VRC (HRV)"
+    ],
+    [
+     "Débit",
+     "70, 100 ou 150 CFM"
+    ],
+    [
+     "Efficacité sensible",
+     "jusqu’à 65 %"
+    ],
+    [
+     "Sorties",
+     "Sur le dessus, collets ovales en plastique"
+    ],
+    [
+     "Dégivrage",
+     "Recirculation ou arrêt du ventilateur"
+    ],
+    [
+     "Certifications",
+     "HVI, CSA ; ENERGY STAR (VHR 70)"
+    ]
+   ]
+  },
+  "en": {
+   "lead": "HRV for single- and multi-family homes",
+   "keys": [
+    [
+     "Type",
+     "HRV"
+    ],
+    [
+     "Airflow",
+     "70 to 150 CFM"
+    ],
+    [
+     "Recovery",
+     "up to 65%"
+    ]
+   ],
+   "intro": "Fantech’s VHR Series delivers balanced ventilation with heat recovery. Top ports with oval collars, unobstructed front access for fast maintenance and an aluminum core.",
+   "why": [
+    [
+     "Versatile",
+     "Suits single- and multi-family homes."
+    ],
+    [
+     "Air Boost Mode",
+     "Up to 50% more exhaust capacity (FLEX 100H)."
+    ],
+    [
+     "Aluminum core",
+     "Better heat transfer and energy efficiency."
+    ],
+    [
+     "Integrated airflow measurement",
+     "Quick, accurate reads at installation."
+    ]
+   ],
+   "spec": [
+    [
+     "Core type",
+     "HRV"
+    ],
+    [
+     "Airflow",
+     "70, 100 or 150 CFM"
+    ],
+    [
+     "Sensible recovery",
+     "up to 65%"
+    ],
+    [
+     "Ports",
+     "Top, plastic oval collars"
+    ],
+    [
+     "Defrost",
+     "Recirculation or fan shutdown"
+    ],
+    [
+     "Certifications",
+     "HVI, CSA; ENERGY STAR (VHR 70)"
+    ]
+   ]
+  }
+ },
  "sinope-th6250wf": {
   "brochure": "https://support.sinopetech.com/wp-content/uploads/2026/08/250-6730-0001-D-Product-fact-sheet-TH6250W-EN-web.pdf",
   "fr": {
@@ -183,6 +310,7 @@ window.ACC={
   }
  },
  "ecobee-premium": {
+  "brochure": "https://siglers.com/mwdownloads/download/link/id/11528",
   "fr": {
    "lead": "Le plus complet : SmartSensor et qualité de l’air",
    "keys": [
@@ -301,6 +429,7 @@ window.ACC={
   }
  },
  "ecobee-enhanced": {
+  "brochure": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/save-with-powershift/smart-thermostat/Enhanced_StarterSheet_DIGITAL.pdf",
   "fr": {
    "lead": "S’ajuste quand vous partez et revenez",
    "keys": [
@@ -419,6 +548,7 @@ window.ACC={
   }
  },
  "ecobee-essential": {
+  "brochure": "https://pdf.lowes.com/productdocuments/9ef20991-a3cd-4796-8824-238c5387a448/69629080.pdf",
   "fr": {
    "lead": "Programmation simple, contrôle par application",
    "keys": [

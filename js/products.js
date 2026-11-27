@@ -744,6 +744,21 @@ window.PRODUCTS=[
   ]
  },
  {
+  "slug": "fantech-vhr",
+  "name": "Fantech VHR",
+  "brand": "Fantech",
+  "type": "exchanger",
+  "sub": [
+   "hrv"
+  ],
+  "btu": [],
+  "img": "img/products/no-photo.svg",
+  "acc": true,
+  "imgs": [
+   "img/products/no-photo.svg"
+  ]
+ },
+ {
   "slug": "lifebreath",
   "sub": ["hrv","erv"],
   "name": "Lifebreath",
@@ -4183,6 +4198,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-multi-zone-r454b": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/MULTIZONE-ZEPHYR-22-SEER-BROCHURE.pdf",
   "fr": {
    "intro": "Les systèmes multizones Zephyr s’installent avec 2 à 5 unités intérieures pour une seule unité extérieure. Des performances qui concurrencent presque toutes les marques, à petit prix. Offerts de 18 000 à 42 000 BTU/h.",
    "why": [
@@ -4499,6 +4515,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "forestair-e20": {
+  "brochure": "https://www.forestair.ca/images/E-20_Mini_Split/FORESTAIR-MANUAL-HP-FAH09A20TL-FAH12A20TL-FR-WEB.pdf",
   "fr": {
    "intro": "La série E-20 ForestAir par Gree est un système mural sans conduits conçu pour nos hivers froids : l’un des rares à pouvoir chauffer ou climatiser par des températures aussi rigoureuses. Idéale pour un usage résidentiel, commercial ou une salle de serveurs. De 9 000 à 36 000 BTU, jusqu’à 20 SEER.",
    "why": [
@@ -4628,6 +4645,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "forestair-e38": {
+  "brochure": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/FORESTAIR-MANUEL-SERIE-E38-FR-WEB.pdf?v=1627570249",
   "fr": {
    "intro": "La série E-38 ForestAir offre jusqu’à 38 SEER avec un chauffage jusqu’à −30 °C, de 9 000 à 24 000 BTU. Un confort constant quelle que soit la météo, avec Wi-Fi et plusieurs modes de fonctionnement.",
    "why": [
@@ -5009,6 +5027,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "comfortmaker-dlcera": {
+  "brochure": "https://cdn.shopify.com/s/files/1/0715/1694/6724/files/BROCHURE_FR_-_COMFORTMAKER.pdf",
   "fr": {
    "intro": "Détails techniques Compresseur Inverter Wifi Modes: Cool, Heat, Dry, Fan, Auto Quatre vitesses de ventilateur Commande de volet haut-bas (fixe ou pivotant) Dégivrer Mode de panne de courant Mode veille Mode Turbo Mode JE RESSENS Mode écologique SEER: 17.6 EER: 11.2 HSPF: 10.6 Niveau sonore: 25",
    "why": [
@@ -5073,6 +5092,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "comfortmaker-dlcsra": {
+  "brochure": "https://d3l66gvjdr7rqw.cloudfront.net/Templates/32505/myimages/outdoor%20product%20data_1675263214208.pdf",
   "fr": {
    "intro": "COMFORTMAKER DLCSRA / DLFSHA combine les performances de chauffage et de refroidissement à haut rendement que vous souhaitez avec le style attrayant que vous désirez. Cet appareil dispose de cinq modes, dont le mode turbo, le mode veille et le mode ECO, et est disponible dans les variantes 115 V et 208/230 V.",
    "why": [
@@ -5137,6 +5157,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "goodman-gsz16": {
+  "brochure": "https://apps.goodmanmfg.com/brochures/files/5f3d53bd849d8SS-GSZ16.pdf",
   "fr": {
    "intro": "Goodman GSZ16: système central, chauffage jusqu’à −10 °C, 24 000 à 60 000 BTU.",
    "why": [
@@ -5201,6 +5222,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "goodman-gsz14": {
+  "brochure": "https://apps.goodmanmfg.com/brochures/files/5f3d53a6dc964SS-GSZ14.pdf",
   "fr": {
    "intro": "Goodman GSZ14: système central, chauffage jusqu’à −10 °C, 24 000 à 60 000 BTU.",
    "why": [
@@ -5330,6 +5352,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "comfortmaker-r4h4": {
+  "brochure": "https://www.sidharvey.com/documents/r4h4.pdf",
   "fr": {
    "intro": "Comfortmaker R4H4: système central, chauffage jusqu’à −10 °C, 24 000 à 60 000 BTU.",
    "why": [
@@ -5524,6 +5547,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "tosot-lomo-23-multizone": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/LOMO-23-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Les termes qui représentent le mieux notre série multizone extérieure en édition standard sont fiables, efficaces, intelligents et puissants. Il peut être utilisé en conjonction avec une cassette, un conduit mince, une console, un plancher et un plafond ou une unité murale.",
    "why": [
@@ -6888,6 +6912,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lennox-mha": {
+  "brochure": "https://www.lennox.com/dA/be4a928f4b/minisplitsystem-brochure.pdf",
   "fr": {
    "intro": "Les systèmes de pompe à chaleur mini-split Lennox® sont abordables, fiables et silencieux, et ils peuvent chauffer et refroidir votre maison, vous offrant un confort optimal en toute saison. Les systèmes mini-split de Lennox sont une option d’économie d’énergie pour les zones où les conduits ne peuvent pas être installés ou étendus, comme les vérandas et les pièces supplémentaires.",
    "why": [
@@ -6952,6 +6977,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lennox-mla": {
+  "brochure": "https://www.lennox.com/dA/be4a928f4b/minisplitsystem-brochure.pdf",
   "fr": {
    "intro": "La série Lennox MLA est principalement destinée à être utilisée dans des zones extrêmement froides. À -18 °C, les unités MLA fonctionneront à pleine capacité, avec la possibilité de fonctionner à -30 °F.",
    "why": [
@@ -7016,6 +7042,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lennox-ml14xp1": {
+  "brochure": "https://www.lennox.com/dA/554937c43c/guidespecs_ml14xp1_X000411.pdf",
   "fr": {
    "intro": "Lennox ML14XP1: système central, chauffage jusqu’à −10 °C, 24 000 à 60 000 BTU.",
    "why": [
@@ -7080,6 +7107,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "lennox-ml16xp1": {
+  "brochure": "https://www.lennox.com/dA/0b8cea2d45/20B12_MERIT_HeatPumpCard_0922_CLEAN.pdf",
   "fr": {
    "intro": "Lennox ML16XP1: système central, chauffage jusqu’à −10 °C, 24 000 à 60 000 BTU.",
    "why": [
@@ -7469,6 +7497,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-lomo-23": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/LOMO-23-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "La série LOMO est une solution à la fois attrayante et abordable pour vos besoins de confort, saison après saison. Le modèle pompe à chaleur, équipé d’un élément chauffant, procure une chaleur réconfortante même par des températures extrêmement froides jusqu’à -25°C.",
    "why": [
@@ -7663,6 +7692,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-serie-23-r32-ac": {
+  "brochure": "https://cdn.shopify.com/s/files/1/0715/1694/6724/files/BROCHURE_FR_EN_-_ZEPHYR_-_23.pdf",
   "fr": {
    "intro": "Découvrez le climatiseur mural Zephyr Série 23 R-32, un système de refroidissement avancé qui allie performance, efficacité énergétique et confort optimal pour répondre à vos besoins tout au long de l'été. Des Caractéristiques Exceptionnelles pour un Confort Supérieur ✅ Technologie I-Feel: Ajuste automatiquement la température en fonction de la télécommande, vous offrant une expérience personnalisée et agréable.",
    "why": [
@@ -7727,6 +7757,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "zephyr-serie-23-r32": {
+  "brochure": "https://cdn.shopify.com/s/files/1/0715/1694/6724/files/BROCHURE_FR_EN_-_ZEPHYR_-_23.pdf",
   "fr": {
    "intro": "Découvrez la Système Murale Zephyr Série 23 R-32—bien plus qu'un simple système de chauffage et de refroidissement. Ce système de pointe offre une efficacité énergétique supérieure, un confort exceptionnel et des technologies avancées, tout en étant respectueux de l'environnement.",
    "why": [
@@ -7986,6 +8017,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-lomo-19-115v": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/LOMO-17-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "La GREE LOMO 19 (115V) offre une solution polyvalente et écoénergétique pour les foyers de la grande région de Montréal, incluant la Rive-Nord et la Rive-Sud. Conçue de manière unique pour fonctionner sur une alimentation standard de 115V, ce système est parfait pour les rénovations, les sous-sols ou les maisons plus anciennes où le câblage 220V n’est pas disponible.",
    "why": [
@@ -9414,6 +9446,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-free-match": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/FREE-MATCH-LOMO-16-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Conçus pour des performances silencieuses et des installations adaptables, les systèmes Thermolux Free Match s’associent à une gamme d’unités intérieures pour ajuster le confort pièce par pièce tout en optimisant la consommation d’énergie. Technologie inverter G10 pour un contrôle précis de la température et une réduction de la consommation énergétique.",
    "why": [
@@ -9478,6 +9511,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-multi21-plus": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/MULTI-GEN2-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Conçus pour un fonctionnement silencieux et efficace, les systèmes Thermolux Multi21+ s’appuient sur la technologie inverter G10, le réfrigérant R410A et des protections intelligentes pour ajuster finement la température pièce par pièce tout en maîtrisant la consommation. Avec un chauffage fiable jusqu’à −20 °C et un refroidissement de −18 °C à 48 °C, ces unités compactes assurent un confort toute l’année dans le climat variable du Québec.",
    "why": [
@@ -9542,6 +9576,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-multi-plus-ultra": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/12/MULTI-ULTRA-Series-Air-Conditioners-Consumer-Brochure.pdf",
   "fr": {
    "intro": "Optimisés pour des installations flexibles et un fonctionnement discret, les systèmes Thermolux Multi+ Ultra s’associent à différentes têtes intérieures pour ajuster précisément la charge par pièce, réduire la consommation et simplifier le contrôle au quotidien. Technologie inverter G10 pour une régulation précise et une consommation maîtrisée sur plusieurs zones.",
    "why": [
@@ -9606,6 +9641,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "gree-free-match-r32": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/05/GREE-BROCHURE-MULTI-ZONE-FREEMATCH-R32-FR.pdf",
   "fr": {
    "intro": "Adaptées au climat québécois, les unités Thermolux MULTI R32 offrent une climatisation efficace et un chauffage fiable jusqu’à −30 °C tout en maintenant de faibles niveaux sonores et une consommation maîtrisée. Que ce soit pour un condo deux zones ou une résidence cinq zones, la gamme s’ajuste à votre espace avec des commandes intelligentes et une installation simplifiée.",
    "why": [
@@ -9735,6 +9771,7 @@ window.PRODUCT_DETAILS={
   }
  },
  "haxxair-t2d-multizone": {
+  "brochure": "https://thermolux.ca/wp-content/uploads/2025/09/HAXXAIR-T2D-Thermopompe-Climatiseur-Mural-Brochure.pdf",
   "fr": {
    "intro": "Conçue pour répondre aux besoins variés des foyers canadiens, le système extérieure (compresseur) Série HAXXAIR T2D Multizone offre une performance puissante et une flexibilité exceptionnelle. Pensé pour la grande région de Montréal, incluant la Rive-Nord et la Rive-Sud, ce compresseur robuste assure un chauffage fiable même lorsque les températures chutent à -25°C (-13°F).",
    "why": [
