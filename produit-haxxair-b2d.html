@@ -26,18 +26,18 @@
 
 <main>
 <section class="phead" style="padding:28px 0">
- <div class="wrap"><nav class="crumbs" style="margin:0" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>/</span><a href="catalogue.html">Catalogue</a><span>/</span><span style="margin:0;opacity:1" id="crumb">Gree Fairy Ultra Heat</span></nav></div>
+ <div class="wrap"><nav class="crumbs" style="margin:0" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>/</span><a href="catalogue.html">Catalogue</a><span>/</span><span style="margin:0;opacity:1" id="crumb">Haxxair B2D</span></nav></div>
 </section>
 
 <section class="pp"><div class="wrap">
  <div class="grid">
   <div class="gal">
-   <div class="tile"><img id="main" src="img/products/gree-fairy-1.png" alt="Système mural Gree Fairy Ultra Heat"></div>
+   <div class="tile"><img id="main" src="img/products/haxxair-b2d-1.jpg" alt="Haxxair B2D"></div>
    <div class="thumbs" id="thumbs"></div>
   </div>
   <div class="buy">
    <div class="meta" id="meta"></div>
-   <h1 id="name">Gree Fairy Ultra Heat</h1>
+   <h1 id="name">Haxxair B2D</h1>
    <p class="lead" id="lead" hidden></p>
    <dl class="keys" id="keys"></dl>
    <div class="caps" id="caps"><p>Capacités disponibles (BTU)</p><ul id="capl"></ul></div>
@@ -89,7 +89,7 @@
  var D=(window.PRODUCT_DETAILS||{})[p.slug]||{},d=D[L]||{};
  var cap=n(p.btu[0])+(p.btu.length>1?" – "+n(p.btu[p.btu.length-1]):"")+" BTU";
  var SEO=L=="en"?{mural:"Wall-mounted heat pump",multizone:"Multi-zone heat pump",central:"Central heat pump"}:{mural:"Thermopompe murale",multizone:"Thermopompe multizone",central:"Thermopompe centrale"}; // mots-clés SEO: champs cachés seulement
- document.title=p.name+" — "+SEO[p.type]+" | Thermolux";
+ if(!window.PSLUG)document.title=p.name+" — "+SEO[p.type]+" | Thermolux";
  document.querySelector('meta[name=description]').content=p.name+" — "+SEO[p.type]+(p.tminC?", "+neg(p.tminC)+" °C":"")+(p.seer2?", "+num(p.seer2)+" SEER2":"")+", "+cap+". Thermolux.";
  $("crumb").textContent=p.name;$("name").textContent=p.name;$("qn").textContent=p.name;$("qs").textContent=I[p.type];
  var imgs=p.imgs||[p.img],m=$("main");m.src=imgs[0];m.alt=p.name;
@@ -127,7 +127,7 @@
  $("sim").innerHTML=sim.map(function(q){
   var c=n(q.btu[0])+(q.btu.length>1?" – "+n(q.btu[q.btu.length-1]):"");
   var mid=q.seer2?'<li><b>'+num(q.seer2)+'</b> SEER2</li>':q.dB?'<li><b>'+num(q.dB)+'</b> dB</li>':"";
-  return '<article class="card"><div class="tile"><span class="brand">'+esc(q.brand)+'</span><img src="'+q.img+'" alt="'+esc(q.name)+'" loading="lazy"></div><div class="body"><p class="meta">'+I[q.type]+'</p><h2>'+esc(q.name)+'</h2><ul class="specs"><li><b>'+c+'</b> BTU</li>'+mid+(q.tminC?'<li><b>'+neg(q.tminC)+' °C</b></li>':"")+'</ul><a class="go" href="produit.html?p='+q.slug+'">'+I.view+'<i aria-hidden="true">→</i></a></div></article>'}).join("");
+  return '<article class="card"><div class="tile"><span class="brand">'+esc(q.brand)+'</span><img src="'+q.img+'" alt="'+esc(q.name)+'" loading="lazy"></div><div class="body"><p class="meta">'+I[q.type]+'</p><h2>'+esc(q.name)+'</h2><ul class="specs"><li><b>'+c+'</b> BTU</li>'+mid+(q.tminC?'<li><b>'+neg(q.tminC)+' °C</b></li>':"")+'</ul><a class="go" href="produit-'+q.slug+'.html">'+I.view+'<i aria-hidden="true">→</i></a></div></article>'}).join("");
  // barre de soumission: visible quand les boutons du haut sortent de l'écran
  var qb=$("qbar");
  if("IntersectionObserver" in window)new IntersectionObserver(function(e){var on=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;qb.classList.toggle("on",on);qb.querySelector("a").tabIndex=on?0:-1;qb.setAttribute("aria-hidden",!on)}).observe($("acts"));

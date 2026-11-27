@@ -5,9 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Air Conditioning and Heating — Thermolux Catalogue | Montréal, Laval, Longueuil</title>
 <meta name="description" content="Wall-mounted, multi-zone and central heat pumps from Gree, Zephyr, Lennox, LG and more. Compare models built for the Quebec climate and request a quote from Thermolux.">
+<link rel="canonical" href="https://thermolux.ca/en/catalogue.html">
 <link rel="alternate" hreflang="fr" href="https://thermolux.ca/catalogue.html">
 <link rel="alternate" hreflang="en" href="https://thermolux.ca/en/catalogue.html">
 <link rel="alternate" hreflang="x-default" href="https://thermolux.ca/catalogue.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thermolux">
+<meta property="og:title" content="Air Conditioning and Heating — Thermolux Catalogue | Montréal, Laval, Longueuil">
+<meta property="og:description" content="Wall-mounted, multi-zone and central heat pumps from Gree, Zephyr, Lennox, LG and more. Compare models built for the Quebec climate and request a quote from Thermolux.">
+<meta property="og:url" content="https://thermolux.ca/en/catalogue.html">
+<meta property="og:image" content="https://thermolux.ca/img/catalogue-hero-remote.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=175">
@@ -96,7 +104,7 @@
    '<div class="tile"><span class="brand">'+esc(p.brand)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
    '<div class="body"><p class="meta">'+I[p.type]+'</p><h2>'+esc(p.name)+'</h2>'+
    (cap||mid||p.tminC?'<ul class="specs">'+(cap?'<li><b>'+cap+'</b> BTU</li>':"")+mid+(p.tminC?'<li><b>'+p.tminC.replace("-","\u2212")+' °C</b></li>':"")+'</ul>':"")+aid(p)+
-   '<a class="go" href="'+(p.acc?'accessoire.html':'produit.html')+'?p='+p.slug+'">'+I.view+'<i aria-hidden="true">\u2192</i></a>'+'</div></article>'}).join("");
+   '<a class="go" href="produit-'+p.slug+'.html">'+I.view+'<i aria-hidden="true">\u2192</i></a>'+'</div></article>'}).join("");
  var cards=[].slice.call(document.querySelectorAll(".card"));
  function val(name){var e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:"all"}
  function apply(){
