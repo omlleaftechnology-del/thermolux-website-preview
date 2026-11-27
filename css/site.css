@@ -603,3 +603,6 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .cta-band .wrap>h2{font-size:clamp(28px,2.7vw,42px)!important;max-width:none!important;flex:1 1 520px;text-wrap:balance;margin:0}
 .cta-band .wrap>h2{flex:1 1 100%;font-size:clamp(24px,2.35vw,36px)!important}
 @media(min-width:1000px){.cta-band .wrap>h2{white-space:nowrap}}
+.totop{transition:bottom .3s,opacity .2s,transform .2s}
+body:has(.qbar.on) .totop{bottom:100px}
+@media(max-width:700px){body:has(.qbar.on) .totop{bottom:calc(var(--qbh,72px) + 14px)}}
