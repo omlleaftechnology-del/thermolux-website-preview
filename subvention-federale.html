@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css?v=175">
-<link rel="stylesheet" href="css/content.css?v=144">
+<link rel="stylesheet" href="css/content.css?v=145">
 </head>
 <body>
 
@@ -49,6 +49,10 @@
  <ul class="checks"><li><b>Propriétaire</b> au Canada, pas forcément de sa résidence principale (un logement loué est admissible).</li><li><b>Thermopompe admissible</b> : identifiée par son numéro AHRI sur la liste officielle des produits.</li><li><b>Achat et installation</b> par un entrepreneur en CVC.</li><li><b>Une seule aide par ménage</b>, même si vous possédez plusieurs propriétés, et aucune aide fédérale déjà reçue pour cette adresse.</li><li><b>Chauffage actuel</b> : électricité (plinthes, fournaise), gaz naturel, mazout, propane, diesel, charbon ou bois.</li><li><b>Urgence ou projet planifié</b> : les deux sont acceptés, sans preuve de panne.</li></ul>
 </div></section>
 <section class="sec paper"><div class="wrap">
+ <div class="sec-h" style="max-width:940px"><div class="eyebrow">Nos modèles</div><h2>Modèles <em>admissibles</em></h2><p>Nos systèmes dont le numéro AHRI figure sur la liste officielle de Ressources naturelles Canada. Le montant ne dépend pas du modèle.</p></div>
+ <div id="nhprtables" class="nhpr"></div><p class="fin-note">Liste vérifiée le 26 novembre 2026. ✓ : modèle inscrit. « Variable » : seules certaines combinaisons d’unités intérieures sont inscrites. La liste officielle peut changer avant l’ouverture du programme.</p>
+</div></section>
+<section class="sec paper"><div class="wrap">
  <div class="sec-h" style="max-width:940px"><div class="eyebrow">Revenu</div><h2>Seuil de revenu pour <em>10 000 $</em></h2><p>Revenu familial après impôt (Québec, en dollars de 2025). Égal ou inférieur au seuil : jusqu’à 10 000 $.</p></div>
  <div class="kt"><div><small>1 personne</small><b>41 228 $</b></div><div><small>2 personnes</small><b>82 097 $</b></div><div><small>3 personnes</small><b>107 865 $</b></div><div><small>4 personnes</small><b>134 232 $</b></div><div><small>5 personnes ou plus</small><b>140 225 $</b></div></div><p class="fin-note">Calcul : ligne 23600 (revenu net) moins ligne 43500 (total des impôts à payer) de la déclaration de revenus 2025, pour vous et votre conjoint. À l’ouverture du programme, le numéro d’assurance sociale servira à vérifier le revenu auprès de l’Agence du revenu du Canada.</p>
 </div></section>
@@ -73,4 +77,23 @@
 </main>
 
 <div id="site-footer"></div>
+<script src="js/products.js?v=241"></script>
+<script src="js/nhpr.js?v=1"></script>
+<script>
+(function(){
+ var N=window.NHPR,P=window.PRODUCTS,L=window.LANG,box=document.getElementById("nhprtables");if(!N||!P||!box)return;
+ var T=L=="en"?{mural:"Wall-mounted systems",multizone:"Multi-zone systems",central:"Central systems",model:"Model",ok:"Eligible",cs:"Varies",none:"—",btu:"BTU"}:{mural:"Systèmes muraux",multizone:"Systèmes multizones",central:"Systèmes centraux",model:"Modèle",ok:"Admissible",cs:"Variable",none:"—",btu:"BTU"};
+ var n=function(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,L=="en"?",":"\u00a0")};
+ var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+ ["mural","multizone","central"].forEach(function(type){
+  var rows=P.filter(function(p){return p.type==type&&N.data[p.slug]});if(!rows.length)return;
+  var caps=[];rows.forEach(function(p){p.btu.forEach(function(b){if(caps.indexOf(b)<0)caps.push(b)})});caps.sort(function(a,b){return a-b});
+  var h='<h3 class="at-h">'+T[type]+'</h3><div class="at-wrap"><table class="at"><thead><tr><th>'+T.model+'</th>'+caps.map(function(c){return'<th>'+n(c)+'<small>'+T.btu+'</small></th>'}).join("")+'</tr></thead><tbody>';
+  rows.forEach(function(p){var d=N.data[p.slug];
+   h+='<tr><th scope="row"><a href="produit-'+p.slug+'.html">'+esc(p.name)+'</a></th>'+caps.map(function(c){
+    if(p.btu.indexOf(c)<0)return'<td class="x"></td>';var v=d[c],l=' data-l="'+n(c)+' '+T.btu+'"';
+    return v==1?'<td class="v"'+l+' title="'+T.ok+'"><span aria-hidden="true">✓</span><span class="sr">'+T.ok+'</span></td>':v==2?'<td class="no"'+l+'>'+T.cs+'</td>':'<td class="no"'+l+'>'+T.none+'</td>'}).join("")+'</tr>'});
+  box.insertAdjacentHTML("beforeend",h+'</tbody></table></div>')});
+})();
+</script>
 <script src="js/layout.js?v=152"></script>
