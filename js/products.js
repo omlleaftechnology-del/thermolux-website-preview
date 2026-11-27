@@ -10094,7 +10094,7 @@ window.PRODUCT_DETAILS={
  "novair-hyper-heat": {
   "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
   "fr": {
-   "intro": "Système mural Novair conçu pour les hivers canadiens : fonctionnement jusqu’à −35 °C, ailettes dorées (Gold Fins), élément chauffant de bac et compresseur Inverter. Offert en 12 000, 18 000 et 24 000 BTU.",
+   "intro": "Améliorez votre chauffage et votre climatisation avec ce système conçu pour les hivers canadiens, fonctionnel jusqu’à −35 °C (−31 °F). Bâti pour le froid extrême, il comprend des ailettes dorées (Gold Fins) pour une meilleure durabilité, un élément chauffant de bac contre le gel et un compresseur Inverter pour une efficacité maximale. L’unité intérieure distribue l’air efficacement dans toute maison canadienne. Garantie de 10 ans pièces et main-d’œuvre d’un fabricant canadien.",
    "why": [
     [
      "Fonctionne jusqu’à −35 °C",
@@ -10125,7 +10125,7 @@ window.PRODUCT_DETAILS={
    }
   },
   "en": {
-   "intro": "Novair wall-mounted system built for Canadian winters: operation down to −35 °C, Gold Fins, pan heater and Inverter compressor. Available in 12,000, 18,000 and 24,000 BTU.",
+   "intro": "Upgrade your heating and cooling with this system specially designed for Canadian winters, rated down to −35 °C (−31 °F). Built to withstand extreme cold, it features Gold Fins for enhanced durability, a pan heater to prevent freezing and an Inverter compressor for peak efficiency. The indoor unit distributes air efficiently in any Canadian home. Backed by a 10-year parts and labour warranty from a Canadian manufacturer.",
    "why": [
     [
      "Runs down to −35 °C",
@@ -10159,7 +10159,7 @@ window.PRODUCT_DETAILS={
  "novair-hyper-heat-multizone": {
   "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
   "fr": {
-   "intro": "Une unité extérieure Novair pour 2, 3 ou 4 zones, avec fonctionnement jusqu’à −35 °C. Modèles de 20 000, 28 000 et 36 000 BTU.",
+   "intro": "Unité extérieure pour systèmes multizones, conçue pour les hivers canadiens avec un fonctionnement jusqu’à −35 °C (−31 °F). Elle comprend des ailettes dorées (Gold Fins) pour la durabilité, un élément chauffant de bac contre le gel et un compresseur Inverter pour l’efficacité énergétique. Garantie de 10 ans pièces et main-d’œuvre d’une entreprise canadienne spécialisée en systèmes pour climat froid.",
    "why": [
     [
      "2 à 4 zones",
@@ -10190,7 +10190,7 @@ window.PRODUCT_DETAILS={
    }
   },
   "en": {
-   "intro": "One Novair outdoor unit for 2, 3 or 4 zones, operating down to −35 °C. Models of 20,000, 28,000 and 36,000 BTU.",
+   "intro": "Outdoor unit for multi-zone systems, specially designed for Canadian winters with operation down to −35 °C (−31 °F). It features Gold Fins for durability, a pan heater to prevent freezing and an Inverter compressor for energy efficiency. Backed by a 10-year parts and labour warranty from a leading Canadian cold-climate heat pump company.",
    "why": [
     [
      "2 to 4 zones",
@@ -10224,7 +10224,7 @@ window.PRODUCT_DETAILS={
  "novair-evox-central": {
   "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
   "fr": {
-   "intro": "Système central Novair EVOX avec unité extérieure et appareil de traitement d’air assorti, fonctionnement jusqu’à −30 °C. Modèles de 48 000 et 60 000 BTU.",
+   "intro": "Système central à conduits : unité extérieure fonctionnelle jusqu’à −30 °C, avec ailettes dorées (Gold Fins), élément chauffant de bac et compresseur Inverter, et appareil de traitement d’air intérieur qui distribue l’air efficacement et s’intègre facilement aux installations existantes. Garantie de 10 ans pièces et main-d’œuvre d’une entreprise canadienne.",
    "why": [
     [
      "Fonctionne jusqu’à −30 °C",
@@ -10255,7 +10255,7 @@ window.PRODUCT_DETAILS={
    }
   },
   "en": {
-   "intro": "Novair EVOX central system with matched outdoor unit and air handler, operating down to −30 °C. Models of 48,000 and 60,000 BTU.",
+   "intro": "Centrally ducted system: an outdoor unit operating down to −30 °C with Gold Fins, a pan heater and an Inverter compressor, and an indoor air handler that distributes air efficiently and integrates easily with existing systems. Backed by a 10-year parts and labour warranty from a trusted Canadian company.",
    "why": [
     [
      "Runs down to −30 °C",
