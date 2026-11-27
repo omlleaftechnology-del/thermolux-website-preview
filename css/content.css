@@ -534,3 +534,11 @@ body.pm-lock{overflow:hidden}
 .kf{justify-content:flex-start}
 @media(max-width:900px){.sb-steps{grid-template-columns:minmax(0,1fr)}}
 @media(min-width:701px){.at td.v{white-space:nowrap;line-height:1.25}.at td.v br+*{display:inline}}
+/* LogisVert multi-unit card: table stays inside its rounded box, official link below the card */
+.sp-card .at-wrap{overflow:hidden!important;border-radius:14px}
+.sp-after{display:flex;justify-content:center;margin-top:22px}
+.sp-link{display:inline-flex;align-items:center;gap:14px;padding:14px 20px 14px 14px;border-radius:16px;background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:0 14px 30px -24px rgba(10,31,61,.45);transition:.15s}
+.sp-link:hover{border-color:var(--blue);transform:translateY(-2px)}
+.sp-link-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#E8F0FB;color:var(--blue);font:800 13px Manrope,Inter,sans-serif}
+.sp-link b{display:block;font:700 15px Inter,sans-serif}.sp-link small{display:block;color:var(--muted);font-size:13px}
+.sp-link i{font-style:normal;font-size:18px;color:var(--blue);margin-left:6px}
