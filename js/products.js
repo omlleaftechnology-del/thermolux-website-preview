@@ -2914,6 +2914,67 @@ window.PRODUCTS=[
   ]
  },
  {
+  "slug": "novair-hyper-heat",
+  "name": "Novair Hyper Heat",
+  "brand": "Novair",
+  "type": "mural",
+  "series": "Hyper Heat",
+  "btu": [
+   12000,
+   18000,
+   24000
+  ],
+  "hspf2": "11.4",
+  "tminC": "-35",
+  "refrigerant": "R-410A",
+  "img": "img/products/novair-hyper-heat-1.jpg",
+  "src": "https://www.novairplus.com/heatpumps",
+  "imgs": [
+   "img/products/novair-hyper-heat-1.jpg",
+   "img/products/novair-hyper-heat-2.jpg"
+  ]
+ },
+ {
+  "slug": "novair-hyper-heat-multizone",
+  "name": "Novair Hyper Heat Multizone",
+  "brand": "Novair",
+  "type": "multizone",
+  "series": "Hyper Heat",
+  "btu": [
+   20000,
+   28000,
+   36000
+  ],
+  "hspf2": "9.7",
+  "tminC": "-35",
+  "refrigerant": "R-410A",
+  "img": "img/products/novair-hyper-heat-multizone-1.jpg",
+  "src": "https://www.novairplus.com/heatpumps",
+  "imgs": [
+   "img/products/novair-hyper-heat-multizone-1.jpg"
+  ]
+ },
+ {
+  "slug": "novair-evox-central",
+  "name": "Novair EVOX Central",
+  "brand": "Novair",
+  "type": "central",
+  "series": "Central EVOX",
+  "btu": [
+   48000,
+   60000
+  ],
+  "hspf2": "9.4",
+  "tminC": "-30",
+  "refrigerant": "R-410A",
+  "img": "img/products/novair-evox-central-1.jpg",
+  "src": "https://www.novairplus.com/heatpumps",
+  "imgs": [
+   "img/products/novair-evox-central-1.jpg",
+   "img/products/novair-evox-central-2.jpg"
+  ]
+ },
+ {
   "slug": "elios-emulti",
   "name": "Elios e-Multi",
   "brand": "Elios",
@@ -10027,6 +10088,201 @@ window.PRODUCT_DETAILS={
     "warr": "Parts 10 years · labour 10 years",
     "ahri": "AHRI 216621485, 216621488 | 216621489 | 216621490 | 216621491 | 216621492 | 216621493 | 216684081 | 216720951 | 216720952, 216621486",
     "models": "CEB-24MX1421 / 4CDH2018C21, CEB-24MX1721 / 4CDH2018C21, CEB-24MX1721 / 4CDH2024C21, CEB-36MX2121 / 4CDH2030C21, CEB-36MX1421 / 4CDH2030C21, CEB-36MX1721 / 4CDH2036C21, CEB-36MX1721 / 4CDH2030C21, CEB-36MX2121 / 4CDH2036C21, CEB-60MX2421 / 4CDH2060C21, CEB-60MX2121 / 4CDH2048C21, CEB-60MX2121 / 4CDH2060C21"
+   }
+  }
+ },
+ "novair-hyper-heat": {
+  "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
+  "fr": {
+   "intro": "Système mural Novair conçu pour les hivers canadiens : fonctionnement jusqu’à −35 °C, ailettes dorées (Gold Fins), élément chauffant de bac et compresseur Inverter. Offert en 12 000, 18 000 et 24 000 BTU.",
+   "why": [
+    [
+     "Fonctionne jusqu’à −35 °C",
+     "Conçu comme source de chauffage principale par grand froid."
+    ],
+    [
+     "Gold Fins",
+     "Ailettes traitées pour une meilleure durabilité."
+    ],
+    [
+     "Élément chauffant de bac",
+     "Empêche le gel de l’eau de dégivrage."
+    ],
+    [
+     "Garantie 10 ans",
+     "Pièces et main-d’œuvre, installation par un technicien licencié et enregistrement requis."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, liste NEEP climat froid",
+    "warr": "10 ans pièces et main-d’œuvre*",
+    "ahri": "AHRI 211709683, 211709684, 211709685",
+    "models": "LEA12SZ35SK-O / 2LEA12UUSK-I · LEA18SZ35SK-O / 2LEA18UUSK-I · LEA24SZ35SK-O / 2LEA24UUSK-I"
+   }
+  },
+  "en": {
+   "intro": "Novair wall-mounted system built for Canadian winters: operation down to −35 °C, Gold Fins, pan heater and Inverter compressor. Available in 12,000, 18,000 and 24,000 BTU.",
+   "why": [
+    [
+     "Runs down to −35 °C",
+     "Designed as a primary heat source in deep cold."
+    ],
+    [
+     "Gold Fins",
+     "Treated fins for better durability."
+    ],
+    [
+     "Pan heater",
+     "Prevents defrost water from freezing."
+    ],
+    [
+     "10-year warranty",
+     "Parts and labour; licensed HVAC installation and registration required."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, NEEP cold-climate list",
+    "warr": "10 years parts and labour*",
+    "ahri": "AHRI 211709683, 211709684, 211709685",
+    "models": "LEA12SZ35SK-O / 2LEA12UUSK-I · LEA18SZ35SK-O / 2LEA18UUSK-I · LEA24SZ35SK-O / 2LEA24UUSK-I"
+   }
+  }
+ },
+ "novair-hyper-heat-multizone": {
+  "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
+  "fr": {
+   "intro": "Une unité extérieure Novair pour 2, 3 ou 4 zones, avec fonctionnement jusqu’à −35 °C. Modèles de 20 000, 28 000 et 36 000 BTU.",
+   "why": [
+    [
+     "2 à 4 zones",
+     "LEA20MZ (2 zones), LEA28MZ (3 zones), LEA36MZ (4 zones)."
+    ],
+    [
+     "Fonctionne jusqu’à −35 °C",
+     "Chauffage fiable par grand froid."
+    ],
+    [
+     "Compresseur Inverter",
+     "Puissance ajustée à la demande."
+    ],
+    [
+     "Garantie 10 ans",
+     "Pièces et main-d’œuvre, installation par un technicien licencié et enregistrement requis."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, liste NEEP climat froid",
+    "warr": "10 ans pièces et main-d’œuvre*",
+    "ahri": "AHRI 209416885, 209416882, 211133300",
+    "models": "LEA20MZ-2P-35SK-O (2 zones) · LEA28MZ-3P-35SK-O (3 zones) · LEA36MZ-4P-35SK-O (4 zones)"
+   }
+  },
+  "en": {
+   "intro": "One Novair outdoor unit for 2, 3 or 4 zones, operating down to −35 °C. Models of 20,000, 28,000 and 36,000 BTU.",
+   "why": [
+    [
+     "2 to 4 zones",
+     "LEA20MZ (2 zones), LEA28MZ (3 zones), LEA36MZ (4 zones)."
+    ],
+    [
+     "Runs down to −35 °C",
+     "Reliable heating in deep cold."
+    ],
+    [
+     "Inverter compressor",
+     "Output matched to demand."
+    ],
+    [
+     "10-year warranty",
+     "Parts and labour; licensed HVAC installation and registration required."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, NEEP cold-climate list",
+    "warr": "10 years parts and labour*",
+    "ahri": "AHRI 209416885, 209416882, 211133300",
+    "models": "LEA20MZ-2P-35SK-O (2 zones) · LEA28MZ-3P-35SK-O (3 zones) · LEA36MZ-4P-35SK-O (4 zones)"
+   }
+  }
+ },
+ "novair-evox-central": {
+  "brochure": "https://www.novairplus.com/_files/ugd/dbee63_ecbbc439ed154b99bff630b85bd35c5c.pdf",
+  "fr": {
+   "intro": "Système central Novair EVOX avec unité extérieure et appareil de traitement d’air assorti, fonctionnement jusqu’à −30 °C. Modèles de 48 000 et 60 000 BTU.",
+   "why": [
+    [
+     "Fonctionne jusqu’à −30 °C",
+     "Chauffage central par temps froid."
+    ],
+    [
+     "Unités assorties",
+     "Unité extérieure et appareil de traitement d’air EVOX."
+    ],
+    [
+     "Toute la maison",
+     "Distribution par conduits existants ou neufs."
+    ],
+    [
+     "Garantie 10 ans",
+     "Pièces et main-d’œuvre, installation par un technicien licencié et enregistrement requis."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, liste NEEP climat froid",
+    "warr": "10 ans pièces et main-d’œuvre*",
+    "ahri": "AHRI 211253514, 211253512",
+    "models": "LEA48-EVOX-30-O / LEA48-EVOX-30-I · LEA60-EVOX-30-O / LEA60-EVOX-30-I"
+   }
+  },
+  "en": {
+   "intro": "Novair EVOX central system with matched outdoor unit and air handler, operating down to −30 °C. Models of 48,000 and 60,000 BTU.",
+   "why": [
+    [
+     "Runs down to −30 °C",
+     "Central heating in cold weather."
+    ],
+    [
+     "Matched units",
+     "EVOX outdoor unit and air handler."
+    ],
+    [
+     "Whole home",
+     "Distribution through new or existing ducts."
+    ],
+    [
+     "10-year warranty",
+     "Parts and labour; licensed HVAC installation and registration required."
+    ]
+   ],
+   "spec": {
+    "clim": "—",
+    "noise": "—",
+    "volt": "208/230 V / 1 ph / 60 Hz",
+    "wifi": "—",
+    "cert": "AHRI, NEEP cold-climate list",
+    "warr": "10 years parts and labour*",
+    "ahri": "AHRI 211253514, 211253512",
+    "models": "LEA48-EVOX-30-O / LEA48-EVOX-30-I · LEA60-EVOX-30-O / LEA60-EVOX-30-I"
    }
   }
  },
