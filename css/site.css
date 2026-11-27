@@ -599,3 +599,7 @@ section{padding:clamp(48px,5.5vw,76px) 0}
 .bl a{overflow:hidden}
 .bl a img[src*="mainline"]{max-height:none;max-width:none;width:172px;flex:none}
 @media(max-width:600px){.bl a img[src*="kinghome"]{max-height:62px}.bl a img[src*="mainline"]{max-height:none;width:150px}.bl a .bt{font-size:12px}}
+/* closing call-to-action: heading on one or two balanced lines, button beside it */
+.cta-band .wrap>h2{font-size:clamp(28px,2.7vw,42px)!important;max-width:none!important;flex:1 1 520px;text-wrap:balance;margin:0}
+.cta-band .wrap>h2{flex:1 1 100%;font-size:clamp(24px,2.35vw,36px)!important}
+@media(min-width:1000px){.cta-band .wrap>h2{white-space:nowrap}}
