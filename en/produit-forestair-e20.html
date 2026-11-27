@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=173">
-<link rel="stylesheet" href="../css/catalogue.css?v=96">
+<link rel="stylesheet" href="../css/catalogue.css?v=98">
 </head>
 <body class="pdp">
 <div id="site-header"></div>
@@ -49,7 +49,7 @@
 
 <section class="blk"><div class="wrap"><div class="det"><h2>Technical specifications</h2><table class="spec"><tbody id="spec"></tbody></table></div></div></section>
 
-<section class="aidsec" id="aidsec" hidden><div class="wrap"><div class="head"><div><p class="eyebrow">Financial aid</p><h2>LogisVert rebate by capacity</h2></div></div><p class="aidask">Choose the capacity</p><div class="aidtabs" id="aidtabs" role="tablist"></div><div class="aidres"><span>LogisVert rebate</span><b id="aidval"></b></div><p class="aidnote2">The same amount applies to new and existing homes.</p><p class="aidfoot">Based on the Hydro-Québec list of November 12, 2026. Eligibility and the final amount are confirmed by Hydro-Québec.<a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Check on Hydro-Québec →</a></p></div></section>
+<section class="aidsec" id="aidsec" hidden><div class="wrap"><div class="head"><div><p class="eyebrow">Financial aid</p><h2>LogisVert rebate by capacity</h2></div></div><p class="aidask">Choose the capacity</p><div class="aidtabs" id="aidtabs" role="tablist"></div><div class="aidres"><span>LogisVert rebate</span><b id="aidval"></b></div><div class="aidmz" id="aidmz" hidden></div><p class="aidnote2">The same amount applies to new and existing homes.</p><p class="aidfoot">Based on the Hydro-Québec list of November 26, 2026. Eligibility and the final amount are confirmed by Hydro-Québec.<a class="link" id="aidlink" target="_blank" rel="noopener" href="#">Check on Hydro-Québec →</a></p></div></section>
 
 <section class="blk blk-end" id="about"><div class="wrap"><div class="det"><h2>Description</h2><div><p id="intro"></p><p class="dl" id="dl" hidden><a class="link" target="_blank" rel="noopener" id="brochure" href="#">Manufacturer brochure (PDF)</a></p></div></div></div></section>
 
@@ -70,7 +70,7 @@
 <div id="site-footer"></div>
 <script>window.PSLUG="forestair-e20"</script>
 <script src="../js/layout.js?v=152"></script>
-<script src="../js/subsidies.js?v=233"></script>
+<script src="../js/subsidies.js?v=234"></script>
 <script src="../js/variants.js?v=232"></script>
 <script src="../js/products.js?v=236"></script>
 <script>
@@ -142,7 +142,7 @@
  var top=document.createElement("p");top.className="aid";top.innerHTML='<span class="al"><i></i>LogisVert rebate</span><span class="av"><b id="topv"></b></span>';$("caps").parentNode.insertBefore(top,$("caps").nextSibling);
  $("capl").innerHTML=p.btu.map(function(c){return '<li><button type="button" data-c="'+c+'">'+n(c)+'</button></li>'}).join("");
  function show(c){if(window.renderSpec)window.renderSpec(c);var v=d.grants[c]||d.newhome[c],s=v?A.val(d,c):(d.combo?T.combo:T.no);
-  $("aidval").textContent=s;$("aidval").className=v?"":"na";$("topv").textContent=s;
+  $("aidval").textContent=s;$("aidval").className=v?"":"na";$("topv").textContent=s;var mzb=$("aidmz"),mz=d.mz&&d.mz[c],ML={s:"Wall units (ductless)",d:"Ducted units",c:"Mix of wall and ducted"};if(mz){mzb.innerHTML=["s","d","c"].filter(function(k){return mz[k]}).map(function(k){return '<p><span>'+ML[k]+'</span><b>'+A.fmt(mz[k])+'</b></p>'}).join("")+'<small>The amount depends on the type of indoor units connected, not on how many (2, 3 or more).</small>';mzb.hidden=false}else if(!v&&+c<10500){mzb.innerHTML='<small>No unit under 10,500 BTU is on the Hydro-Québec list.</small>';mzb.hidden=false}else{mzb.hidden=true}
   [].forEach.call(document.querySelectorAll("#aidtabs button,#capl button"),function(b){b.setAttribute("aria-selected",b.dataset.c==c);b.setAttribute("aria-pressed",b.dataset.c==c)})}
  window.showCap=show;
  $("aidtabs").innerHTML=p.btu.map(function(c){return '<button type="button" role="tab" data-c="'+c+'">'+n(c)+' BTU</button>'}).join("");
