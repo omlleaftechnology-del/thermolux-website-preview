@@ -335,3 +335,12 @@
 .sort label{white-space:nowrap}
 .csub[hidden],.dds .dd[hidden],.fs-sub[hidden]{display:none!important}
 .ctile .ct-n{margin-top:auto;padding-top:2px}.ctile .ct-t{line-height:1.25}
+@media(max-width:600px){
+.card h2{min-height:0;font-size:22px;margin-bottom:14px}
+.specs,.sim .specs{min-height:0;flex-wrap:nowrap;gap:5px;margin-bottom:0}
+.specs li{flex:none;height:30px;padding:0 8px;gap:3px;font-size:10.5px;white-space:nowrap;letter-spacing:-.01em}
+.specs b{font-size:12px;letter-spacing:-.01em}
+.card .aid{margin:16px 0 18px!important}
+.card .go{padding-top:16px}
+.card .body{padding:22px 18px}
+}
