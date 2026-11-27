@@ -542,3 +542,14 @@ body.pm-lock{overflow:hidden}
 .sp-link-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#E8F0FB;color:var(--blue);font:800 13px Manrope,Inter,sans-serif}
 .sp-link b{display:block;font:700 15px Inter,sans-serif}.sp-link small{display:block;color:var(--muted);font-size:13px}
 .sp-link i{font-style:normal;font-size:18px;color:var(--blue);margin-left:6px}
+/* LogisVert: single official link, as a navy band under the multi-unit card */
+.hq-wrap{padding:0 0 72px}
+.sec#programmes{padding-bottom:40px}
+.hq-band{display:flex;align-items:center;gap:24px;padding:28px 32px;border-radius:22px;background:linear-gradient(135deg,#0D3258 0%,#0A1F3D 70%);color:#fff;box-shadow:0 24px 50px -30px rgba(10,31,61,.7);position:relative;overflow:hidden}
+.hq-band:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(80,160,255,.25),transparent 70%)}
+.hq-ic{flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:rgba(255,255,255,.1);color:#8FC3FF}.hq-ic svg{width:26px;height:26px}
+.hq-tx{flex:1;min-width:0}.hq-tx small{display:block;font:700 11px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8FC3FF;margin-bottom:6px}
+.hq-tx h2{font-size:26px;letter-spacing:-.02em;color:#fff;margin:0 0 6px;max-width:none}.hq-tx p{margin:0;color:#C9D6E6;font-size:15px;max-width:60ch}
+.hq-btn{flex:none;position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;background:#fff;color:var(--ink);font:700 15px Inter,sans-serif;transition:.15s}
+.hq-btn:hover{background:#EAF2FD;transform:translateY(-2px)}.hq-btn i{font-style:normal;color:var(--blue)}
+@media(max-width:800px){.hq-band{flex-direction:column;align-items:flex-start;padding:24px}.hq-btn{width:100%;justify-content:center}}
