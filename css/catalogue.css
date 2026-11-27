@@ -333,3 +333,4 @@
 .mdl-c{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff}.mdl-c b{display:block;font:800 17px Manrope,Inter,sans-serif;margin-bottom:8px}
 .mdl-c ul{margin:0;padding-left:18px;color:#2B3D57;font-size:14px;line-height:1.55}
 .sort label{white-space:nowrap}
+.csub[hidden],.dds .dd[hidden],.fs-sub[hidden]{display:none!important}
